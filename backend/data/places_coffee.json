@@ -1,0 +1,1652 @@
+{
+    "1": {
+        "url": "https://www.google.com/maps/place/Ti%E1%BB%87m+C%C3%A0+Ph%C3%AA+Th%C3%A1ng+M%C6%B0%E1%BB%9Di+Hai/data=!4m7!3m6!1s0x3142190007266fb3:0xa9a76ada2e3cbea0!8m2!3d16.0833478!4d108.1497808!16s%2Fg%2F11yb87vb8d!19sChIJs28mBwAZQjERoL48Ltpqp6k?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0833478",
+            "108.1497808"
+        ],
+        "name": "Tiệm Cà Phê Tháng Mười Hai",
+        "rating": "4,6",
+        "address": "72 Nguyễn Chánh, Hoà Khánh Bắc, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+        "phone": "",
+        "website": null,
+        "image_path": "data/image/Tiệm_Cà_Phê_Tháng_Mười_Hai.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Thang Le The",
+                "review_time": "4 tháng trước",
+                "rating": "5 sao",
+                "content": "Quán rất chill. Mình ghé quán vào một ngày mưa, để xe trước quán có mái che nên không sợ ướt, đây điểm cộng lớn khi mới ghé quán. Tiếp theo order tại quầy, giá cả hợp lý hợp túi. Không gian rộng rãi, có hồ cá, có gác mái ngồi nhìn ra cửa sổ rất chill. Trang trí mang hơi hướng hoài cổ, vintage, phù hợp cho bạn nào kiểu trầm trầm lowkey.\nMình gọi 2 ly cf muối, và thực lòng mình ko thích cf muối đây lắm, chắc do mình ún nhiều chỗ khác rồi nên khó tánh.\nNói chung mình recommend quán này, và mình sẽ quay lại."
+            },
+            {
+                "reviewer_name": "Bngoc Nguyễn",
+                "review_time": "một tháng trước",
+                "rating": "5 sao",
+                "content": "Quán có không gian cực kỳ ấn tượng, nhiều cây xanh, hoa tươi và hồ cá koi tạo cảm giác rất yên bình, thư giãn. Decor mang phong cách vintage pha thiên nhiên, đi một vòng là thấy thích liền, góc nào cũng đẹp để chụp hình. Rất phù hợp để ngồi chill, nghỉ ngơi và tận hưởng không khí trong lành🩷"
+            },
+            {
+                "reviewer_name": "Nhu Xuan Tran",
+                "review_time": "9 tháng trước",
+                "rating": "5 sao",
+                "content": "Ko gian dễ thương chỉn chu, có hồ cá koi chill chill ở giữa, đồ uống tàm tạm thôi, giá 20k trở lên, nhiều lựa chọn"
+            }
+        ]
+    },
+    "2": {
+        "url": "https://www.google.com/maps/place/Ibasho+Coffee/data=!4m7!3m6!1s0x31421949baf9e1a1:0x71f980b2515c49c5!8m2!3d16.072602!4d108.1798707!16s%2Fg%2F11qyn_6jxq!19sChIJoeH5ukkZQjERxUlcUbKA-XE?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.072602",
+            "108.1798707"
+        ],
+        "name": "Ibasho Coffee",
+        "rating": "4,1",
+        "address": "124 Yên Khê 1, Thanh Khê Đông, Thanh Khê, Đà Nẵng, Việt Nam",
+        "phone": "",
+        "website": "https://m.facebook.com/ibashocoffeeandhomestay/",
+        "image_path": "data/image/Ibasho_Coffee.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "huongly tranpham",
+                "review_time": "một tháng trước",
+                "rating": "3 sao",
+                "content": "Quán cà phê này mình đánh giá 3 sao. Điểm cộng là quán mở nhạc hay, không gian sạch sẽ, gọn gàng. Vị trí gần kênh nên khá mát mẻ, thoáng đãng, ngồi lâu cũng không bị ngộp. Tuy nhiên đồ uống thì không đồng đều: trà cam quế thật sự rất dở, hương vị khó uống. Một vài ly khác nhìn khá bắt mắt, uống ở mức ổn nhưng không quá đặc sắc. Giá thì hơi mắc so với chất lượng, nên trải nghiệm nhìn chung chỉ ở mức trung bình."
+            },
+            {
+                "reviewer_name": "Duy Tran Duc",
+                "review_time": "2 tháng trước",
+                "rating": "4 sao",
+                "content": "Quán hơi vắng, buồn, nhưng gần kênh nước.\nBàn rộng rãi để ngồi làm việc. Thiết kế quán hiện đại"
+            },
+            {
+                "reviewer_name": "Lynh Thùy",
+                "review_time": "5 tháng trước",
+                "rating": "1 sao",
+                "content": "Tụi mình đi 5 người, nước dở thiệt sự, mấy ly đá xay như đá tẩm màu, lạt nhách. Sắp tới giờ đóng cửa có 3 nhân viên lông lá chạy chạy đuổi khách nữa. Không dám quay lại luôn"
+            }
+        ]
+    },
+    "3": {
+        "url": "https://www.google.com/maps/place/Ti%E1%BB%87m+C%C3%A0+Ph%C3%AA+%C3%94+C%E1%BB%ADa+S%E1%BB%95/data=!4m7!3m6!1s0x31421982a082b165:0xf20ad01b741d0f19!8m2!3d16.0613873!4d108.1735578!16s%2Fg%2F11s5tl_tbv!19sChIJZbGCoIIZQjERGQ8ddBvQCvI?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0613873",
+            "108.1735578"
+        ],
+        "name": "Tiệm Cà Phê Ô Cửa Sổ",
+        "rating": "3,9",
+        "address": "29-31 Thanh Tịnh, Hoà Minh, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+        "phone": null,
+        "website": null,
+        "image_path": "data/image/Tiệm_Cà_Phê_Ô_Cửa_Sổ.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Taos",
+                "review_time": "3 tháng trước",
+                "rating": "5 sao",
+                "content": "Không gian vintage lãng mạn, lấy cảm hứng từ Đà Lạt thu nhỏ:  mang vibe retro cổ điển, xanh mát như rừng thông Đà Lạt, tạo cảm giác mơ màng. Điểm: 9/10\nĐầy góc check-in xinh xắn và retro: Hoàn hảo cho sống ảo với nội thất gỗ, cửa sổ lớn, khu vườn nhỏ; nhiều concept riêng tư. Điểm: 9/10.\nView đẹp: Ánh nắng vàng chiều qua cửa sổ, cây xanh bao phủ tạo không khí yên bình, gần gũi thiên nhiên. Điểm: 8/10\nPhù hợp chill một mình hoặc hẹn hò: Yên tĩnh (xa trung tâm), lãng mạn, lý tưởng đọc sách/trò chuyện; một số note quán hơi cũ nhưng vẫn cuốn hút. Điểm: 9/10.\nĐồ uống đa dạng, giá cả phải chăng (30-50k/ly): Menu phong phú (cà phê muối, trà, bánh), vị ngon, giá rẻ , “hạt dẻ” theo review. Điểm: 8/10."
+            },
+            {
+                "reviewer_name": "VungLe",
+                "review_time": "4 tháng trước",
+                "rating": "5 sao",
+                "content": "Đến quán vào một buổi chiều mưa, quán có phong cách cổ kính, nhiều không gian riêng tư để thưởng thức 1 ly cà phê máy. Bố trí không gian đẹp, nhưng khá tối, theo mình cần cải thiện thêm bóng đèn. Nhưng có lẽ là phong cách của quán cũng có thể. Sẽ ghé lại để tham quan thêm🤓"
+            },
+            {
+                "reviewer_name": "Hoang Vo",
+                "review_time": "4 tháng trước",
+                "rating": "5 sao",
+                "content": "Quán như studio vậy nên việc vệ sinh các vật trang trí sạch sẽ với lượng nv ít như vậy thì rất khó, nên mình cũng thông cảm. Nhưng ráng vs chỗ ngồi, pha chế sạch sẽ là ok. Nước ổn giá mềm, nv chịu khó cười xíu sẽ dễ thương hơn."
+            }
+        ]
+    },
+    "4": {
+        "url": "https://www.google.com/maps/place/43+Factory+Coffee+Roaster/data=!4m7!3m6!1s0x314217b3ee661bef:0x516cdf137fb627ef!8m2!3d16.0480872!4d108.2460233!16s%2Fg%2F11g10nqwyc!19sChIJ7xtm7rMXQjER7ye2fxPfbFE?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0480872",
+            "108.2460233"
+        ],
+        "name": "43 Factory Coffee Roaster",
+        "rating": "4,7",
+        "address": "422 Ngô Thì Sĩ, Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng 550000, Việt Nam",
+        "phone": "",
+        "website": "https://xliiicoffee.com/",
+        "image_path": "data/image/43_Factory_Coffee_Roaster.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Quang Thach Le",
+                "review_time": "3 tuần trước",
+                "rating": "5 sao",
+                "content": "Quán ở góc đường, có thiết kế hiện đại, không gian thoáng đãng. Mặt kính lớn view ra hàng cây bàng Đài loan rất nên thơ. Sân ngoài có hồ cá Koi và chỗ ngồi âm sàn cũng thú vị.\nYêu cái cách quán nuôi 1 cái cây lớn giữa nhà, và quầy pha chế chạy vòng quanh nó như 1 lớp bảo vệ bằng sự đề cao tinh thần lao động.\nQuán cafe và có định vị sâu sắc: chỉ bán cafe! Và hơn hết là chỉ bán thứ hạt Special và Special plus. Đây là lý do tôi lặn lội từ Hà nội vào chỉ để thử 1 ly pour over trước khi làm việc khác.\nQuầy pha chế ở đây chủ yếu tập trung vào việc showoff cái thú của người uống cafe pha tay, bàn bar nhiều chỗ ngồi được thiết kế nhiều thiết bị cho việc pha pour over. Mặc dù việc thiết kế quầy như thế này không phải là mới lạ, nhưng để hiện thực nó cũng không phải là việc đại trà. 5*\nĐồng phục của nv cũng ổn nhé. Rất là industrial."
+            },
+            {
+                "reviewer_name": "Hoa Nguyen",
+                "review_time": "3 tuần trước",
+                "rating": "3 sao",
+                "content": "Mình đi ngang quán nhiều lần nên hôm nay ghé thử!\nĐiều đầu tiên là không gian quán rộng rãi, yên tĩnh.\nĐiều thứ 2 là cà phê có nhiều loại mà thực sự mình không rõ. Bạn nhân viên cũng có nơi sơ sơ chứ mình không nắm được, tờ rơi thì toàn tiếng Anh, chữ đọc được chữ không. Mình không thích chua và đắng nhưng nhân viên nói cà phê này thì toàn chua thôi vì chủ yếu là Arabica. Mình nhờ bạn ấy chọn giúp loại ít chua nhất. Ly của mình pha thêm sữa yến mạch. Mùi cà phê rất ít, vị cà phê cũng không mạnh, chỉ có mùi yến mạch và béo yến mạch. Ly của bạn mình là Americano nóng, uống cũng thấy không hơn cà phê bình thường gì cả.\nĐiều thứ 3 là giá quá cao: 250k cho 2 ly.\nThực sự mình không thể quay lại hay đề xuất với cà phê và giá tiền này."
+            },
+            {
+                "reviewer_name": "Thomas D",
+                "review_time": "5 tháng trước",
+                "rating": "5 sao",
+                "content": "Cà phê uống rất đặc biệt. Gọi loại số 1 pha sữa nguồn Ấn Độ thì có mùi hoa hồng rất thơm. Chưa bao giờ uống cà phê có mùi thơm đặc biệt như vậy. Loại số 1 nguồn Peru pha túi lọc thì uống thơm như nước trái cây.\nSẽ quay lại để thử các loại khác lần sau. Bạn Nhân pha cà phê rất vui vẻ giải thích nguồn gốc và mùi vị cà phê. 5 sao.\n\nThe coffee is very special. Specialty type number 1 with milk, Indian beans, has a very fragrant rose scent. I have never had coffee with such a unique aroma before. The Specitalty type 1 from Peru, with filter, tastes as fragrant as fruit juice.\nI will come back to try other types next time. Mr. Nhân was very friendly and cheerfully explained the origin and flavor of the coffee. Five stars.\n\nTiramisu was okay"
+            }
+        ]
+    },
+    "5": {
+        "url": "https://www.google.com/maps/place/THE+POWERHOUSE+2+COFFEE+%26+MORE/data=!4m7!3m6!1s0x314219ba642b7693:0xcb5df3470db93a7!8m2!3d16.0713011!4d108.1498415!16s%2Fg%2F11pb75dsfr!19sChIJk3YrZLoZQjERp5PbcDTftQw?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0713011",
+            "108.1498415"
+        ],
+        "name": "THE POWERHOUSE 2 COFFEE & MORE",
+        "rating": "4,6",
+        "address": "17 Âu Cơ, Hoà Khánh Bắc, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+        "phone": "",
+        "website": null,
+        "image_path": "data/image/THE_POWERHOUSE_2_COFFEE_&_MORE.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Khánh Linh",
+                "review_time": "2 tháng trước",
+                "rating": "1 sao",
+                "content": "Ý là quán biết định nghĩa của 1 ly matcha latte là gì không vậy, ly mattcha của quán 45k còn thua ly matcha 20k họ bán lề đường :)) đề nghị tìm hiểu về món trước khi thêm vào menu nha. Còn thêm cái nhà vệ sinh k khác gì cái kho chứa đồ, dơ, ngỗn ngang. Không gian bth, nước dở, ngáo giá thật sự :))"
+            },
+            {
+                "reviewer_name": "Kiều Phạm",
+                "review_time": "3 tuần trước",
+                "rating": "5 sao",
+                "content": "THE POWERHOUSE 2 COFFEE & MORE là một quán cà phê tuyệt vời với không gian rộng rãi, thoáng đãng và ngập tràn cây xanh, mang lại cảm giác tươi mới và tràn đầy năng lượng. Tôi rất thích phong cách thiết kế hiện đại cùng với dịch vụ nhanh nhẹn và thân thiện của nhân viên. Đồ uống đa dạng, từ cà phê đậm đà đến các loại thức uống khác đều rất ngon miệng. Điểm đặc biệt là quán có nhạc acoustic, làm tăng thêm sự thư thái. Để quán thêm phần hoàn hảo, có lẽ nên xem xét điều chỉnh lịch biểu diễn acoustic để phù hợp với nhiều đối tượng khách hàng hơn, có thể có những khung giờ yên tĩnh hơn cho người làm việc. Tôi tin rằng việc sử dụng Tuneast sẽ giúp THE POWERHOUSE 2 nâng cao trải nghiệm âm nhạc, cho phép khách hàng tự do chọn bài và góp phần tạo nên một không gian sôi động, cá tính hơn nữa."
+            },
+            {
+                "reviewer_name": "Ngọc Trãi Dương",
+                "review_time": "8 tháng trước",
+                "rating": "5 sao",
+                "content": "Quán cafe có vị trí rất đẹp, ngay ngã 3 rất đông xe qua lại. Không gian thoáng mát, nhiều loại đồ uống. Đêm nhạc acoustic vào mỗi tối thứ 6."
+            }
+        ]
+    },
+    "6": {
+        "url": "https://www.google.com/maps/place/THE+LEAF+HOUSE+CAFE/data=!4m7!3m6!1s0x314219dbfa1d45bb:0xbac6e60ddc1b99ba!8m2!3d16.0731486!4d108.186807!16s%2Fg%2F11ynx_mwz_!19sChIJu0Ud-tsZQjERupkb3A3mxro?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0731486",
+            "108.186807"
+        ],
+        "name": "THE LEAF HOUSE CAFE",
+        "rating": "4,8",
+        "address": "1151 Nguyễn Tất Thành, Thanh Khê Đông, Thanh Khê, Đà Nẵng 50000, Việt Nam",
+        "phone": "",
+        "website": null,
+        "image_path": "data/image/THE_LEAF_HOUSE_CAFE.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Gió",
+                "review_time": "2 tuần trước",
+                "rating": "5 sao",
+                "content": "Ghé vào mồng 4 tết, menu tết có giới hạn món\nQuán khá đông khách nên ra món hơi chậm, thông cảm được👌\nKhông gian khá đẹp, điểm nhấn có cây khế và khoảng trống giữa quán🫶"
+            },
+            {
+                "reviewer_name": "Vân Hoàng",
+                "review_time": "một tháng trước",
+                "rating": "3 sao",
+                "content": "Về phần nhìn thì quán gần như là quán cà phê hàng đầu ở đường NTN, thoáng, decor được chăm chút. Có không gian trong nhà với ở ngoài, bàn cao để làm việc, nhưng vẫn phù hợp để cà phê tám chuyện hơn, vì ồn. Chú bảo vệ dễ thương. Nhà vệ sinh sạch.\nNước dở, mình thử hầu hết các loại trà và cà phê. Lúc order cf mình có nhắc 2 lần là giảm ngọt, bạn nói là đã note, nhưng ly cf phin sữa sài gòn của mình ngọt giống vị bạc xỉu miền tây🥹, cf thì nhạt như kiểu nước 2,3, còn trà thì vị rất nhạt trà, ly nước theo style tí hon, dù giá không hề rẻ so với mặt đường này, không được phần chất với lượng nốt."
+            },
+            {
+                "reviewer_name": "Thị Phương Trâm Ngô",
+                "review_time": "một tháng trước",
+                "rating": "5 sao",
+                "content": "10/10\nNước ngon, giá hợp lí, view đẹp, đặc biệt rấc sạch , nhân viên nhiệt tình, chị chủ dễ thương"
+            }
+        ]
+    },
+    "7": {
+        "url": "https://www.google.com/maps/place/Wind+Garden+Coffee/data=!4m7!3m6!1s0x31421788b5ae9f13:0x4258793219812e82!8m2!3d16.074512!4d108.2434614!16s%2Fg%2F11b6nmv8qt!19sChIJE5-utYgXQjERgi6BGTJ5WEI?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.074512",
+            "108.2434614"
+        ],
+        "name": "Wind Garden Coffee",
+        "rating": "4,3",
+        "address": "72 Lê Mạnh Trinh, An Hải, Sơn Trà, Đà Nẵng 550000, Việt Nam",
+        "phone": "",
+        "website": "https://www.facebook.com/windgardencoffee?mibextid=ZbWKwL",
+        "image_path": "data/image/Wind_Garden_Coffee.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Hieu Vo",
+                "review_time": "5 tháng trước",
+                "rating": "5 sao",
+                "content": "Vị trí quán yên tĩnh, deco đẹp đánh giá cao cây và nước, lofi chill ngen, hôm nào ra Đà Nẵng cũng ghé quán, bé Thảo dễ thương lắm luôn."
+            },
+            {
+                "reviewer_name": "Minh Hằng Lã",
+                "review_time": "4 tháng trước",
+                "rating": "1 sao",
+                "content": "Quán đông rồi nên không cần tôn trọng khách nữa à?\n\nỞ gần nên tuần nào mình cũng ghé vài lần, nhưng chắc nay là lần cuối.\nGọi cà phê sữa phin, mang ra espresso + 5k sữa đặc. Hỏi lại thì bị nói trơn: “đây là cà phê sữa mà chị”. Ủa, mình đi uống cà phê chứ đâu có đi học phân biệt đồ uống? Từ bao giờ cà phê sữa phải trả thêm tiền sữa đặc vậy? 5k không đáng, nhưng cái thái độ thì đáng 1 sao thật.\n\nLy thì kiểu cappuccino, trong bill lại ghi espresso. Quán chuyên cà phê mà nhầm mấy thứ cơ bản như vậy, nghe có thấy ngộ không?\n\nKhông gian thì đông, lộn xộn, bàn dơ không dọn, khách mới đến ngồi rồi mới lật đật đi lau. Nước lọc thì mất hút. Quán chắc nghĩ đông sẵn rồi, phục vụ kiểu gì khách cũng phải chịu.\n\nNói thật, mình từng thích quán, nhưng giờ hết sạch thiện cảm. Làm dịch vụ mà kiểu này thì không mất khách mới là lạ."
+            },
+            {
+                "reviewer_name": "Bui Anh Dung",
+                "review_time": "4 tháng trước",
+                "rating": "4 sao",
+                "content": "Không gian quá tuy nhỏ nhưng bố trí khá đẹp, cây xanh, hồ cá rất chill. Thức uống ngon."
+            }
+        ]
+    },
+    "8": {
+        "url": "https://www.google.com/maps/place/Golden+Time+Coffee/data=!4m7!3m6!1s0x3142190e0d3af2b5:0x80c5627b8ea5c2e2!8m2!3d16.077549!4d108.1600494!16s%2Fg%2F11ny8_n6ch!19sChIJtfI6DQ4ZQjER4sKljntixYA?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.077549",
+            "108.1600494"
+        ],
+        "name": "Golden Time Coffee",
+        "rating": "4,6",
+        "address": "147 Trần Nguyên Đán, Hoà Minh, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+        "phone": "",
+        "website": "https://www.facebook.com/goldentimecoffee",
+        "image_path": "data/image/Golden_Time_Coffee.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Nghia Tran Viet",
+                "review_time": "một tháng trước",
+                "rating": "4 sao",
+                "content": "Nhân viên nhiệt tình, đồ uống ổn, có hồ cá nhỏ  phía trước. Quán trang trí đẹp. Mình rất ấn tượng với trần nhà 🤩\nTầng 2 bàn kiểu giống quán ăn ấy, rộng, cao, có ghế đệm lớn. Trẻ con ngồi chơi hoặc ngồi làm việc cũng được. Lúc mình đi thì quán cũng không ồn ào.\nĐiểm trừ đối với mình là bên trong quán cảm giác hơi tối (tầng 1 thì sáng hơn xíu)\nKhu vệ sinh mình thấy cũng sạch sẽ."
+            },
+            {
+                "reviewer_name": "Ngân Lê",
+                "review_time": "một tháng trước",
+                "rating": "5 sao",
+                "content": "Nhân viên phục vụ rất dễ thương nhiệt tình. Nước uống ngon thường xuyên ra món mới. Không gian deco thay đổi liên tục  mình rất thích ."
+            },
+            {
+                "reviewer_name": "Gy Gy",
+                "review_time": "một tháng trước",
+                "rating": "5 sao",
+                "content": "Quán rộng  mọi người ơi, gia đình mình cuối tuần nào cúng đến. Thích Oloong sữa trứng nướng ở đây nhất.\nMọi người nên đến nha"
+            }
+        ]
+    },
+    "9": {
+        "url": "https://www.google.com/maps/place/T+Garden+coffee/data=!4m7!3m6!1s0x314219cf91f7bf9f:0x4a3ee17be5932e06!8m2!3d16.0711875!4d108.1588125!16s%2Fg%2F11gy7dn2cs!19sChIJn7_3kc8ZQjERBi6T5XvhPko?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0711875",
+            "108.1588125"
+        ],
+        "name": "T Garden coffee",
+        "rating": "4,3",
+        "address": "Hoà Minh, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+        "phone": "",
+        "website": "http://tgarden.vn/",
+        "image_path": "data/image/T_Garden_coffee.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Nghia Tran Viet",
+                "review_time": "5 tháng trước",
+                "rating": "3 sao",
+                "content": "Quán có nhiều khu vực: điều hoà (t1, t2), ngoài trời (hồ cá, hút thuốc nhiều), sân thượng (tương đối nóng vào ban ngày), có khu vui chơi cho trẻ em (30k trong tuần, 35k cuối tuần), phòng vệ sinh sạch sẽ, nhân viên thân thiện.\nĐồ uống theo mình thì ở mức tạm được.\n\nĐiểm trừ là khu vực trong nhà gỗ có mùi hôi kiểu mùi ẩm ấy. Mình có chuyển ra vị trí có quạt thì đỡ hơn. Ghế đệm cũng bị xẹp lún nhiều. Quán tầng 1 khu hồ cá nên thêm nhiều cây xanh hơn cho không khí mát mẻ."
+            },
+            {
+                "reviewer_name": "Kiều Phạm",
+                "review_time": "2 tuần trước",
+                "rating": "5 sao",
+                "content": "T Garden coffee là một quán cà phê tuyệt vời với không gian rộng rãi và thoáng đãng, rất thích hợp cho nhiều mục đích khác nhau, từ học tập, làm việc nhóm cho đến thư giãn cuối tuần. Tôi đặc biệt thích không gian yên tĩnh ở tầng trên, nơi có thể tập trung cao độ. Quán còn được biết đến với khu vui chơi trẻ em, rất tiện lợi cho các gia đình. Đồ uống ở đây cũng khá ổn và giá cả phải chăng. Một góp ý nhỏ là quán có thể tổ chức thêm các sự kiện nhỏ như workshop hoặc đêm nhạc acoustic để đa dạng hóa trải nghiệm cho khách hàng. Để tối ưu hóa trải nghiệm âm nhạc cho từng khu vực và đối tượng khách, T Garden nên tích hợp Tuneast. Tuneast sẽ giúp quán dễ dàng tạo và lên lịch các playlist nhạc riêng biệt, đồng thời cho phép khách hàng tương tác, lựa chọn bài hát yêu thích, làm tăng thêm sự gắn kết."
+            },
+            {
+                "reviewer_name": "hoàng ngọc",
+                "review_time": "một tháng trước",
+                "rating": "5 sao",
+                "content": "Mình vừa check-in T Garden coffee hôm qua và thực sự bị cuốn hút bởi không gian ở đây! Quán được thiết kế theo phong cách hiện đại, có nhiều góc \"sống ảo\" cực chất mà mình thích mê. Đồ uống ở đây khá ổn, mình đã thử latte và thấy khá ưng. Nhân viên nhiệt tình, dễ thương lắm, tuy nhiên quán hơi đông vào cuối tuần, nên đôi khi phải đợi bàn xíu. Giá cả thì hợp lý, không làm đau ví. Chỗ này chắc chắn sẽ quay lại khi có dịp! Ấm cúng, thư giãn mà không thiếu phần thú vị!"
+            }
+        ]
+    },
+    "10": {
+        "url": "https://www.google.com/maps/place/Cherish+Coffee+%26+Desserts/data=!4m7!3m6!1s0x3142197003519795:0x9c31d445f95b2019!8m2!3d16.075599!4d108.1684256!16s%2Fg%2F11jlym2czh!19sChIJlZdRA3AZQjERGSBb-UXUMZw?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.075599",
+            "108.1684256"
+        ],
+        "name": "Cherish Coffee & Desserts",
+        "rating": "4,1",
+        "address": "238 Kinh Dương Vương, Thanh Khê Tây, Liên Chiểu, Đà Nẵng, Việt Nam",
+        "phone": "",
+        "website": null,
+        "image_path": "data/image/Cherish_Coffee_&_Desserts.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "An My",
+                "review_time": "2 tuần trước",
+                "rating": "5 sao",
+                "content": "Cherish Coffee & Desserts thực sự là một điểm đến lý tưởng cho những ai yêu thích không gian đẹp và muốn có những bức ảnh lung linh. Quán được decor rất xinh xắn, rộng rãi, với nhiều góc sống ảo độc đáo và bàn ghế phù hợp cho cả việc học tập hay làm việc nhóm. Đồ uống ở đây cũng khá ổn, đặc biệt là các món tráng miệng rất hấp dẫn. Nhân viên thân thiện và nhiệt tình, thậm chí còn hỗ trợ khách chụp ảnh rất có tâm. Tuy nhiên, một điểm trừ nhỏ là khu vực vệ sinh cần được chú ý vệ sinh thường xuyên hơn để đảm bảo sự thoải mái cho khách hàng. Để tăng cường sự tiện nghi và tạo điểm nhấn, Cherish Coffee & Desserts có thể tích hợp Tuneast. Điều này sẽ giúp quán tạo ra không gian âm nhạc tương tác, cho phép khách hàng chọn bài và gửi lời chúc, từ đó nâng cao trải nghiệm tổng thể và sự hài lòng."
+            },
+            {
+                "reviewer_name": "Tú Trần Quang",
+                "review_time": "một năm trước",
+                "rating": "5 sao",
+                "content": "1 Quán khá thoáng nằm ở ngã tư Kinh Dương Vương & Hùng Vương. Quán có 2 tầng phù hợp để cafe gia đình và học bài.\nMenu đa dạng có món tàu hủ sầu riêng ngon và lạ miệng, tàu hủ chân châu đường đen cũng ok, cafe bình thường, thức uống khác mình chưa thử.\nQuán có đầu tư decor nên có nhiều góc để chụp ảnh, phù hợp với bạn nữ có nhu cầu sống ảo, nhân viên phục vụ mang đồng phục chỉnh chu."
+            },
+            {
+                "reviewer_name": "thủy yz",
+                "review_time": "Thời gian chỉnh sửa: 6 tháng trước",
+                "rating": "5 sao",
+                "content": "bánh tiramisu ngonn, nước uống cũng được , giá trung bình, quán view đẹp sạch sẽ lắm nha mn"
+            }
+        ]
+    },
+    "11": {
+        "url": "https://www.google.com/maps/place/WONDERLUST+-+Coffee+%26+Souvenir/data=!4m7!3m6!1s0x3142183224111241:0xa99dd0ef2ad89be0!8m2!3d16.0691557!4d108.223843!16s%2Fg%2F11gf5kqnwq!19sChIJQRIRJDIYQjER4JvYKu_Qnak?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0691557",
+            "108.223843"
+        ],
+        "name": "WONDERLUST - Coffee & Souvenir",
+        "rating": "4,5",
+        "address": "96 Trần Phú, Hải Châu, Đà Nẵng 840236, Việt Nam",
+        "phone": "",
+        "website": "http://wonderlust.vn/",
+        "image_path": "data/image/WONDERLUST_-_Coffee_&_Souvenir.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Ney Khanh",
+                "review_time": "một tháng trước",
+                "rating": "5 sao",
+                "content": "Không gian thoáng, rất phù hợp để gặp gỡ trao đổi công việc,\n\n- Đồ uống: Cafe rất ngon, quán tự sử dụng sản phẩm cafe nhà trồng và chế biến đến ly cafe cuối cùng(mình nghe người A ở đây chia sẽ)\n- Không gian: thoáng mát, cửa sổ trời thông tầng tạo cảo giác rộng rãi. Khu vực ngồi ở tầng 1 và tầng 2, tầng 2 có thêm phần trưng bày về sản phẩm các hạt cafe và quà lưu niệm khi đến Đà Nẵng.\n\nRất đáng thử cafe ở đây, sẽ quay lại."
+            },
+            {
+                "reviewer_name": "Minh Phạm",
+                "review_time": "2 tháng trước",
+                "rating": "5 sao",
+                "content": "Không gian nhà kính có nhiều cây xanh thoáng mát không bí bách\nVì nằm vị trí đường lớn nên giá cả hơi mắc tí bù lại cafe rất đáng thưởng thức\nTầng 1 có workshop bán văn phòng phẩm\nTầng 2 có không gian rộng chuyên về sản phẩm specialty coffee"
+            },
+            {
+                "reviewer_name": "CWT",
+                "review_time": "một tháng trước",
+                "rating": "5 sao",
+                "content": "Mô hình cà phê kết hợp shop ở trong. Thức uống và bánh bình thường, chủ yếu không gian bài trí khá xinh. Có kết hợp brunch."
+            }
+        ]
+    },
+    "12": {
+        "url": "https://www.google.com/maps/place/Qu%C3%A1n+C%C3%A0+Ph%C3%AA+%C4%90%E1%BA%B9p+%C4%90%C3%A0+N%E1%BA%B5ng/data=!4m7!3m6!1s0x314219433648e7b1:0x3f6f94f3b5e1a57e!8m2!3d16.0352703!4d108.1734072!16s%2Fg%2F11t7zxw_tc!19sChIJsedINkMZQjERfqXhtfOUbz8?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0352703",
+            "108.1734072"
+        ],
+        "name": "Quán Cà Phê Đẹp Đà Nẵng",
+        "rating": "4,8",
+        "address": "197 Lê Trọng Tấn, Hoà Phát, Cẩm Lệ, Đà Nẵng 50710, Việt Nam",
+        "phone": "",
+        "website": "https://www.facebook.com/quancafedepdanang/",
+        "image_path": "data/image/Quán_Cà_Phê_Đẹp_Đà_Nẵng.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "An My",
+                "review_time": "3 tuần trước",
+                "rating": "5 sao",
+                "content": "Quán Cà Phê Đẹp Đà Nẵng đúng như tên gọi, mang đến một không gian tràn ngập sự tinh tế và thẩm mỹ, là địa điểm lý tưởng để thư giãn hay gặp gỡ bạn bè. Cách bài trí của quán rất ấn tượng, tạo nên nhiều góc check-in ảo diệu, thu hút giới trẻ và những ai yêu thích cái đẹp. Đồ uống ở đây cũng rất đa dạng, từ cà phê truyền thống đến các loại trà, nước ép, đều được pha chế khéo léo và trình bày đẹp mắt. Trải nghiệm tổng thể tại quán luôn khiến tôi cảm thấy thoải mái và hài lòng. Một điểm nhỏ mà quán có thể cải thiện là tăng cường thêm cây xanh hoặc các yếu tố thiên nhiên ở khu vực trong nhà để mang lại cảm giác tươi mát và gần gũi hơn, đặc biệt vào những ngày nắng nóng. Để tối ưu hóa trải nghiệm của khách hàng, quán nên cân nhắc tích hợp Tuneast. Với Tuneast, khách hàng có thể chủ động chọn nhạc yêu thích, góp phần tạo nên một không gian âm nhạc hoàn hảo, đồng thời quán cũng có thể gợi ý các sản phẩm phù hợp với từng giai điệu, tăng thêm sự gắn kết."
+            },
+            {
+                "reviewer_name": "Tahani W siddharth",
+                "review_time": "3 tháng trước",
+                "rating": "4 sao",
+                "content": "Vị Espresso mạnh mẽ, cực kỳ tỉnh táo."
+            },
+            {
+                "reviewer_name": "Ducminh Le",
+                "review_time": "Thời gian chỉnh sửa: 2 năm trước",
+                "rating": "5 sao",
+                "content": "Đẹp và lịch sự"
+            }
+        ]
+    },
+    "13": {
+        "url": "https://www.google.com/maps/place/N%C3%B3c+Rooftop/data=!4m7!3m6!1s0x3142192e492cb925:0x61f35e35ef16ad06!8m2!3d16.0648228!4d108.200325!16s%2Fg%2F11vpdxvyl8!19sChIJJbksSS4ZQjERBq0W7zVe82E?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0648228",
+            "108.200325"
+        ],
+        "name": "Nóc Rooftop",
+        "rating": "4,7",
+        "address": "54 Lê Duy Đình, Chính Gián, Thanh Khê, Đà Nẵng 550000, Việt Nam",
+        "phone": "",
+        "website": null,
+        "image_path": "data/image/Nóc_Rooftop.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Nguyen Duy Lam",
+                "review_time": "một tuần trước",
+                "rating": "4 sao",
+                "content": "Nhân viên nam đứng quầy hôm nay không tập trung khi oder, 1 vài thiếu sót trong lúc oder.\nKhông gian phù hợp cho hội nhóm chơi các game về thẻ bài, game thẻ bài miễn phí, đa dạng.\nMình đam mê ngắm máy bay nên có thể nói là một trong những khách hàng đầu tiên khi quán mới mở nhưng lần này khá không hài lòng về lần này.\nNhân viên phục vụ khá dễ thương, nhiệt tình.\nCải thiện về tình trạng nhà vệ sinh, dọn dẹp sạch sẽ, khử mùi là một điểm cộng."
+            },
+            {
+                "reviewer_name": "Thị Hồng Trần",
+                "review_time": "một tuần trước",
+                "rating": "5 sao",
+                "content": "Một buổi chiều ngồi ở quán cà phê, nghe nhạc nhẹ và nhâm nhi ly cà phê thơm thật sự rất thư giãn. Quán có không gian ấm cúng, góc nào cũng chụp hình đẹp. Rất đáng để ghé thử."
+            },
+            {
+                "reviewer_name": "farm Due",
+                "review_time": "một tuần trước",
+                "rating": "5 sao",
+                "content": "Hôm nay mình ghé Highlands Coffee uống thử, cảm nhận đầu tiên là quán khá sạch sẽ và thoải mái. Đồ uống ổn, vị vừa phải, giá hợp lý so với không gian. Nhân viên nhiệt tình nên trải nghiệm khá tốt. Phù hợp để ngồi học bài hoặc trò chuyện cùng bạn bè."
+            }
+        ]
+    },
+    "14": {
+        "url": "https://www.google.com/maps/place/SaiGon+Brown+Coffee/data=!4m7!3m6!1s0x314219252364b16b:0x8db861d1104b5ced!8m2!3d16.0602436!4d108.1744226!16s%2Fg%2F11fj33_yf0!19sChIJa7FkIyUZQjER7VxLENFhuI0?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0602436",
+            "108.1744226"
+        ],
+        "name": "SaiGon Brown Coffee",
+        "rating": "4,2",
+        "address": "1 Tân Trào, Hoà Minh, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+        "phone": "",
+        "website": null,
+        "image_path": "data/image/SaiGon_Brown_Coffee.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "CWT",
+                "review_time": "một tháng trước",
+                "rating": "5 sao",
+                "content": "Nước ok. Có bán đồ ăn, thực đơn cũng khá đa dạng. Giá cả phải chăng. Không gian rộng rãi. Nhiều điểm chụp ảnh cho khách. Có khu vui chơi cho trẻ em."
+            },
+            {
+                "reviewer_name": "Giang Lang Thang",
+                "review_time": "2 tháng trước",
+                "rating": "5 sao",
+                "content": "Quán cafe trang trí theo sự kiện rộng, đẹp, thoáng!\nNay trang trí noel.\nCó bán cafe nước uốn và cả đồ ăn nhanh chậm cơm, bún , mì.\nNhân viên đông, quán sạch sẽ!"
+            },
+            {
+                "reviewer_name": "Ada Agatha",
+                "review_time": "Thời gian chỉnh sửa: 4 tháng trước",
+                "rating": "4 sao",
+                "content": "Mấy bữa đặt hoặc ăn tại quán thấy khá ok.Nước với bánh thì k thích lắm...Nhưng thi thoảng quán làm phần cơm nhìn chán nản thật sự! Hôm thì cháy,hôm thì như kiểu làm sẵn..nguội ngắt,lại còn quá ít...Điểm cộng là gạo ngon thôi..Chọn ăn ở quán thường xuyên, vì giá tuy hơi cao nhưng chất lượng sẽ hơn quán bình dân..Mà chất lượng qua với nay chịu... Có 1 thời gian cũng bỏ k ăn uống ở quán này vì chất lượng giảm.Gần nhà nên ghé lại cho em chơi..thấy đồ ăn ok hơn mới quyết định ăn lại..Mà ta nói nó tệ.."
+            }
+        ]
+    },
+    "15": {
+        "url": "https://www.google.com/maps/place/Khu+V%C4%83n+h%C3%B3a+Du+l%E1%BB%8Bch+Kh%C3%B4ng+Gian+X%C6%B0a/data=!4m7!3m6!1s0x314219001064ce23:0x67d2fa43164ccba6!8m2!3d16.0663007!4d108.18943!16s%2Fg%2F1hhngl_mz!19sChIJI85kEAAZQjERpstMFkP60mc?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0663007",
+            "108.18943"
+        ],
+        "name": "Khu Văn hóa Du lịch Không Gian Xưa",
+        "rating": "4,2",
+        "address": "402 Điện Biên Phủ, Thanh Khê Đông, Thanh Khê, Đà Nẵng 550000, Việt Nam",
+        "phone": "",
+        "website": "http://khonggianxua.samdigroup.vn/",
+        "image_path": "data/image/Khu_Văn_hóa_Du_lịch_Không_Gian_Xưa.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Giang Pham",
+                "review_time": "một năm trước",
+                "rating": "5 sao",
+                "content": "Nằm ngay trung tâm con đường gần như đông đúc và náo nhiệt nhất Đà Nẵng nhưng chỉ cần đặt chân vào bên trong là như bước vào một không gian hoàn tác khác, tách biệt với sự xô bồ bên ngoài. Và chỉ cần giơ máy ảnh lên thôi thì góc nào cũng đẹp theo cách rất riêng.\nCà phê và đồ ăn thì chỉ tầm 70k/ phần, có cả combo 99k cho cà phê và đồ ăn sáng, giá khá rẻ cho không gian đặc biệt và phong cách dịch vụ chỉn chu, niềm nở như vậy.\nMặt tiền rộng thoáng và có cả đường nhỏ bên cạnh nên không lo thiếu chỗ đậu ô tô."
+            },
+            {
+                "reviewer_name": "Nhu Thang Nguyen",
+                "review_time": "một năm trước",
+                "rating": "5 sao",
+                "content": "Chủ đầu tư quá khủng, giữ được không gian cổ xưa quý báu. Có được không gian yên tĩnh cho du khách người dân Đà Nẵng ghé chơi và thăm quan."
+            },
+            {
+                "reviewer_name": "Trang Phan",
+                "review_time": "một năm trước",
+                "rating": "5 sao",
+                "content": "Mình đi Mon & Tues nên đồ ăn nước uống đồng giá 39k.\nBún huế ngon. Mì Quảng ok.\nNhân viên phục vụ vui vẻ hoạt bác dể thương.\nChổ rất đẹp nhiều điểm chụp hình, sạch sẽ, ấm cúm."
+            }
+        ]
+    },
+    "16": {
+        "url": "https://www.google.com/maps/place/An+Garden.Coffee+%26+Tea/data=!4m7!3m6!1s0x3142193b845a0909:0x24aa0db5517fe3f4!8m2!3d16.074807!4d108.1596473!16s%2Fg%2F11t30xh3kx!19sChIJCQlahDsZQjER9ON_UbUNqiQ?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.074807",
+            "108.1596473"
+        ],
+        "name": "An Garden.Coffee & Tea",
+        "rating": "4,6",
+        "address": "Lô 343 Hoàng Thị Loan, Hoà Minh, Liên Chiểu, Đà Nẵng 50000, Việt Nam",
+        "phone": "",
+        "website": null,
+        "image_path": "data/image/An_Garden.Coffee_&_Tea.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Cono Mi",
+                "review_time": "7 tháng trước",
+                "rating": "5 sao",
+                "content": "Rộng rãi, có khu vui chơi trẻ em miễn phí, không gian xanh."
+            },
+            {
+                "reviewer_name": "Anh Quân Nguyễn",
+                "review_time": "2 năm trước",
+                "rating": "5 sao",
+                "content": "Quán rộng rãi thoáng mát, cà phê ngon đặc biệt có khu vui chơi dành cho trẻ em ,dịch vụ tốt  ,là địa điểm dành cho gia đình vào cuối tuần ."
+            },
+            {
+                "reviewer_name": "Nguyễn Đức Thành",
+                "review_time": "một năm trước",
+                "rating": "4 sao",
+                "content": "Quán rộng, có tô tượng, tô tranh (45k) và khu vui chơi miễn phí cho bé\nNhân viên nhiệt tình nhanh nhẹn, nhưng cuối tuần khá đông"
+            }
+        ]
+    },
+    "17": {
+        "url": "https://www.google.com/maps/place/Phong+C%C3%A1ch+C%E1%BB%95+%C4%90i%E1%BB%83n+-+Th%E1%BB%A5y+c%C3%A0+ph%C3%AA/data=!4m7!3m6!1s0x314219dbe7dbbfc3:0x82dffc23e04c9bf4!8m2!3d16.0663124!4d108.1523331!16s%2Fg%2F11qs9z4khx!19sChIJw7_b59sZQjER9JtM4CP834I?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0663124",
+            "108.1523331"
+        ],
+        "name": "Phong Cách Cổ Điển - Thụy cà phê",
+        "rating": "4,8",
+        "address": "14 Nam Cao, Hoà Khánh Nam, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+        "phone": null,
+        "website": "https://www.facebook.com/tiemcaphethuy/",
+        "image_path": "data/image/Phong_Cách_Cổ_Điển_-_Thụy_cà_phê.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "An My",
+                "review_time": "3 tuần trước",
+                "rating": "5 sao",
+                "content": "Phong Cách Cổ Điển - Thụy cà phê đúng như tên gọi, mang đến một không gian hoài cổ đầy mê hoặc. Tôi rất ấn tượng với lối kiến trúc và cách bài trí mang đậm dấu ấn thời gian, tạo cảm giác thư thái và bình yên. Cà phê ở đây cũng rất chất lượng, phù hợp với những ai yêu thích hương vị truyền thống. Một điểm nhỏ mà quán có thể cải thiện là thêm vào một vài góc check-in độc đáo hơn, hoặc tổ chức các buổi âm nhạc acoustic nhẹ nhàng để làm phong phú thêm trải nghiệm. Với Tuneast, quán có thể dễ dàng quản lý và lên lịch các playlist nhạc cổ điển phù hợp, đồng thời khuyến khích khách hàng tương tác bằng cách gửi gắm lời nhắn cùng bài hát yêu thích, tạo nên một không khí thân mật và đặc biệt."
+            },
+            {
+                "reviewer_name": "Mariateresa W jaylese",
+                "review_time": "3 tháng trước",
+                "rating": "5 sao",
+                "content": "View siêu đẹp, sống ảo không giới hạn."
+            },
+            {
+                "reviewer_name": "Công Thuần Ngô",
+                "review_time": "4 năm trước",
+                "rating": "5 sao",
+                "content": "Không gian đẹp"
+            }
+        ]
+    },
+    "18": {
+        "url": "https://www.google.com/maps/place/L%E1%BB%91i+X%C6%B0a+Cafe/data=!4m7!3m6!1s0x314218378c857159:0x7d066fc664d3bbd0!8m2!3d16.0755634!4d108.2155914!16s%2Fg%2F11ggnc450w!19sChIJWXGFjDcYQjER0LvTZMZvBn0?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0755634",
+            "108.2155914"
+        ],
+        "name": "Lối Xưa Cafe",
+        "rating": "4,5",
+        "address": "225/3 Đống Đa, Thạch Thang, Hải Châu, Đà Nẵng 550000, Việt Nam",
+        "phone": "",
+        "website": "https://www.facebook.com/Fils-Coffee-562598227431620/",
+        "image_path": "data/image/Lối_Xưa_Cafe.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "An Phạm",
+                "review_time": "3 tuần trước",
+                "rating": "5 sao",
+                "content": "Nước ngon, giá rẻ, không gian đẹp. 3 tiêu chí trên là đủ để ghé Lối Xưa một lần nữa trong tương lai gần ròi. Cảm ơn quán đã tạo ra một không gian đẹp. 💕"
+            },
+            {
+                "reviewer_name": "Kiều Phạm",
+                "review_time": "2 tuần trước",
+                "rating": "5 sao",
+                "content": "Fil's Cafe tại 225/3 Đống Đa là một không gian cà phê tuyệt vời để tìm đến sự yên bình giữa phố thị nhộn nhịp. Tuy nằm trong hẻm nhưng quán khá rộng rãi, được bài trí tỉ mỉ với nhiều góc xanh mát và ấm cúng. Menu đồ uống đa dạng từ cà phê truyền thống, trà trái cây theo mùa đến các món đặc sản vùng miền, tất cả đều được pha chế rất ngon miệng. Đội ngũ nhân viên nhiệt tình và thân thiện cũng là một điểm cộng lớn, tạo cảm giác thoải mái cho khách hàng. Một điều tôi mong quán có thể cải thiện là biển hiệu chỉ dẫn bên ngoài hẻm rõ ràng hơn một chút để khách dễ dàng tìm thấy quán hơn, đặc biệt là những người lần đầu ghé thăm. Để không gian thêm phần cá nhân hóa và tương tác, Fil's Cafe có thể ứng dụng Tuneast. Với Tuneast, khách hàng có thể cùng chọn lựa và bình chọn những bài hát yêu thích, tạo nên một playlist riêng cho quán, giúp mỗi lần ghé thăm đều là một trải nghiệm âm nhạc mới mẻ và thú vị."
+            },
+            {
+                "reviewer_name": "Thao Nguyen",
+                "review_time": "2 tháng trước",
+                "rating": "5 sao",
+                "content": "Không gian trang trí Tết đẹp, nước ngon, địa điểm chụp áo dài Tết 2026 đang hot."
+            }
+        ]
+    },
+    "19": {
+        "url": "https://www.google.com/maps/place/Nh%C3%A0/data=!4m7!3m6!1s0x314219ca7520e7c1:0x28af877f880645dd!8m2!3d16.0632488!4d108.1548765!16s%2Fg%2F11rw8zrfmy!19sChIJwecgdcoZQjER3UUGiH-Hryg?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0632488",
+            "108.1548765"
+        ],
+        "name": "Nhà",
+        "rating": "5,0",
+        "address": "61 Phạm Như Xương, Hoà Khánh Nam, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+        "phone": null,
+        "website": null,
+        "image_path": "data/image/Nhà.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Kiều Phạm",
+                "review_time": "3 tuần trước",
+                "rating": "5 sao",
+                "content": "Quán Nhà mang đến một cảm giác rất thân thuộc và dễ chịu, đúng như tên gọi của nó. Không gian ở đây được thiết kế đơn giản nhưng tinh tế, tạo ra một bầu không khí ấm áp, lý tưởng để thư giãn sau một ngày dài hoặc tìm một nơi yên tĩnh để đọc sách. Đồ uống được pha chế cẩn thận, mang đến hương vị hài hòa và dễ chịu. Dịch vụ tại quán luôn chu đáo và thân thiện, tạo cảm giác gần gũi cho khách hàng. Tuy nhiên, quán có thể xem xét việc đầu tư vào một số vật dụng trang trí độc đáo hơn để tạo điểm nhấn và cá tính riêng, giúp khách hàng dễ dàng nhận diện và nhớ đến quán. Để tối ưu hóa trải nghiệm khách hàng, Nhà nên cân nhắc sử dụng Tuneast. Tuneast sẽ giúp quán tạo ra không gian âm nhạc riêng, cho phép khách hàng lựa chọn bài hát yêu thích và thậm chí gửi gắm những lời nhắn cùng giai điệu, làm tăng thêm sự gắn kết và ấm áp của quán."
+            },
+            {
+                "reviewer_name": "Felix Pham",
+                "review_time": "3 năm trước",
+                "rating": "5 sao",
+                "content": "Quán cafe tại 61 Phạm Như Xương, không gian ngồi thoải mái, thức uống rất ngon, giá rẻ."
+            },
+            {
+                "reviewer_name": "Thu Trang Đặng Thị",
+                "review_time": "3 năm trước",
+                "rating": "5 sao",
+                "content": "Đồ uống rất ngon, nhân viên nhiệt tình, sẽ ủng hộ lâu dài"
+            }
+        ]
+    },
+    "20": {
+        "url": "https://www.google.com/maps/place/Tr%C3%ACnh+c%C3%A0+ph%C3%AA/data=!4m7!3m6!1s0x314217b76e56e1d9:0xcd8455fecf74c490!8m2!3d16.0673825!4d108.2217327!16s%2Fg%2F11f9hdgyv2!19sChIJ2eFWbrcXQjERkMR0z_5VhM0?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0673825",
+            "108.2217327"
+        ],
+        "name": "Trình cà phê",
+        "rating": "4,8",
+        "address": "25 Phạm Hồng Thái, Hải Châu, Đà Nẵng 55000, Việt Nam",
+        "phone": "",
+        "website": "https://www.facebook.com/trinhcaphedn/",
+        "image_path": "data/image/Trình_cà_phê.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Ngọc Anh Trần",
+                "review_time": "một tháng trước",
+                "rating": "4 sao",
+                "content": "Quán có view đẹp, phù hợp nhiều lứa tuổi. Ban ngày quán đông và hơi ồn, tối đi gặp bạn bè dễ nói chuyện hơn.\n- Quán đầu tư 1 số góc đẹp phù hợp cho các bạn tới chụp ảnh làm kỉ niệm.\n- Nước ổn, cá nhân mình thấy các dòng trà pha chế ngon hơn cà phê, bánh ngọt có red velvet kết hợp kem phô mai ngon, tiramitsu thì … khá dở.\n- Nhân viên quán dễ thương, vui vẻ và lên đồ uống nhanh.\nĐáng để đi ❤️"
+            },
+            {
+                "reviewer_name": "Long Vux",
+                "review_time": "2 tuần trước",
+                "rating": "5 sao",
+                "content": "Quán đông khủng khiếp nên hơi ồn và bừa bộn. Mà cũng tại mình thấy đông nên ghé vào. Cafe ok\nView sông Hàn ngay chân cầu Rồng rất đẹp."
+            },
+            {
+                "reviewer_name": "Văn Trạch",
+                "review_time": "2 tháng trước",
+                "rating": "5 sao",
+                "content": "Mọi thứ rất ổn. Kem bơ ngon. Nhân viên lịch sự, nhiệt tình. Thẻ rung nhận món nhưng nhân viên sẽ mang tới bàn cho bạn. Không gian mát mẻ, chill chill. Đáng trải nghiệm."
+            }
+        ]
+    },
+    "21": {
+        "url": "https://www.google.com/maps/place/L%E1%BB%91i+X%C6%B0a+Cafe/data=!4m7!3m6!1s0x314218378c857159:0x7d066fc664d3bbd0!8m2!3d16.0755634!4d108.2155914!16s%2Fg%2F11ggnc450w!19sChIJWXGFjDcYQjER0LvTZMZvBn0?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0755634",
+            "108.2155914"
+        ],
+        "name": "Lối Xưa Cafe",
+        "rating": "4,5",
+        "address": "225/3 Đống Đa, Thạch Thang, Hải Châu, Đà Nẵng 550000, Việt Nam",
+        "phone": "",
+        "website": "https://www.facebook.com/Fils-Coffee-562598227431620/",
+        "image_path": "data/image/Lối_Xưa_Cafe.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "An Phạm",
+                "review_time": "3 tuần trước",
+                "rating": "5 sao",
+                "content": "Nước ngon, giá rẻ, không gian đẹp. 3 tiêu chí trên là đủ để ghé Lối Xưa một lần nữa trong tương lai gần ròi. Cảm ơn quán đã tạo ra một không gian đẹp. 💕"
+            },
+            {
+                "reviewer_name": "Kiều Phạm",
+                "review_time": "2 tuần trước",
+                "rating": "5 sao",
+                "content": "Fil's Cafe tại 225/3 Đống Đa là một không gian cà phê tuyệt vời để tìm đến sự yên bình giữa phố thị nhộn nhịp. Tuy nằm trong hẻm nhưng quán khá rộng rãi, được bài trí tỉ mỉ với nhiều góc xanh mát và ấm cúng. Menu đồ uống đa dạng từ cà phê truyền thống, trà trái cây theo mùa đến các món đặc sản vùng miền, tất cả đều được pha chế rất ngon miệng. Đội ngũ nhân viên nhiệt tình và thân thiện cũng là một điểm cộng lớn, tạo cảm giác thoải mái cho khách hàng. Một điều tôi mong quán có thể cải thiện là biển hiệu chỉ dẫn bên ngoài hẻm rõ ràng hơn một chút để khách dễ dàng tìm thấy quán hơn, đặc biệt là những người lần đầu ghé thăm. Để không gian thêm phần cá nhân hóa và tương tác, Fil's Cafe có thể ứng dụng Tuneast. Với Tuneast, khách hàng có thể cùng chọn lựa và bình chọn những bài hát yêu thích, tạo nên một playlist riêng cho quán, giúp mỗi lần ghé thăm đều là một trải nghiệm âm nhạc mới mẻ và thú vị."
+            },
+            {
+                "reviewer_name": "Thao Nguyen",
+                "review_time": "2 tháng trước",
+                "rating": "5 sao",
+                "content": "Không gian trang trí Tết đẹp, nước ngon, địa điểm chụp áo dài Tết 2026 đang hot."
+            }
+        ]
+    },
+    "22": {
+        "url": "https://www.google.com/maps/place/Seed-coffee/data=!4m7!3m6!1s0x3142196b76ab85c3:0xd21e49f45a4a2244!8m2!3d16.0710377!4d108.1529237!16s%2Fg%2F11h24snk_x!19sChIJw4WrdmsZQjERRCJKWvRJHtI?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0710377",
+            "108.1529237"
+        ],
+        "name": "Seed-coffee",
+        "rating": "4,8",
+        "address": "35C3+C57, Hoà Khánh Bắc, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+        "phone": "+84 905 882 434",
+        "website": null,
+        "image_path": "data/image/Seed-coffee.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Nga Phạm",
+                "review_time": "2 tuần trước",
+                "rating": "5 sao",
+                "content": "Seed-coffee thực sự là một viên ngọc ẩn tại Đà Nẵng với không gian rộng rãi, thoáng mát và lối decor vintage đơn giản nhưng đầy chất riêng. Quán tạo cảm giác như một ngôi nhà ấm cúng, rất thích hợp để học bài, làm việc hay đơn giản là thư giãn. Đồ uống ở đây rất ngon, đặc biệt là món cà phê muối được nhiều người yêu thích, cùng với sự nhiệt tình và thân thiện của anh chị chủ quán. Mặc dù vậy, để giữ chân khách hàng và tạo sự mới mẻ, quán có thể cân nhắc định kỳ thay đổi hoặc bổ sung một vài chi tiết trang trí nhỏ để không gian luôn tươi mới mà vẫn giữ được nét vintage đặc trưng. Việc áp dụng Tuneast vào hệ thống âm nhạc của Seed-coffee sẽ là một điểm cộng lớn. Tuneast không chỉ giúp quán dễ dàng tạo playlist phù hợp với không gian vintage mà còn cho phép khách hàng tương tác, góp phần tạo nên một trải nghiệm âm nhạc chân thực và gắn kết hơn."
+            },
+            {
+                "reviewer_name": "Phuc Nguyen",
+                "review_time": "3 năm trước",
+                "rating": "5 sao",
+                "content": "Đồ uống ngon, anh chị chủ quán nhiệt tình. Decorate đẹp đúng chất vintage. Sau dịch nên hơi vắng, mong mn đến ủng hộ quán."
+            },
+            {
+                "reviewer_name": "Như Yên",
+                "review_time": "2 năm trước",
+                "rating": "5 sao",
+                "content": "Quán guột của mình suốt thời đại học nài. Quán cũng là nhà của 2 anh chị luôn nên cái vibe ở đây cũng rất là \"nhà\". Anh chị thân thiện cực kỳ, bàn ghế cũng hợp để học như mình Must try ở đây là cafe muối nha (eo ôi cục kem ngon cực kì í, kem chị tự làm luôn nha)"
+            }
+        ]
+    },
+    "23": {
+        "url": "https://www.google.com/maps/place/Tanpo+Coffee+%26+Tea/data=!4m7!3m6!1s0x31421914d3cf4173:0xef1399169cc7593a!8m2!3d16.0697725!4d108.1530746!16s%2Fg%2F11rg9ws0rf!19sChIJc0HP0xQZQjEROlnHnBaZE-8?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0697725",
+            "108.1530746"
+        ],
+        "name": "Tanpo Coffee & Tea",
+        "rating": "4,3",
+        "address": "36 Đ. Ngô Thì Nhậm, Hoà Khánh Nam, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+        "phone": "",
+        "website": null,
+        "image_path": "data/image/Tanpo_Coffee_&_Tea.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Thảo Vy",
+                "review_time": "2 tuần trước",
+                "rating": "5 sao",
+                "content": "Tanpo Coffee & Tea là một quán cà phê đáng yêu với không gian được thiết kế rất tinh tế, vừa hiện đại lại vừa ấm cúng, rất thích hợp để học bài, làm việc hay đơn giản là trò chuyện cùng bạn bè. Đồ uống ở đây đa dạng, từ cà phê đến trà, đều rất ngon và có mức giá phải chăng. Nhân viên phục vụ nhanh nhẹn và luôn niềm nở, tạo ấn tượng tốt cho khách hàng. Mặc dù mọi thứ đều ổn, mình nghĩ quán có thể làm phong phú hơn nữa các lựa chọn đồ ăn nhẹ hoặc bánh ngọt để khách có thêm nhiều sự lựa chọn khi đến đây. Nếu Tanpo Coffee & Tea áp dụng Tuneast, việc quản lý playlist theo từng khung giờ sẽ trở nên dễ dàng hơn, thậm chí có thể gợi ý những sản phẩm phù hợp với bài hát đang phát, tối ưu hóa trải nghiệm khách hàng."
+            },
+            {
+                "reviewer_name": "Dong Hoang",
+                "review_time": "một năm trước",
+                "rating": "5 sao",
+                "content": "Quán có lầu, ngay ngã tư, phong cách chill, màu dịu nhẹ. Có máy lạnh, toilet sạch, có lầu và khoảng bàn ghế phía trong, trước quán có ngoại cảnh phù hợp check-in. Có kệ sách free đọc giải trí.\nGiá nước bình dân. Phục vụ tận bàn, free trà đá. Sáng có hơi đông khách."
+            },
+            {
+                "reviewer_name": "Thinh Pham",
+                "review_time": "7 tháng trước",
+                "rating": "3 sao",
+                "content": "Quán phù hợp ngồi làm việc, đồ uống ngon, máy lạnh mở vừa phải rất thoải mái, ổ cắm điện nhiều.\n\nTuy nhiên mong quán đào tạo lại thái độ phục vụ của nhân viên:\n- Mặt thì lạnh tanh ko cảm xúc, thậm chí ko thèm nhìn khách hàng.\n- Mang đồ xuống đến bàn cũng không nói một lời gì mời khách hoặc niềm nở.\n- Mình hỏi password wifi thì trả lời cộc lốc.\n\nMong chủ quán đào tạo nhân viên kỹ hơn."
+            }
+        ]
+    },
+    "24": {
+        "url": "https://www.google.com/maps/place/CaLaFe+Coffee/data=!4m7!3m6!1s0x3142194e12b90a17:0x1e32800b43d8186a!8m2!3d16.0686964!4d108.1545877!16s%2Fg%2F11j_1w8kyq!19sChIJFwq5Ek4ZQjERahjYQwuAMh4?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0686964",
+            "108.1545877"
+        ],
+        "name": "CaLaFe Coffee",
+        "rating": "4,7",
+        "address": "34 Hà Văn Tính, Hoà Khánh Nam, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+        "phone": null,
+        "website": "https://www.facebook.com/Caomeosticker?mibextid=ZbWKwL",
+        "image_path": "data/image/CaLaFe_Coffee.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Kiều Phạm",
+                "review_time": "2 tuần trước",
+                "rating": "5 sao",
+                "content": "CaLaFe Coffee thực sự là một điểm đến lý tưởng cho sinh viên và những ai yêu thích không gian thoải mái, ấm cúng. Quán được bài trí rất xinh xắn và có nhiều góc \"chill\" để thư giãn hay chụp ảnh. Đồ uống ở đây cũng rất \"ổn áp\", đặc biệt là các loại cà phê và trà, giá cả phải chăng, phù hợp với túi tiền của mọi người. Mình rất thích sự thân thiện và nhiệt tình của chị chủ quán cũng như đội ngũ nhân viên. Mặc dù không gian đã rất đẹp, nhưng đôi khi mình cảm thấy danh sách nhạc nền chưa thực sự đa dạng hoặc chưa thể hiện hết được \"chất\" riêng của quán. Nếu quán có thể tích hợp Tuneast, khách hàng có thể cùng bình chọn những bài hát yêu thích, tạo nên một không gian âm nhạc sống động và cá tính hơn, chắc chắn sẽ mang lại trải nghiệm tuyệt vời hơn nữa."
+            },
+            {
+                "reviewer_name": "Giang Nhi Nguyễn",
+                "review_time": "Thời gian chỉnh sửa: một năm trước",
+                "rating": "5 sao",
+                "content": "Nước uống oki, giá rẻ nhất là 17k 1ly cafe. Mk học ở Đà Nẵng năm nay là năm thứ hai rùi mà vẫn thấy chỗ này chill với kiểu hợp học bài á, ngày mưa ngồi trong quán ngắm mưa học bài uống bạc xỉu hoặc là cà fe muối là hết sẩy"
+            },
+            {
+                "reviewer_name": "Trần Mỹ Đào",
+                "review_time": "11 tháng trước",
+                "rating": "5 sao",
+                "content": "không gian quán rộng rãi, đồ uống ngonnn, nhân viên thân thiện"
+            }
+        ]
+    },
+    "25": {
+        "url": "https://www.google.com/maps/place/MIRKO+Coffee+%26+Chill+Beer/data=!4m7!3m6!1s0x314219a2478d12f9:0x83041e56fd7241ac!8m2!3d16.1031274!4d108.2329497!16s%2Fg%2F11sj6k7msx!19sChIJ-RKNR6IZQjERrEFy_VYeBIM?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.1031274",
+            "108.2329497"
+        ],
+        "name": "MIRKO Coffee & Chill Beer",
+        "rating": "3,4",
+        "address": "100 Nguyễn Hữu An, Nại Hiên Đông, Sơn Trà, Đà Nẵng 550000, Việt Nam",
+        "phone": "",
+        "website": "https://www.facebook.com/mirkocoffeeandbeer",
+        "image_path": "data/image/MIRKO_Coffee_&_Chill_Beer.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Nhu Hai Le",
+                "review_time": "một năm trước",
+                "rating": "5 sao",
+                "content": "Quán rất chill, ngồi nhâm nhi ly caffe ngắm sông núi chill chill, quán trang trí derco rất đẹp nhiều góc sống ảo chụp hình chill nha. Đến đây vào buổi chiều ngắm hoàng hôn bao chill, nước pha chế ngon, bạn quản lý ở đây rất dễ thương nhiệt tình chào hỏi tư vấn không gian quán. Quán còn bán BBQ buổi tối, sẽ ghé lại thưởng thức."
+            },
+            {
+                "reviewer_name": "Quang Hưng",
+                "review_time": "một năm trước",
+                "rating": "1 sao",
+                "content": "Tôi sẽ đánh giá thẳng thắn và thật nhất về quán cafe này\nThật sự là 4/10 điểm đánh giá vè quán\n+ Mình vào quán tầm chiều, chủ quan nên menu rẻ nhất là cafe đen 55k cong tất cả đều 70k\nChấp nhận điều đó vẫn mua 70k 1 ly. Điều đáng nói ở đây là ly nước rất rất tệ, ko thể tả được 1 ly 70k mà như ly 25k vậy, quá tệ\n+ Về view thì sẽ KO NHƯ MỌI NGƯỜI NGHĨ đâu, rác đầy sân, cừu thì 2 con và sống chung với bãi rác của quán, thỏ thì con nào con nấy thiếu sức sống. Chả khác gì ngược đãi vậy, còn những view khác thì đã xây nên tạm ổn\n+ Về thái độ thì thờ ơ, ko hiểu sao ch uống hết cứ dí bill vào làm gì, cho 2 đứa nhỏ dí bill vào. Thế ngay từ đầu nói order thanh toán nước luôn đi, để 2 đứa nhỏ cỡ cấp 1 ra phụ trông tội và chán nản thật\nKẾT LẠI thì quán này quá tệ để uống cafe và những người nào mà đánh giá 5 sao thực chất đều là mấy con BOT chạy lệnh hết\nCòn chưa đủ thuyết phục thì mọi người có thể trải nghiệm thực tế\nCẢM ƠN ĐÃ QUAN TÂM\n+"
+            },
+            {
+                "reviewer_name": "trinh bao",
+                "review_time": "8 tháng trước",
+                "rating": "3 sao",
+                "content": "Không gian ngồi Chill, nhưng kết hợp giữa ăn uống và cà phê lun thì mình không thấy hợp lắm\nGiá cả hơi cao so với không gian"
+            }
+        ]
+    },
+    "26": {
+        "url": "https://www.google.com/maps/place/DREAMER/data=!4m7!3m6!1s0x3142198b88107cfb:0xd2a2a23ebbc5b051!8m2!3d16.0659505!4d108.2367608!16s%2Fg%2F11pd78mbv5!19sChIJ-3wQiIsZQjERUbDFuz6iotI?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0659505",
+            "108.2367608"
+        ],
+        "name": "DREAMER",
+        "rating": "4,3",
+        "address": "230 Nguyễn Công Trứ, An Hải, Sơn Trà, Đà Nẵng 550000, Việt Nam",
+        "phone": "",
+        "website": null,
+        "image_path": "data/image/DREAMER.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Thuy Ngo",
+                "review_time": "2 năm trước",
+                "rating": "5 sao",
+                "content": "Một quán cafe dễ thương với không gian ngập tràn cỏ cây hoa lá.\n\nKhông gian quán là không gian mỡ, vẫn có chỗ ngồi phía trong nhà nhưng mình thích ngồi ngoài để ngắm cây và hoa rất đẹp. Ngồi ngoài thì mỗi bàn đều có dù che chắn dù nắng mưa rất oki.\n\nMình gọi cà phê muối và bánh, chất lượng rất ngon và ổn áp. Nhân viên dễ thương thân thiện. Sẽ là một quán mình ghé lại trong tương lai."
+            },
+            {
+                "reviewer_name": "Trang Thùy (Tem)",
+                "review_time": "một năm trước",
+                "rating": "5 sao",
+                "content": "Quán cafe phong cách Đà Lạt siêu đẹp và chill. Mình đi sáng sớm nên quán hơi vắng khách, cộng thêm mưa mưa lành lạnh bao chill luôn. Ngồi uống nước nghe tiếng nhạc hòa trong tiếng mưa thích thật ạ. Các bạn nhân viên vui vẻ nhiệt tình, không gian quán đẹp lắm ạ. 🥰 …"
+            },
+            {
+                "reviewer_name": "Thảo Dương",
+                "review_time": "3 năm trước",
+                "rating": "5 sao",
+                "content": "Quán cà phê sân vườn không gian đẹp, rộng và thoáng mát\nNước uống ổn áp, nhìn cũng khá bắt mắt.\nNhân viên thân thiện và chu đáo.\nM nghe bảo cuối tuần có live ca nhạc nữa 😳\nKhu vườn dùng chung của quán phía trước nữa nên nhìn khá rộng, chỗ m ngồi ko bị muỗi nhưng chỗ khác m không chắc..😂\nCó hẳn 1 căn nhà dành riêng cho cây luôn, đầu tư chỉnh chu.\nQuán đi ban đêm chắc đẹp hơn ban ngày 😳"
+            }
+        ]
+    },
+    "27": {
+        "url": "https://www.google.com/maps/place/NORMAD+Coffee+%26+Eatery+-+Ph%E1%BA%A1m+V%C4%83n+%C4%90%E1%BB%93ng/data=!4m7!3m6!1s0x31421978ac2e2107:0x93262a7c5fa2720!8m2!3d16.0711437!4d108.2362378!16s%2Fg%2F11kq5tqgwj!19sChIJByEurHgZQjERICf6xadiMgk?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0711437",
+            "108.2362378"
+        ],
+        "name": "NORMAD Coffee & Eatery - Phạm Văn Đồng",
+        "rating": "4,6",
+        "address": "106 Phạm Văn Đồng, An Hải, Sơn Trà, Đà Nẵng 550000, Việt Nam",
+        "phone": "",
+        "website": "http://normad.com.vn/",
+        "image_path": "data/image/NORMAD_Coffee_&_Eatery_-_Phạm_Văn_Đồng.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "CWT",
+                "review_time": "2 tuần trước",
+                "rating": "4 sao",
+                "content": "Có vẻ như quán đang làm lại thiết kế nội thất, không biết là vẫn đang trong quá trình decor hay đã xong rồi mà cảm giác mọi thứ vẫn còn dang dở, khác xa với hình ảnh quán lúc đầu ra mắt. Chưa kể là công trình có vẻ xuống cấp vì không được bảo quản giữ gìn.\n\nĐồ uống ok. Quầy order các loại trà riêng và quầy order cà phê + bánh riêng. Có bán merchandise.\n\nTầng 2 được bài trí khá... lạ, có vẻ như mix nhiều concept khác nhau. Nên mình cũng không thể nói là đẹp hay không. Nhưng nếu cố ý bài trí để tạo góc check-in thì chắc cũng được.\n\nNói chung mình không ấn tượng nhiều."
+            },
+            {
+                "reviewer_name": "Juno",
+                "review_time": "một tháng trước",
+                "rating": "3 sao",
+                "content": "Mình vừa có dịp ghé qua NORMAD Coffee & Eatery chi nhánh Phạm Văn Đồng. Thành thật mà nói, cảm xúc sau khi rời quán khá là lẫn lộn, giữa một bên là thiết kế vốn dĩ rất ổn và một bên là sự xuống cấp thực tế đến mức báo động.\n1. Về Không gian và Tình trạng cơ sở vật chất:\nĐiểm cộng duy nhất là layout và concept thiết kế của quán ban đầu được làm khá tốt, không gian nhìn chung có vẻ thoáng và 'ổn' để làm việc hoặc trò chuyện. Tuy nhiên, đó chỉ là cái nhìn thoáng qua. Khi ngồi lại lâu, mình thực sự sốc trước sự xuống cấp trầm trọng của cơ sở vật chất ở đây.\nTình trạng ẩm mốc xuất hiện khắp nơi, từ những góc tường đến trần nhà, tạo cảm giác không gian rất bí bách và thiếu vệ sinh. Có vẻ như quán đã lâu không được bảo trì hoặc gặp vấn đề về hệ thống thoát ẩm. Với một quán cà phê có lượng khách đông như thế này, việc để không gian trở nên cũ kỹ và 'mùi mốc' như vậy là một điểm trừ cực kỳ lớn, làm ảnh hưởng trực tiếp đến trải nghiệm thư giãn của khách hàng.\n2. Chất lượng Đồ uống:\nVề phần nước uống, mình đánh giá ở mức tạm ổn, không quá xuất sắc nhưng cũng không đến nỗi tệ. Tuy nhiên, so với mức giá và kỳ vọng vào một thương hiệu có tiếng như NORMAD, mình vẫn mong đợi một sự đột phá hơn về hương vị hoặc cách trình bày. Nước uống ở đây dừng lại ở mức 'uống được', chưa đủ để trở thành lý do khiến mình muốn quay lại lần nữa.\n3. Nhân viên và Phục vụ:\nTrong lần ghé thăm này, mình chủ yếu chỉ tiếp xúc với các bạn nhân viên tại quầy khi gọi món và thanh toán nên không có quá nhiều cơ hội đánh giá sâu. Tuy nhiên, cảm quan cá nhân của mình là nhân viên chưa đủ thân thiện. Thái độ phục vụ có phần hơi cứng nhắc, thiếu đi sự nhiệt tình và nụ cười cần thiết để khách cảm thấy được chào đón. Một chút sự niềm nở từ đội ngũ nhân sự chắc chắn sẽ giúp cải thiện đáng kể không khí của quán.\nTổng kết:\nNORMAD Phạm Văn Đồng có một nền tảng không gian đẹp, nhưng nếu không sớm có kế hoạch sửa sang, xử lý tình trạng ẩm mốc và chấn chỉnh lại thái độ phục vụ của nhân viên, quán sẽ rất dễ mất điểm trong mắt khách hàng giữa thị trường cà phê cạnh tranh như hiện nay. Hy vọng quán sẽ sớm có sự thay đổi tích cực hơn."
+            },
+            {
+                "reviewer_name": "Trang Ngọc",
+                "review_time": "2 tháng trước",
+                "rating": "5 sao",
+                "content": "Normad Coffee\nQuán decor có khá nhiều góc chụp ảnh, không gian cũng mang hơi hướng hiện đại, thoải mái, nhiều góc được trang trí khá tinh tế và chỉn chu, có photoboth nữa thì phải\nNhân viên khá nhiệt tình ( tuỳ bạn)\nQuán đa số chuyên về coffee nên coffee ngonn nha"
+            }
+        ]
+    },
+    "28": {
+        "url": "https://www.google.com/maps/place/C%C3%A0+Ph%C3%AA+X%C3%B3m/data=!4m7!3m6!1s0x314219f07a67b9a9:0xd1414f45a8229116!8m2!3d16.06681!4d108.1523176!16s%2Fg%2F11hst38jw6!19sChIJqblnevAZQjERFpEiqEVPQdE?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.06681",
+            "108.1523176"
+        ],
+        "name": "Cà Phê Xóm",
+        "rating": "4,6",
+        "address": "5 Nam Cao, Hoà Khánh Nam, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+        "phone": null,
+        "website": "http://www.facebook.com/xomxua",
+        "image_path": "data/image/Cà_Phê_Xóm.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "An My",
+                "review_time": "2 tuần trước",
+                "rating": "5 sao",
+                "content": "Cà Phê Xóm đúng như tên gọi, mang đến một cảm giác thân thuộc, gần gũi như ngôi nhà thứ hai. Quán có khu vực sân vườn ngoài trời rất đẹp và thoáng đãng, là nơi lý tưởng để tận hưởng những ly cà phê Việt chất lượng cao. Không gian được chăm chút tỉ mỉ, tạo cảm giác thư thái và dễ chịu, rất phù hợp cho cả buổi sáng yên bình hay chiều tối mát mẻ. Mặc dù đã rất tốt, quán có thể xem xét bổ sung thêm các lựa chọn cho không gian trong nhà, đặc biệt là vào những ngày thời tiết không thuận lợi, để khách hàng luôn có trải nghiệm thoải mái nhất. Để làm mới không gian và tăng sự kết nối, Cà Phê Xóm có thể tích hợp Tuneast, giúp khách hàng cùng nhau tạo nên bản nhạc nền cho quán, biến mỗi ly cà phê thành một trải nghiệm độc đáo và đáng nhớ hơn."
+            },
+            {
+                "reviewer_name": "Hien Tran",
+                "review_time": "2 tháng trước",
+                "rating": "5 sao",
+                "content": "Giá cả phải chăng, phục vụ ok, sáng lúc nào cũng đông. 1 phong cách hoài niệm những năm 90. Ai 8x,9x ngồi đây lần đầu nhìn cảnh vật chắc sẽ hoài niệm lắm."
+            },
+            {
+                "reviewer_name": "Tuyên Lê",
+                "review_time": "Thời gian chỉnh sửa: 3 năm trước",
+                "rating": "5 sao",
+                "content": "Giá không hẳn là rẻ, đá xay ngon. View thì đẹp, nhiều đồ cổ xưa, có ban công tầng 2.\nThích hợp để học bài, học nhóm\n#T."
+            }
+        ]
+    },
+    "29": {
+        "url": "https://www.google.com/maps/place/Tr%C3%ACnh+c%C3%A0+ph%C3%AA/data=!4m7!3m6!1s0x314217b76e56e1d9:0xcd8455fecf74c490!8m2!3d16.0673825!4d108.2217327!16s%2Fg%2F11f9hdgyv2!19sChIJ2eFWbrcXQjERkMR0z_5VhM0?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0673825",
+            "108.2217327"
+        ],
+        "name": "Trình cà phê",
+        "rating": "4,8",
+        "address": "25 Phạm Hồng Thái, Hải Châu, Đà Nẵng 55000, Việt Nam",
+        "phone": "",
+        "website": "https://www.facebook.com/trinhcaphedn/",
+        "image_path": "data/image/Trình_cà_phê.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Ngọc Anh Trần",
+                "review_time": "một tháng trước",
+                "rating": "4 sao",
+                "content": "Quán có view đẹp, phù hợp nhiều lứa tuổi. Ban ngày quán đông và hơi ồn, tối đi gặp bạn bè dễ nói chuyện hơn.\n- Quán đầu tư 1 số góc đẹp phù hợp cho các bạn tới chụp ảnh làm kỉ niệm.\n- Nước ổn, cá nhân mình thấy các dòng trà pha chế ngon hơn cà phê, bánh ngọt có red velvet kết hợp kem phô mai ngon, tiramitsu thì … khá dở.\n- Nhân viên quán dễ thương, vui vẻ và lên đồ uống nhanh.\nĐáng để đi ❤️"
+            },
+            {
+                "reviewer_name": "Long Vux",
+                "review_time": "2 tuần trước",
+                "rating": "5 sao",
+                "content": "Quán đông khủng khiếp nên hơi ồn và bừa bộn. Mà cũng tại mình thấy đông nên ghé vào. Cafe ok\nView sông Hàn ngay chân cầu Rồng rất đẹp."
+            },
+            {
+                "reviewer_name": "Văn Trạch",
+                "review_time": "2 tháng trước",
+                "rating": "5 sao",
+                "content": "Mọi thứ rất ổn. Kem bơ ngon. Nhân viên lịch sự, nhiệt tình. Thẻ rung nhận món nhưng nhân viên sẽ mang tới bàn cho bạn. Không gian mát mẻ, chill chill. Đáng trải nghiệm."
+            }
+        ]
+    },
+    "30": {
+        "url": "https://www.google.com/maps/place/COLOR+COFFEE+-+R%E1%BB%AANG+NHI%E1%BB%86T+%C4%90%E1%BB%9AI/data=!4m7!3m6!1s0x314219e151873183:0xb0be1b5076bdbc15!8m2!3d16.0477566!4d108.2119938!16s%2Fg%2F11vhyym_yb!19sChIJgzGHUeEZQjERFby9dlAbvrA?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0477566",
+            "108.2119938"
+        ],
+        "name": "COLOR COFFEE - RỪNG NHIỆT ĐỚI",
+        "rating": "4,7",
+        "address": "550 Trưng Nữ Vương, Hòa Thuận Nam, Hải Châu, Đà Nẵng 550000, Việt Nam",
+        "phone": "",
+        "website": null,
+        "image_path": "data/image/COLOR_COFFEE_-_RỪNG_NHIỆT_ĐỚI.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Gió",
+                "review_time": "một tháng trước",
+                "rating": "5 sao",
+                "content": "Quán cafe có hồ cá Koi siêu chill\nNgồi khá thoải mái, đồ uống giá ok, uống tạm ổn\nQuán có bán thêm snack các kiểu"
+            },
+            {
+                "reviewer_name": "Trần Trung",
+                "review_time": "5 tháng trước",
+                "rating": "5 sao",
+                "content": "Quán rộng thoáng , nước uống mình thấy vừa miệng , giá cũng vừa phải , không gian vừa có hồ cá bao xung quanh vừa tái tạo là như 1 khu rừng nhỏ , ngồi đêm mình thấy đèn lên nhìn ảo dịu hơn so với ban ngày ."
+            },
+            {
+                "reviewer_name": "Vinh Si",
+                "review_time": "2 tháng trước",
+                "rating": "5 sao",
+                "content": "Nước uống ngon. Không gian quá ư là ok. Giá phù hợp. Nhưng ngồi đây buổi sáng thích hợp hơn. Ngồi đến trưa thì khá hanh nắng"
+            }
+        ]
+    },
+    "31": {
+        "url": "https://www.google.com/maps/place/IKIGAI+.+garden+.+cafe/data=!4m7!3m6!1s0x3142198e485eda79:0x91cf5b707450a662!8m2!3d16.0740215!4d108.2205959!16s%2Fg%2F11js7bd1jn!19sChIJedpeSI4ZQjERYqZQdHBbz5E?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0740215",
+            "108.2205959"
+        ],
+        "name": "IKIGAI . garden . cafe",
+        "rating": "4,4",
+        "address": "60 Nguyễn Chí Thanh, Hải Châu, Đà Nẵng 55000, Việt Nam",
+        "phone": "",
+        "website": null,
+        "image_path": "data/image/IKIGAI_._garden_._cafe.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Yuri Kim",
+                "review_time": "một tháng trước",
+                "rating": "5 sao",
+                "content": "Không gian sạch sẽ, nước uống ngon, bánh cũng ngon luôn. Mỗi tội là khách vắng, nhân viên rãnh nhưng vẫn ko mang nước hộ khách 🥹 biết là qui trình của tiệm là tự phục vụ nhưng khi khách vắng mà nhân viên rỗi có thể giúp khách mà. Nhưng ko sao☺️ …"
+            },
+            {
+                "reviewer_name": "Nguyen Cuong (Peter)",
+                "review_time": "3 tháng trước",
+                "rating": "5 sao",
+                "content": "Mình đầu tiên tới,\n\nKhông gian thiết kế đẹp, đồ uống ngon\n\nCó một chút xíu này, ghế thấp người mình cao ngồi khom lưng 😂 hy vọng có ghế cao sau này"
+            },
+            {
+                "reviewer_name": "Bear Dzung",
+                "review_time": "một tháng trước",
+                "rating": "5 sao",
+                "content": "Tiệm rất sạch sẽ luôn, sàn nhà nhìn bụi bụi nhưng con mình tập đi ngã xuống chà chà tay ko có dơ luôn. Bàn ghế ly tách cái gì cũng sạch. Mình rất thích 😍 nước uống ko phải chê nữa rồiiiii …"
+            }
+        ]
+    },
+    "32": {
+        "url": "https://www.google.com/maps/place/The+59+cafe/data=!4m7!3m6!1s0x314219bb28181783:0xdc89976718ec6b96!8m2!3d16.0717586!4d108.2175209!16s%2Fg%2F11jdrj84zk!19sChIJgxcYKLsZQjERlmvsGGeXidw?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0717586",
+            "108.2175209"
+        ],
+        "name": "The 59 cafe",
+        "rating": "4,3",
+        "address": "59 Hải Phòng, Thạch Thang, Hải Châu, Đà Nẵng 550000, Việt Nam",
+        "phone": null,
+        "website": null,
+        "image_path": "data/image/The_59_cafe.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "20 tbuile",
+                "review_time": "4 tháng trước",
+                "rating": "5 sao",
+                "content": "Không gian rộng, xanh mát, có 3 tầng, tầng trệt có khoảng sân ngồi rất chill. Quán nằm sâu trong hẻm nên rất yên tĩnh. Nước uống okela, giá hợp lý. Nhiều bàn cao để ngồi làm việc. Là một chỗ mà mình có thể đến ngồi thường xuyên đc."
+            },
+            {
+                "reviewer_name": "Oanh Tran",
+                "review_time": "5 tháng trước",
+                "rating": "5 sao",
+                "content": "Một chiếc quán quen như là chỗ trú ẩn mỗi khi cần làm việc hay thư giãn. Đến mãi không chán vì quá thoải mái từ chiếc ghế êm, đến không gian và đồ uống. Tầng trên cùng là bar cũng rất tuyệt với view xịn xò. Mãi ủng hộ ❤️"
+            },
+            {
+                "reviewer_name": "Hà Châu Phạm",
+                "review_time": "4 tháng trước",
+                "rating": "5 sao",
+                "content": "Tui thích cái ô cửa sổ này, nhất là mấy ngày mưa vì nó siêu chill. Những góc khác cũng rất ok để làm việc, ngoài ra còn có không gian ngoài trời để ăn uống hoặc ngồi nói chuyện.\nTrà sữa ở đây cũng ngon còn những loại nước khác tui thấy cũng tàm tạm."
+            }
+        ]
+    },
+    "33": {
+        "url": "https://www.google.com/maps/place/2AM+Coffee/data=!4m7!3m6!1s0x314219a8a321e65d:0x30f53a57540b4d86!8m2!3d16.0591201!4d108.2056653!16s%2Fg%2F11v1bdh75p!19sChIJXeYho6gZQjERhk0LVFc69TA?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0591201",
+            "108.2056653"
+        ],
+        "name": "2AM Coffee",
+        "rating": "4,1",
+        "address": "194 Nguyễn Tri Phương, Thạc Gián, Thanh Khê, Đà Nẵng 550000, Việt Nam",
+        "phone": "",
+        "website": null,
+        "image_path": "data/image/2AM_Coffee.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Vi Kiều",
+                "review_time": "4 tháng trước",
+                "rating": "5 sao",
+                "content": "Không gian trắng-tinh khôi, cây xanh và hàng ghế thoáng – quán có cả trong nhà máy lạnh lẫn ngoài vườn rất chill. Đồ uống đa dạng, giá hợp lý và nhân viên thân thiện"
+            },
+            {
+                "reviewer_name": "Grayesheep",
+                "review_time": "một tháng trước",
+                "rating": "1 sao",
+                "content": "Nhân viên thiếu chuyên nghiệp, cư xử láo xược. Bạn nhân viên không hướng dẫn rõ ràng việc phải order món nướng để ngồi bàn nướng, nhưng khi khách không biết ngồi vào thì lại thái độ, chạy xồng xộc đến đuổi khách sang bàn khác. Rất hỗn.\nMình từng là khách quen của quán, nhưng trải nghiệm lần này thật sự không thể chấp nhận được. Chủ quán coi lại cách làm việc của nhân viên đi nhé.\nThân."
+            },
+            {
+                "reviewer_name": "Linh TrinhGia",
+                "review_time": "2 tháng trước",
+                "rating": "5 sao",
+                "content": "Nhân viên nhiệt tình, không gian quán rộng. Deco xinh iu, có giờ phun tuyết luôn."
+            }
+        ]
+    },
+    "34": {
+        "url": "https://www.google.com/maps/place/Tr%C3%A0+Qu%C3%A1n+G%C3%B3c+Nh%C3%A0+T%E1%BB%A5i+M%C3%ACnh/data=!4m7!3m6!1s0x314218311e0b5cb7:0xe7c8369519580d10!8m2!3d16.0723858!4d108.2218489!16s%2Fg%2F11d_wwzp9m!19sChIJt1wLHjEYQjEREA1YGZU2yOc?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0723858",
+            "108.2218489"
+        ],
+        "name": "Trà Quán Góc Nhà Tụi Mình",
+        "rating": "4,7",
+        "address": "36 Lê Duẩn, Hải Châu, Đà Nẵng 550000, Việt Nam",
+        "phone": null,
+        "website": "https://www.facebook.com/gocnhatuiminh",
+        "image_path": "data/image/Trà_Quán_Góc_Nhà_Tụi_Mình.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Tử Thiên",
+                "review_time": "3 tháng trước",
+                "rating": "5 sao",
+                "content": "Mình thích cái không khí ở đây thiệt sự, kiểu yên tĩnh, trà combo nào cũng ngon, đặc biệt là còn được xách mèo qua nữa. Bị nghiện cái vibe này của quán 🙆"
+            },
+            {
+                "reviewer_name": "Anh Phạm",
+                "review_time": "5 tháng trước",
+                "rating": "5 sao",
+                "content": "Quán trà nhỏ xinh ẩn mình trong hẻm. Quán trang trí nhẹ nhàng với không gian vườn và điều hoà. Phía ngoài phù hợp ngày mát trời, phía trong có khu trưng bày sản phẩm.\nMenu quán đa dạng các loại đồ uống nhưng tâm điểm là các set trà phù hợp 2 người uống. Trà nước ngon, không khí quán dễ chịu cho việc ngồi thư giãn."
+            },
+            {
+                "reviewer_name": "Võ Chí Thành",
+                "review_time": "5 tháng trước",
+                "rating": "5 sao",
+                "content": "Mình ghé quán nhiều lần, hôm nay một buổi chiều quán yên tĩnh. Không gian gần gủi nhiều cây xanh, chị chủ dễ thương. Nước uống ngon"
+            }
+        ]
+    },
+    "35": {
+        "url": "https://www.google.com/maps/place/A+COFFEE/data=!4m7!3m6!1s0x314219953d925983:0x33a6c4a429000209!8m2!3d16.0676039!4d108.1530387!16s%2Fg%2F11fszz8vnv!19sChIJg1mSPZUZQjERCQIAKaTEpjM?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0676039",
+            "108.1530387"
+        ],
+        "name": "A COFFEE",
+        "rating": "4,7",
+        "address": "68 Lê Doãn Nhạ, Hoà Khánh Nam, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+        "phone": "",
+        "website": null,
+        "image_path": "data/image/A_COFFEE.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "An My",
+                "review_time": "3 tuần trước",
+                "rating": "5 sao",
+                "content": "A COFFEE ở 68 Lê Doãn Nhạ là một lựa chọn tiện lợi cho những ai tìm kiếm một không gian cà phê thoải mái. Quán có vị trí dễ tìm, thuận tiện cho việc ghé qua nhanh chóng hoặc ngồi lại thư giãn. Menu đồ uống phong phú với cà phê, trà sữa và nước ép, đáp ứng được nhiều sở thích khác nhau. Đặc biệt, quán có tiện ích giao hàng và chỗ gửi xe miễn phí, rất tiện lợi cho khách hàng. Một điểm có thể cải thiện là không gian quán có thể được trang trí thêm để tạo điểm nhấn độc đáo và thu hút hơn. Để tăng cường sự tương tác và tạo dấu ấn riêng, A COFFEE có thể tích hợp Tuneast, cho phép khách hàng chủ động lựa chọn âm nhạc, góp phần xây dựng một không gian cá tính và hiện đại hơn."
+            },
+            {
+                "reviewer_name": "cúc7 kim",
+                "review_time": "2 năm trước",
+                "rating": "5 sao",
+                "content": "Nước uống đúng ngon.. phục vụ tuyệt vời"
+            },
+            {
+                "reviewer_name": "Trang Nguyễn",
+                "review_time": "2 năm trước",
+                "rating": "5 sao",
+                "content": "Đồ uống ngon, không gian mát mẻ, giá rất rẻ 🌠🌠🌠🌠🌠"
+            }
+        ]
+    },
+    "36": {
+        "url": "https://www.google.com/maps/place/Ribo+Coffee+-+Qu%C3%A1n+Cafe+%C4%90%E1%BA%B9p+%C4%90%C3%A0+N%E1%BA%B5ng/data=!4m7!3m6!1s0x31421852862c73d7:0x20bf25ef162a8b33!8m2!3d16.0682715!4d108.2011952!16s%2Fg%2F11gb3dd58c!19sChIJ13MshlIYQjERM4sqFu8lvyA?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0682715",
+            "108.2011952"
+        ],
+        "name": "Ribo Coffee - Quán Cafe Đẹp Đà Nẵng",
+        "rating": "4,0",
+        "address": "05 Thái Thị Bôi, Chính Gián, Thanh Khê, Đà Nẵng 550000, Việt Nam",
+        "phone": "",
+        "website": null,
+        "image_path": "data/image/Ribo_Coffee_-_Quán_Cafe_Đẹp_Đà_Nẵng.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Nga Phạm",
+                "review_time": "2 tuần trước",
+                "rating": "5 sao",
+                "content": "Ribo Coffee ở 05 Thái Thị Bôi là một viên ngọc ẩn giữa Đà Nẵng với không gian xanh mát, yên bình và hồ cá Koi độc đáo. Quán có nhiều tầng với cách bài trí nghệ thuật, mỗi góc đều có thể trở thành một phông nền tuyệt đẹp để chụp ảnh. Tôi đặc biệt ấn tượng với sự đa dạng của thực đơn, từ cà phê chất lượng đến các loại trà, nước ép và sữa chua đá xay, với mức giá rất phải chăng. Đây thực sự là một nơi tuyệt vời để thư giãn và thoát khỏi sự ồn ào của thành phố. Một điểm nhỏ có thể góp ý là một số loại nước ép có thể hơi ngọt, quán có thể hỏi khách về mức độ ngọt mong muốn. Để tăng thêm sự tương tác và cá nhân hóa, Ribo Coffee có thể tích hợp Tuneast. Điều này sẽ cho phép khách hàng lựa chọn và bình chọn những bài hát yêu thích, tạo nên một không gian âm nhạc phù hợp với tâm trạng của mọi người, đồng thời giúp quán tạo ra các playlist riêng biệt cho từng khu vực."
+            },
+            {
+                "reviewer_name": "Âm nhạc Thư",
+                "review_time": "một tuần trước",
+                "rating": "3 sao",
+                "content": "Hôm bữa đi thì quán đang đóng cửa nhưng gg map vẫn hiện đang hoạt động , phí công sức"
+            },
+            {
+                "reviewer_name": "P",
+                "review_time": "4 tháng trước",
+                "rating": "4 sao",
+                "content": "Ribo Coffee là một quán cà phê nằm trên đường Nguyễn Văn Linh, giữa trung tâm Đà Nẵng, nhưng lại mang đến cảm giác như một thế giới tách biệt. Không gian quán được thiết kế theo kiểu đa tầng, mỗi tầng mang một sắc thái riêng, từ sự thư giãn nhẹ nhàng đến nét nghệ thuật có phần phá cách. Tầng một nổi bật với hai hồ cá koi, tiếng nước chảy róc rách tạo nên bầu không khí tĩnh lặng, trong khi tầng ba có đàn piano – nơi khách có thể tự do chơi nhạc, góp thêm phần cá tính cho không gian.\n\nĐiểm dễ nhận thấy là quán không chạy theo xu hướng hiện đại hay tối giản, mà chọn cách bài trí có phần cầu kỳ, nhiều chi tiết, nhưng vẫn giữ được sự hài hòa. Những bức tranh treo tường, ánh sáng vàng nhẹ, và cách bố trí bàn ghế tạo nên một tổng thể vừa ấm cúng vừa có chiều sâu. Một số khách từng nhận xét rằng “nhìn bên ngoài thì bình thường, nhưng bước vào lại thấy bất ngờ” – như thể quán cố tình giấu đi vẻ đẹp bên trong để dành cho những ai thực sự muốn khám phá.\n\nVề đồ uống, thực đơn khá đa dạng, từ cà phê truyền thống đến các loại nước ép, sinh tố, trà trái cây. Một số món như cà phê muối, cookie việt quất, sinh tố việt quất từng nhận được phản hồi trái chiều. Có người cho rằng lớp kem của cà phê muối quá ngọt, giống sữa đặc, không cảm nhận được vị muối rõ ràng. Một trường hợp hi hữu từng được chia sẻ là món cookie việt quất có lẫn cọng kẽm – điều này khiến trải nghiệm trở nên đáng nhớ theo cách không mong muốn. Tuy nhiên, cũng có những khách đánh giá cao hương vị nước uống và cho rằng quán phù hợp cho những buổi gặp gỡ nhẹ nhàng.\n\nThái độ phục vụ tại Ribo Coffee là điểm gây tranh luận. Một số khách khen ngợi sự thân thiện, dễ chịu, trong khi người khác lại phản ánh về cách ứng xử thiếu chuyên nghiệp của nhân viên, khiến họ không muốn quay lại. Điều này cho thấy sự không đồng đều trong trải nghiệm, và nếu được cải thiện, quán sẽ giữ chân được nhiều khách hơn.\n\nRibo Coffee không phải là nơi hoàn hảo, nhưng lại có cá tính rõ rệt. Nó giống như một không gian mở, nơi người ta có thể ngồi giữa tiếng nước chảy, ngắm cá koi, chơi vài nốt nhạc, hoặc đơn giản là trò chuyện cùng bạn bè. Với những ai yêu thích sự đa tầng trong cảm xúc – từ thư giãn đến sáng tạo – thì Ribo là một điểm đến đáng để thử. Không vì sự hoàn hảo, mà vì sự bất ngờ và chiều sâu mà nơi này mang lại."
+            }
+        ]
+    },
+    "37": {
+        "url": "https://www.google.com/maps/place/IKIGAI+garden+cafe+-+01+Ph%E1%BA%A1m+Nh%C6%B0+X%C6%B0%C6%A1ng,+%C4%90%C3%A0+N%E1%BA%B5ng/data=!4m7!3m6!1s0x314219f5992aa951:0x3f73a310a7d4e141!8m2!3d16.0624223!4d108.1575171!16s%2Fg%2F11t71g_js9!19sChIJUakqmfUZQjERQeHUpxCjcz8?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0624223",
+            "108.1575171"
+        ],
+        "name": "IKIGAI garden cafe - 01 Phạm Như Xương, Đà Nẵng",
+        "rating": "3,8",
+        "address": "1 Phạm Như Xương, Hoà Khánh Nam, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+        "phone": "",
+        "website": null,
+        "image_path": "data/image/IKIGAI_garden_cafe_-_01_Phạm_Như_Xương,_Đà_Nẵng.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Phương Thanh",
+                "review_time": "7 tháng trước",
+                "rating": "5 sao",
+                "content": "Đồ uống chỉ ở mức tạm ổn (chắc do mình hơi khó tính 🥱). Mình đến quán chủ yếu vì có không gian tầng 2 rất yên tĩnh và riêng tư, có ghế đệm dài và gối tựa/ôm, lý tưởng cho người có cột sống già cỗi như mình lăn lộn vài tiếng 😚 có 2 tiếp viên mèo cam, cũng cưng"
+            },
+            {
+                "reviewer_name": "An My",
+                "review_time": "3 tuần trước",
+                "rating": "5 sao",
+                "content": "IKIGAI garden cafe - 01 Phạm Như Xương là một viên ngọc ẩn mang đậm phong cách Nhật Bản tinh tế giữa lòng Đà Nẵng. Không gian quán được thiết kế tối giản nhưng vô cùng ấm cúng, với nhiều cây xanh và kiến trúc gỗ, tạo cảm giác thanh bình và thư thái ngay khi bước vào. Đây là địa điểm hoàn hảo cho những buổi hẹn hò lãng mạn hay đơn giản là tìm một nơi yên tĩnh để làm việc, đọc sách. Đồ uống ở đây rất chất lượng, từ cà phê đến các loại trà đều được pha chế khéo léo, giá cả cũng rất hợp lý. Một góp ý nhỏ để quán hoàn thiện hơn là đôi khi playlist nhạc chưa thực sự đồng điệu với không gian Nhật Bản thiền tịnh. Nếu quán có thể đầu tư vào một hệ thống âm nhạc chuyên nghiệp hơn, được điều chỉnh theo từng thời điểm trong ngày, sẽ tuyệt vời hơn. Việc sử dụng Tuneast sẽ giúp IKIGAI garden cafe dễ dàng tạo và lên lịch các playlist nhạc phù hợp với từng phong cách, thậm chí gợi ý sản phẩm/dịch vụ dựa trên bài hát đang phát, làm cho trải nghiệm của khách hàng thêm phần độc đáo và trọn vẹn."
+            },
+            {
+                "reviewer_name": "Nguyễn Hoài Nam",
+                "review_time": "9 tháng trước",
+                "rating": "5 sao",
+                "content": "✅ Quán thoáng mát, rộng rãi thoải mái, có cả khu vực trò chuyện và làm việc, học bài riêng tư.\n\n📌Không gian & vị trí:\n- Ở mặt đường khá dễ tìm.\n- Không gian rộng, chia làm nhiều khu vực khác nhau: trò chuyện, làm việc, order,…\n- Có 2 tầng, nên khá thoải mái.\n- Decor phong cách tối giản, nhiều cây xanh.\n\n👍🏻Dịch vụ & Nhân viên:\n- Phục vụ nước nhanh.\n- Các bạn nhận viên nhiệt tình, chỉn chu, lễ phép.\n\n🥤Giá cả & sản phẩm\n- Giá khá phù hợp, chất lượng nước uống tốt.\n- Có phục vụ nước trà đá, nước lọc.\n\n⛔️Điểm cần cải thiện:\n- Điểm cộng, cũng như là điểm trừ của quán là quán có nuôi mèo, bé Mèo khá dễ thương nhưng đối với các khách khó tính thì KHÔNG.\n- Lông mèo vương vãi khá nhiều.\n- Các bàn ghế ở không gian ngoài hơi bụi bặm."
+            }
+        ]
+    },
+    "38": {
+        "url": "https://www.google.com/maps/place/43+M%C3%A9t+Vu%C3%B4ng+C%C3%A0+Ph%C3%AA/data=!4m7!3m6!1s0x314219e3bf7b5105:0xd541ed1c73d717fb!8m2!3d16.0686507!4d108.1836326!16s%2Fg%2F11r1dbkmbh!19sChIJBVF7v-MZQjER-xfXcxztQdU?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0686507",
+            "108.1836326"
+        ],
+        "name": "43 Mét Vuông Cà Phê",
+        "rating": "4,2",
+        "address": "727 Trần Cao Vân, Thanh Khê Đông, Thanh Khê, Đà Nẵng, Việt Nam",
+        "phone": "",
+        "website": "https://43metvuongcaphe.com/",
+        "image_path": "data/image/43_Mét_Vuông_Cà_Phê.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Thành Nguyễn Trung",
+                "review_time": "8 tháng trước",
+                "rating": "5 sao",
+                "content": "Cà phê ngon, giá cả phải chăng, vị trí thuận tiện, có chỗ đỗ xe thoải mái, oto đỗ cửa được 3 chiếc"
+            },
+            {
+                "reviewer_name": "nguyên nguyễn",
+                "review_time": "một tuần trước",
+                "rating": "1 sao",
+                "content": "Chất lượng ngày càng đi xuống, order ly cf đen không đường dặn nhân viên order 2 lần nhưng vẫn là ly cf đầy áp đường, chất lượng cf thì loãng."
+            },
+            {
+                "reviewer_name": "Hùng Nguyễn Như",
+                "review_time": "một năm trước",
+                "rating": "5 sao",
+                "content": "Quán thoáng mát, không gian cây xanh nhiều. Có nhiều đồ cổ trưng bày tại quán. Đồ uống ngon, giá vừa phải. Phù hợp trò chuyện làm việc"
+            }
+        ]
+    },
+    "39": {
+        "url": "https://www.google.com/maps/place/Ti%E1%BB%87m+c%C3%A0+ph%C3%AA+ch%C3%BA+M%E1%BA%A1nh/data=!4m7!3m6!1s0x31421b3655e78487:0x98b861fae7a239af!8m2!3d16.0172861!4d108.2028716!16s%2Fg%2F11twqksvlm!19sChIJh4TnVTYbQjERrzmi5_phuJg?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0172861",
+            "108.2028716"
+        ],
+        "name": "Tiệm cà phê chú Mạnh",
+        "rating": "4,9",
+        "address": "298/21 Cách Mạng Tháng 8, Hòa Thọ Đông, Cẩm Lệ, Đà Nẵng 550000, Việt Nam",
+        "phone": "",
+        "website": "https://www.facebook.com/profile.php?id=100083278791776",
+        "image_path": "data/image/Tiệm_cà_phê_chú_Mạnh.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "vo quoc",
+                "review_time": "6 tháng trước",
+                "rating": "4 sao",
+                "content": "Cafe sữa tạm ổn nhưng giá hơi cao so với quy mô quán và khu vực xung quanh.\nQuán có không gian khá rộng, kiểu nhà của thập niên 70-80 kết hợp trang trí sân vườn."
+            },
+            {
+                "reviewer_name": "Le Thuong",
+                "review_time": "10 tháng trước",
+                "rating": "3 sao",
+                "content": "Tình cờ đi tìm quán cf trên googlemap thì thấy có quán này cũng khá gần nhà nên rủ bạn bè qua thử\nQuán là ngôi nhà kiểu xưa, trong kiệt nhỏ, decor rất đơn giản đẹp. Sân sau là khu vẽ tranh cho trẻ em và người lớn, có workshop vẽ tranh nữa nha\nKhông gian mở nên mát thoáng nhưng muỗi nhiều quá, do trồng cây cối um tùm nên có muỗi nhưng cũng thấy máy xông tinh dầu nhưng có vẻ ko hiệu quả 😄 mình là hay bị muỗi dòm ngó nên ngại\nTrong gian nhà chính nếu ngồi đông thì khá là ồn, chỗ ngồi 2 ghế gần đó là ko có thoải mái luôn\nRảnh thì ghé ngồi đây chil chil chút cũng ok\nNước uống thì nên uống cf chứ những nước kia ko hợp lắm"
+            },
+            {
+                "reviewer_name": "Lê Đình Minh Toàn",
+                "review_time": "một năm trước",
+                "rating": "5 sao",
+                "content": "Tổng hợp khách chụp Quốc Khánh 2-9\nBạn đã check in tiệm cà phê Chú Mạnh chưaaaa 😘\nĐịa chỉ: 298/21 Cách mạng tháng 8 - Đà Nẵng\n🕰 Mở cửa hàng ngày 7.00am - 22.30 p. m\nQuán Café này thực sự là một điểm đến lý tưởng cho những ai yêu thích không gian yên tĩnh, gần gũi với thiên nhiên và có sự chăm chút tỉ mỉ trong từng chi tiết. Dưới đây là những điểm nổi bật của quán:\n\n*Không gian và trang trí:\nKhông gian rộng rãi: Mặc dù quán nằm trong hẻm, nhưng không gian bên trong rất rộng và thoáng đãng.\nTrang trí tinh tế: Quán được trang trí với bàn ghế mộc mạc, tranh vẽ tay, cây xanh, hoa khô, lồng đèn và nhiều decor nhỏ xinh, tạo nên một không gian ấm cúng và nghệ thuật.\nCây xanh và hoa: Ngay từ cổng vào, bạn sẽ thấy một cây hoa giấy lớn. Bên trong quán có nhiều cây xanh và một cây mai rất đẹp, là điểm nhấn cho không gian sân trước.\n*Đồ uống và dịch vụ:\nĐồ uống ngon: Đồ uống tại quán được đánh giá cao với điểm số 8/10. Giá cả hợp lý, dao động từ 18-35k.\nNhân viên dễ thương: Nhân viên tại quán rất thân thiện và dễ thương, luôn sẵn sàng phục vụ khách hàng.\nChủ quán nhiệt tình: Chủ quán trẻ trung, nhiệt tình và rất dễ thương.\n*Check-in :\nNhiều góc check-in: Quán có nhiều góc chụp ảnh đẹp, phù hợp cho những ai thích chụp ảnh.\nPhòng chụp concept: Phòng ngủ trước đây đã được decor lại thành phòng chụp concept cho khách có nhu cầu chụp ảnh với phông nền có sẵn.\nKhung tranh và hộp màu: Quán có khung tranh và hộp màu để vẽ, tạo thêm sự thú vị cho khách hàng.\nNhững điểm cần lưu ý:\nĐi lại: Quán nằm trong hẻm nên việc đi ô tô sẽ khó có chỗ để, nhưng đi xe máy thì vô tư.\nMèo cưng: Quán có mấy em mèo rất dễ thương, là điểm cộng cho những ai yêu thích động vật.\nNhìn chung, quán Café này là một nơi lý tưởng để thư giãn, thưởng thức đồ uống ngon và tận hưởng không gian yên tĩnh, nghệ thuật. Nếu có dịp, bạn hãy ghé thăm và trải nghiệm nhé!"
+            }
+        ]
+    },
+    "40": {
+        "url": "https://www.google.com/maps/place/Acacia+by+CaySi+cafe/data=!4m7!3m6!1s0x314217d1fac2c311:0x94c5c423146d01af!8m2!3d16.0740525!4d108.2419258!16s%2Fg%2F11kq3v81rp!19sChIJEcPC-tEXQjERrwFtFCPExZQ?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0740525",
+            "108.2419258"
+        ],
+        "name": "Acacia by CaySi cafe",
+        "rating": "4,8",
+        "address": "05 An Cư 5, An Hải, Sơn Trà, Đà Nẵng 550000, Việt Nam",
+        "phone": "",
+        "website": "http://facebook.com/caysidng",
+        "image_path": "data/image/Acacia_by_CaySi_cafe.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Mặp Cá",
+                "review_time": "4 tháng trước",
+                "rating": "5 sao",
+                "content": "Cà phê bơ đậu phộng + bánh sừng bò là chúa tể combo lun, huhu ngon quá chừng, please, must try peanut butter creamy with croissant 🫶🏻🫶🏻🫶🏻.  Mấy bạn chủ nhà đáng iu dễ thương, 🥰"
+            },
+            {
+                "reviewer_name": "Nhi Hoàng",
+                "review_time": "4 tháng trước",
+                "rating": "5 sao",
+                "content": "Acacia by Caysi cafe là quán lần nào tới Đà Nẵng tui đều ghé đầu tiên vì nước uống khá là đúng gu tui (Matcha nà, cà phê bơ đậu phộng nà, vv…) cả bánh nữa các u nên must try 😌 hơn hết là vì tui bị nghiền em nhân viên có thái độ chảnh part time (tui sẽ để ảnh ở dưới cho mn thấy ẻm). Không gian quán vừa, có cây xanh nhiều khá mát mẻ là một nơi để trò chuyện hay thư giãn trong ngày đều rất hợp lý và đáng thử đó."
+            },
+            {
+                "reviewer_name": "Trường Vĩnh",
+                "review_time": "6 tháng trước",
+                "rating": "4 sao",
+                "content": "Sáng nay, mình, Vĩnh, đại diện cho nhang nụ bột Tuệ Tâm, có dịp đến Đà Nẵng để gặp gỡ anh em sinh đôi Việt và Hùng – hai bạn trẻ đầy nhiệt huyết khởi nghiệp với tương ớt Đại Lộc từ Quảng Nam, mang thương hiệu Dulius, nổi tiếng với vị cay nồng đặc trưng và chất lượng tự nhiên. Cùng với đó, mình còn gặp bạn Vững, một người bạn từ Nhật Bản về Việt Nam chơi và ghé Đà Nẵng. Sau buổi trò chuyện sôi nổi, cả nhóm quyết định ghé Acacia by Caysi Cafe tại 05 An Cư 5, gần bãi biển Mỹ Khê, để nhâm nhi cà phê và tận hưởng không gian xanh mát. Phải nói rằng, đây là một trải nghiệm tuyệt vời, đúng chuẩn “chill” của thành phố biển!\n\nNgay khi bước vào Acacia by Caysi Cafe, mình đã bị ấn tượng bởi không gian đậm chất thiên nhiên, đúng như mô tả trên các trang đánh giá. Quán được thiết kế như một khu vườn nhỏ giữa lòng đô thị, với cây xanh bao quanh, tạo cảm giác trong lành và mát mẻ. Nội thất mộc mạc với bàn gỗ và những chi tiết trang trí tinh tế, kết hợp hài hòa giữa phong cách hiện đại và gần gũi thiên nhiên. Tầng 1 là không gian mở, thoáng đãng, rất hợp để trò chuyện và check-in. Tầng 2 thì có khu vực máy lạnh, lý tưởng cho những ai muốn tìm góc yên tĩnh để làm việc hay “đu deadline”. Theo thông tin từ Khoe Quán, quán được xây dựng bởi bạn Thịnh, một người yêu thiên nhiên, nên không gian này mang đậm dấu ấn “rừng trong phố”. Cả nhóm mình đặc biệt thích khu vực ngoài trời, nơi có thể nghe tiếng lá xào xạc và cảm nhận làn gió biển nhẹ nhàng.\n\nVề đồ uống, thực đơn của Acacia by Caysi thật sự đa dạng và chất lượng. Mình gọi một ly cà phê đen đá, đúng chuẩn vị đậm đà, thơm lừng, được pha chế từ hạt cà phê tuyển chọn. Anh em Việt và Hùng chọn trà sữa trân châu đường đen, với vị ngọt dịu và trân châu dai giòn, rất được khen ngợi. Bạn Vững, vừa từ Nhật về, muốn thử món gì đó tươi mát nên gọi smoothie dâu tây, và cậu ấy tấm tắc khen vì vị tươi ngon, không quá ngọt, đúng gu lành mạnh. Theo đánh giá trên Foody.vn, quán còn có các món trà và cacao nóng rất được yêu thích, đặc biệt trong những buổi chiều se lạnh. Giá đồ uống dao động từ 15.000đ - 40.000đ, rất hợp lý cho một không gian đẹp và chất lượng như thế này.\n\nTrong lúc nhâm nhi cà phê, mình tranh thủ chia sẻ với anh em Việt, Hùng và Vững về nhang nụ bột Tuệ Tâm. Hương thơm thanh tịnh, nhẹ nhàng của nhang rất hợp với không gian xanh mát, thư giãn của Acacia, khiến cuộc trò chuyện thêm phần dễ chịu. Việt và Hùng, với tinh thần khởi nghiệp trẻ trung của thương hiệu tương ớt Dulius, rất hào hứng với ý tưởng sử dụng nhang sạch để tạo không gian thư thái cho các buổi gặp gỡ đối tác hoặc khi làm việc tại nhà. Bạn Vững thì chia sẻ rằng ở Nhật, những sản phẩm tự nhiên như nhang Tuệ Tâm rất được ưa chuộng, đặc biệt trong các không gian thiền hoặc yoga. Cả nhóm còn đùa rằng nếu kết hợp hương nhang với vị cay nồng của tương ớt Dulius, chắc chắn sẽ tạo nên một “bộ đôi” độc đáo cho trải nghiệm thư giãn và ẩm thực!\n\nDịch vụ tại quán cũng là một điểm cộng lớn. Nhân viên thân thiện, nhiệt tình, luôn sẵn sàng hỗ trợ và tư vấn món uống. Dù quán khá đông vào buổi sáng, tốc độ phục vụ vẫn nhanh, không để khách chờ lâu. Theo một bài viết trên diadiemdanang.info, quán còn có các chương trình khuyến mãi như giảm 50% hoặc mua 1 tặng 1 vào một số thời điểm, nên mình khuyên mọi người theo dõi fanpage của quán để săn deal. Điểm trừ duy nhất có lẽ là bãi đỗ xe hơi hạn chế, nhưng với xe máy thì rất tiện, và nhân viên giữ xe rất nhiệt tình.\n\nTóm lại, Acacia by Caysi Cafe là một điểm đến lý tưởng để thư giãn, trò chuyện và tận hưởng không gian xanh giữa lòng Đà Nẵng. Với không gian đẹp, đồ uống ngon và dịch vụ chu đáo, mình chấm 10/10 cho trải nghiệm này và chắc chắn sẽ quay lại khi có dịp. Anh chị em ở Đà Nẵng, đặc biệt là những ai yêu thiên nhiên và muốn tìm một góc chill gần biển, nhất định phải ghé thử Acacia! Và đừng quên mang theo nhang nụ bột Tuệ Tâm để không gian thêm phần thanh tịnh, thư giãn, hoặc kết hợp với tương ớt Dulius của anh em Việt và Hùng để có một trải nghiệm ẩm thực độc đáo nhé! Highly recommend!\n\n#TuệTâm #AcaciaByCaysi #ĐàNẵng #TươngỚtDulius #CheckinĐàNẵng"
+            }
+        ]
+    },
+    "41": {
+        "url": "https://www.google.com/maps/place/La%E2%80%99s+Cafe/data=!4m7!3m6!1s0x3142195032d6c221:0x90697642e2c75bd5!8m2!3d16.0198284!4d108.2222373!16s%2Fg%2F11dx94n0rn!19sChIJIcLWMlAZQjER1VvH4kJ2aZA?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0198284",
+            "108.2222373"
+        ],
+        "name": "La’s Cafe",
+        "rating": "4,6",
+        "address": "36 Đ. Nguyễn Văn Thông, Hoà Xuân, Cẩm Lệ, Đà Nẵng 840236, Việt Nam",
+        "phone": "",
+        "website": null,
+        "image_path": "data/image/La’s_Cafe.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Ly Pham Thi",
+                "review_time": "một tuần trước",
+                "rating": "1 sao",
+                "content": "Quán không gian tạm được, cây cỏ lâu ngày không cắt tỉa hơi lộn xôn, bàn ghế ngoài trời rêu mốc. Ly cf 40k mà bỏ ly nhựa, quá phản cảm"
+            },
+            {
+                "reviewer_name": "Trịnh Duy Nhân",
+                "review_time": "2 tháng trước",
+                "rating": "4 sao",
+                "content": "La Coffee có không gian rộng rãi, thoáng mát và decor dễ thương, rất phù hợp để làm việc hoặc tụ tập cùng bạn bè. Cà phê và đồ uống đa dạng, pha chế ngon, vị đậm đà, phục vụ cũng nhanh và thân thiện. Giá cả hợp lý so với chất lượng. Điểm trừ nhỏ là đôi lúc quán hơi ồn vào cuối tuần và chỗ ngồi ngoài nắng chưa có nhiều che chắn. Nói chung là một quán cà phê đáng thử ở Hòa Xuân."
+            },
+            {
+                "reviewer_name": "My",
+                "review_time": "2 tháng trước",
+                "rating": "5 sao",
+                "content": "Quán cà phê view đẹp, phù hợp cho học bài làm việc nhưng quán hơi đông\nGiá cả phù hợp đồ uống ổn"
+            }
+        ]
+    },
+    "42": {
+        "url": "https://www.google.com/maps/place/Amber+coffee+house/data=!4m7!3m6!1s0x3142198f914b54dd:0xebb3c3e55ea7cea9!8m2!3d16.0431395!4d108.1831281!16s%2Fg%2F11kb0xjc4k!19sChIJ3VRLkY8ZQjERqc6nXuXDs-s?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0431395",
+            "108.1831281"
+        ],
+        "name": "Amber coffee house",
+        "rating": "4,6",
+        "address": "437 Tôn Đản, Hoà An, Cẩm Lệ, Đà Nẵng, Việt Nam",
+        "phone": "",
+        "website": null,
+        "image_path": "data/image/Amber_coffee_house.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "vy pham",
+                "review_time": "2 năm trước",
+                "rating": "5 sao",
+                "content": "Quán bên ngoài trang trí Tết trông khá bắt mắt, bên trong quán sâu, dài. Chia làm ba khu, một khu trong nhà, khu hành lang và khu ngoài vườn. Tất cả đều bày trí chỉnh chu đón năm mới. Vì vậy có nhiều góc để chụp hình ok nè.\n\nCà phê muối kem trứng ngon, mằn mặn và béo nhẹ, thơm lừng mùi cà phê. Nước ép thơm vị ít ngọt, uống ok. Giá cả phải chăng, 2 ly đều có giá 28k.\n\nQuán bật nhạc Đen Vâu âm lượng nhỏ vừa nghe, không gian thư thái, đầy màu xanh, góc nhỏ bình yên.\n\nMình đến quán lúc 9h-10h, mà quán đông khách nha. Nhưng được phân khu nên cũng có góc yên tĩnh cho mình.\n\nBãi đổ xe thì chật vì mặt tiền quán khá nhỏ.\n\nMình chấm điểm quán 9/10. Mọi người nên đến thử."
+            },
+            {
+                "reviewer_name": "Hồng Hạnh Bùi Trần",
+                "review_time": "2 năm trước",
+                "rating": "4 sao",
+                "content": "Quán nhìn bên ngoài thì có vẻ khá nhỏ. Nhưng đi vào trong thì có khoảng sân vườn phía sau rộng. Lúc mình tới 7 rưỡi, và về lúc 9h. 9h rất đông nha, mình nghĩ cái phần đường sỏi phía sau nên bỏ sỏi và làm phẳng để dễ đi, vì mình thấy người lớn dẫn trẻ con đi khá nhiều.\nMenu rất đa dạng, mình gọi 1 trà hoa đỏ atiso thêm trân châu trắng.\nVới mình thì trà hơi ngọt, kể cả khi tan hết đá rồi vẫn ngọt.\nNếu đi sớm lúc vắng thì sẽ chụp đc rất nhiều hình, vì có nhiều góc đẹp lắm, cây và hoa rất nhiều."
+            },
+            {
+                "reviewer_name": "Tịp",
+                "review_time": "một tháng trước",
+                "rating": "1 sao",
+                "content": "giá khá cao mà nc thì kh xứng đáng vs giá luôn á, hi vọng quán sẽ đâu tư hơn vào món"
+            }
+        ]
+    },
+    "43": {
+        "url": "https://www.google.com/maps/place/L%E1%BA%B7ng+Coffee/data=!4m7!3m6!1s0x3142190049157433:0x37ecaf90c8639ddf!8m2!3d16.07248!4d108.1745836!16s%2Fg%2F11x6p8y021!19sChIJM3QVSQAZQjER351jyJCv7Dc?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.07248",
+            "108.1745836"
+        ],
+        "name": "Lặng Coffee",
+        "rating": "5,0",
+        "address": "39 Yên Khê 3, Thanh Khê Tây, Liên Chiểu, Đà Nẵng, Việt Nam",
+        "phone": "",
+        "website": null,
+        "image_path": "data/image/Lặng_Coffee.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Lynh Thùy",
+                "review_time": "4 tháng trước",
+                "rating": "5 sao",
+                "content": "Quán này thích hợp đi với người thân bạn bè nha, có mấy board game để giải trí nữa, quán có cá koi nữa dễ thương lắm. Nước uống thì mình thấy trà sữa rất tuỵt vời, có trân châu đen là 10 đỉm, kem phô kem dẻo siu yummy yummy, còn matcha bạn nhân viên bảo matcha Nhật nhưng mà bạn pha chế pha không ngol lắm í"
+            },
+            {
+                "reviewer_name": "Gordy Thomas",
+                "review_time": "5 tháng trước",
+                "rating": "5 sao",
+                "content": "(English follows)\nTôi vô cùng vui mừng khi khám phá ra quán cà phê tuyệt đẹp này. Nhà tôi chỉ cách địa điểm này ba con phố. Vì vậy, tôi có thể dễ dàng đi bộ đến đây trong tương lai. Cà phê rất ngon và nhân viên phục vụ rất nhiệt tình và hiệu quả.\n~~~\nI'm extremely happy to discover this beautiful coffee shop. My house is only three streets away from this location. So I can easily walk here in the future. The coffee is very delicious and the waiter is very helpful and efficient."
+            },
+            {
+                "reviewer_name": "Hoàng Vũ Nguyễn Văn",
+                "review_time": "5 tháng trước",
+                "rating": "5 sao",
+                "content": "Quán view rất đẹp. Không gian rộng rãi, thoáng mát. Nước uống hợp khẩu vị. Ở đây thích hợp cho mọi người làm việc nhóm."
+            }
+        ]
+    },
+    "44": {
+        "url": "https://www.google.com/maps/place/Nia+Coffee/data=!4m7!3m6!1s0x314219cf43f4d151:0x6f97e2f6f0100ad0!8m2!3d16.0529845!4d108.2214719!16s%2Fg%2F1pzwnl1d9!19sChIJUdH0Q88ZQjER0AoQ8Pbil28?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0529845",
+            "108.2214719"
+        ],
+        "name": "Nia Coffee",
+        "rating": "4,3",
+        "address": "3/14, Phan Thành Tài, Bình Thuận, Hải Châu, Đà Nẵng 550000, Việt Nam",
+        "phone": "",
+        "website": null,
+        "image_path": "data/image/Nia_Coffee.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Khoi Nguyen",
+                "review_time": "một tháng trước",
+                "rating": "5 sao",
+                "content": "Quán rộng rãi mặc dù ở trong đường nhỏ khá hẻm , nội thất và phong cảnh trong quán cực kỳ đẹp. Có hai tầng ,tầng 1 để ngồi cafe bth và checking , tầng 2 để làm việc . Giá thức uống khá cao với món cơ bản là cà phê sữa 30.000 và giá trung bình xấp xỉ khoảng 50 đến 60 k cho các món khác . Đồ uống ổn không quá ngon .\nĐiểm ăn tiền của quán chính là không Gian ngồi và cảnh quan , rất đẹp và đáng để đến chụpa ảnh ( mn có thể xem ảnh để bik thêm ) . Nếu muốn trải nghiệm ở một quán có không gian lạ và đẹp thì đây là một địa điểm rất đáng đên😌"
+            },
+            {
+                "reviewer_name": "Sang Le",
+                "review_time": "2 tháng trước",
+                "rating": "4 sao",
+                "content": "Không gian quán rộng rãi, trang trí đẹp, mát mẻ và rất chill. Đô uống ổn, giá nước tầm 40-60k.\nPhục vụ ổn.\nĐiểm chưa tốt là buổi tối hơi nhiều muỗi và chuột."
+            },
+            {
+                "reviewer_name": "Huy Phong Nguyễn",
+                "review_time": "3 tuần trước",
+                "rating": "3 sao",
+                "content": "Không gian ở đây rất là đẹp nha, nhưng mình không đánh giá cao các thức uống, khuyên các bạn là cân nhắc kĩ trước khi đến, nếu không quan tâm về thức uống thì nên, còn ai tới đây chỉ để uống thì mình nghĩ là không nên. (Matcha kem muối thì mik thấy khá là cặn, kem muối, và mùi thơm của matcha mình cũng thấy không ngon). Ở đây theo từng khung giờ đông hay ít đông là yên tĩnh nha, mình đi buổi chiều(3h30-5h) .Tuỳ các bạn thôi nha, đây chỉ là ý kiến riêng của mình. 😌"
+            }
+        ]
+    },
+    "45": {
+        "url": "https://www.google.com/maps/place/128+ng%C3%B4+v%C4%83n+s%E1%BB%9F/data=!4m7!3m6!1s0x31421900033cb9c5:0xdb169468a935f6c!8m2!3d16.0677415!4d108.1477795!16s%2Fg%2F11vq7z96bd!19sChIJxbk8AwAZQjERbF-TikZpsQ0?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0677415",
+            "108.1477795"
+        ],
+        "name": "128 ngô văn sở",
+        "rating": "4,7",
+        "address": "128 Ngô Văn Sở, Hoà Khánh Bắc, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+        "phone": "+84 975 565 205",
+        "website": null,
+        "image_path": "data/image/128_ngô_văn_sở.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "PHƯƠNG CƠ KHÍ",
+                "review_time": "một năm trước",
+                "rating": "5 sao",
+                "content": "Quán đẹp, rộng rãi. Cà phê ngon. Vị trí đẹp ngã 3 đoàn phú tứ và ngô văn sở. Bàn ghế sang trọng. Các bạn gần khu vực này ghé thưởng thức nhé."
+            },
+            {
+                "reviewer_name": "Huyền Phương",
+                "review_time": "Thời gian chỉnh sửa: 8 tháng trước",
+                "rating": "5 sao",
+                "content": "cf ngon rẻ. Sẽ ủng hộ dài lâu"
+            },
+            {
+                "reviewer_name": "cong giang nguyễn",
+                "review_time": "một năm trước",
+                "rating": "5 sao",
+                "content": "Coffee rất ngon , vị trí đẹp nhiều chổ checkin sống ảo , nhân viên rất vui vẻ nhưng cần thêm 1 vài cái quạt bên ngoài 😊😊"
+            }
+        ]
+    },
+    "46": {
+        "url": "https://www.google.com/maps/place/Ng%C3%A3+Coffee+%26+Desserts/data=!4m7!3m6!1s0x314219b9f2efd265:0x5e0a2cc156361522!8m2!3d16.0523796!4d108.2062998!16s%2Fg%2F11f3vdmnbh!19sChIJZdLv8rkZQjERIhU2VsEsCl4?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0523796",
+            "108.2062998"
+        ],
+        "name": "Ngã Coffee & Desserts",
+        "rating": "4,7",
+        "address": "2 Đặng Thùy Trâm, Hoà Thuận, Hải Châu, Đà Nẵng 550000, Việt Nam",
+        "phone": "",
+        "website": "https://m.facebook.com/hemxeohouse2018/",
+        "image_path": "data/image/Ngã_Coffee_&_Desserts.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Ngọc Anh Lê",
+                "review_time": "3 tháng trước",
+                "rating": "5 sao",
+                "content": "Ngã Coffee & Desserts nằm trong hẻm nhỏ yên tĩnh, decor vintage rất có gu. Đồ uống ngon, đặc biệt là bạc xỉu và cà phê muối. Nhân viên thân thiện, không gian chill, có cả mấy bé mèo dễ thương. Rất thích!"
+            },
+            {
+                "reviewer_name": "Thao Thanh",
+                "review_time": "2 tháng trước",
+                "rating": "5 sao",
+                "content": "Siêu chill, không gian yên tĩnh. Nước ngon và rẻ"
+            },
+            {
+                "reviewer_name": "Lê Minh Thư",
+                "review_time": "2 tháng trước",
+                "rating": "5 sao",
+                "content": "Quán trong hẻm hợp tụ tập bạn bè, cực chill. Chỗ để xe thoải mái, giá nước rẻ, quán có bánh brownies mình nhớ chỉ 25k nhma ngon thật. Mn muốn tìm chốn yên bình thì đến đây ha"
+            }
+        ]
+    },
+    "47": {
+        "url": "https://www.google.com/maps/place/P+Coffee/data=!4m7!3m6!1s0x314219d18f373ac7:0x6d21db29006aceef!8m2!3d16.0607465!4d108.2206633!16s%2Fg%2F11qyc0plp4!19sChIJxzo3j9EZQjER785qACnbIW0?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0607465",
+            "108.2206633"
+        ],
+        "name": "P Coffee",
+        "rating": "4,2",
+        "address": "53-55 Nguyễn Văn Linh, Phước Ninh, Hải Châu, Đà Nẵng 50211, Việt Nam",
+        "phone": "",
+        "website": "https://www.facebook.com/p.poonacoffee/",
+        "image_path": "data/image/P_Coffee.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "My Nguyễn",
+                "review_time": "2 tháng trước",
+                "rating": "5 sao",
+                "content": "Quán trang trí đẹp có gu , nhân viên đến bác bảo vệ nhiệt tình dễ thương, nước uống đối với mình thì ngon nha, ngồi xíu thì có bạn đưa mình chai nước nhìn cũng rất gì và này nọ, có dịp mình sẽ ghé lại tiếp."
+            },
+            {
+                "reviewer_name": "Many Nguyen",
+                "review_time": "một tháng trước",
+                "rating": "5 sao",
+                "content": "Không gian thơm lừng mùi bánh và decor có gu. Điểm sáng là bánh rất ngonnnn và vị nước cũng ổn (có lẽ bánh ngon nên mình kì vọng nước cũng thế =))), anyway mình thích lớp cheese phía trên, omg yummyyyy!!! Giá thành hợp lý với chất lượng, vị trí và dịch vụ."
+            },
+            {
+                "reviewer_name": "Thảo Thiên",
+                "review_time": "3 tháng trước",
+                "rating": "5 sao",
+                "content": "Không gian thoáng mát, bày trí đồ ăn và pha chế không gian mở, có view ngắm đường, phòng lạnh và cây cối\nQuán còn có bán các đồ như áo thun, mũ,… của quán\nVề đồ uống thì với mình cũng ổn\nNhân viên nhiệt tình, thân thiện"
+            }
+        ]
+    },
+    "48": {
+        "url": "https://www.google.com/maps/place/Melody+Garden+Coffee/data=!4m7!3m6!1s0x3142198568ffef37:0x65a4c1d238bd91bf!8m2!3d16.0751286!4d108.1492621!16s%2Fg%2F11t8ggh_sj!19sChIJN-__aIUZQjERv5G9ONLBpGU?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0751286",
+            "108.1492621"
+        ],
+        "name": "Melody Garden Coffee",
+        "rating": "3,6",
+        "address": "92 Nguyễn Lương Bằng, Hoà Khánh Bắc, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+        "phone": "",
+        "website": "http://facebook.com/MelodyGarden.Coffee",
+        "image_path": "data/image/Melody_Garden_Coffee.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Công Thiện Trương",
+                "review_time": "một năm trước",
+                "rating": "5 sao",
+                "content": "Quán rộng rãi thoải mái, đồ uống phục vụ rất nhanh, có trà đá nước lọc uống kèm cũng tốt. Không gian đẹp và đa dạng các view từ hồ cá, gốc cây, ghế gỗ, ghế đá, phòng kín gió… Nhưng có vẻ hơi ít nhân viên nên các bạn chưa chú ý khách lắm. Trải nghiệm nhìn chung vẫn rất oke, bên ngoài quán trông đơn sơ nhưng vào trong thực sự bất ngờ."
+            },
+            {
+                "reviewer_name": "Quân Nguyễn",
+                "review_time": "2 tháng trước",
+                "rating": "1 sao",
+                "content": "Khách vào ngồi nhờ nhân viên dọn dẹp rất lịch sự mà nhân viên tỏ thờ ơ và đi ra ngoài, để khách với đống rác :)"
+            },
+            {
+                "reviewer_name": "DT hau",
+                "review_time": "3 năm trước",
+                "rating": "5 sao",
+                "content": "Nhân viên thân thiện, ca phê rất ngon.mình mê ca phê muối ở đây. Giá cả cũng vừa phải. Rất thích hợp với gia đình có con nhỏ vì có khu vui chơi cho trẻ khá rộng rãi. Có cả phòng điều hòa cho ai sợ nóng . Phòng yên tĩnh có bàn học và làm việc. Mình ghé vào thường xuyên cùng với các bé. Cảm ơn chủ quán!"
+            }
+        ]
+    },
+    "49": {
+        "url": "https://www.google.com/maps/place/Qu%C3%A1n+c%C3%A0+ph%C3%AA+H%C3%A8+-+C%C3%A0+ph%C3%AA+s%C3%A2n+v%C6%B0%E1%BB%9Dn,+m%C3%A1y+l%E1%BA%A1nh/data=!4m7!3m6!1s0x314219985133fe5d:0xebdffc550489e4b4!8m2!3d16.0641941!4d108.1519022!16s%2Fg%2F11y_hckh9y!19sChIJXf4zUZgZQjERtOSJBFX83-s?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0641941",
+            "108.1519022"
+        ],
+        "name": "Quán cà phê Hè - Cà phê sân vườn, máy lạnh",
+        "rating": "5,0",
+        "address": "123 Phạm Như Xương, Hoà Khánh Nam, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+        "phone": "",
+        "website": null,
+        "image_path": "data/image/Quán_cà_phê_Hè_-_Cà_phê_sân_vườn,_máy_lạnh.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Quỳnh Diễm",
+                "review_time": "3 ngày trước",
+                "rating": "5 sao",
+                "content": "Không gian thoáng mát, thức uống ngon nha, phục vụ nhiệt tình nè"
+            },
+            {
+                "reviewer_name": "Văn khánh Nguyễn",
+                "review_time": "một tuần trước",
+                "rating": "5 sao",
+                "content": "Quán mát mẻ, chủ quán thân thiện!  Sẽ ghé lại"
+            },
+            {
+                "reviewer_name": "Lưu Bùi Thị Hồng",
+                "review_time": "một tuần trước",
+                "rating": "5 sao",
+                "content": "Cf ngon, quán mới mở nên chưa đông khách lắm, mình hướng nội nhưng mình thích như vậy, không gian rộng rãi, yên tĩnh, có idea để làm việc 😂 …"
+            }
+        ]
+    },
+    "50": {
+        "url": "https://www.google.com/maps/place/Third+House+Coffee/data=!4m7!3m6!1s0x314219ded5de9179:0x16eb4bd8c0b2d65d!8m2!3d16.0668394!4d108.2013939!16s%2Fg%2F11qplxf8gg!19sChIJeZHe1d4ZQjERXdaywNhL6xY?authuser=0&hl=vi&rclk=1",
+        "coordinate": [
+            "16.0668394",
+            "108.2013939"
+        ],
+        "name": "Third House Coffee",
+        "rating": "4,7",
+        "address": "142/3 Lê Độ, Xuân Hà, Thanh Khê, Đà Nẵng 550000, Việt Nam",
+        "phone": "",
+        "website": "http://thethirdhouse.coffee/",
+        "image_path": "data/image/Third_House_Coffee.jpg",
+        "reviews": [
+            {
+                "reviewer_name": "Thảo Yên Lê Hoàng",
+                "review_time": "một tháng trước",
+                "rating": "5 sao",
+                "content": "Quán mới mở bên Lê Độ nên mình ghé thử, rất có guu nha mn nên ghé\n- Quán chủ yếu là về cf, rất chất, matcha cũng ngon\n- Nhân viên nhiệt tình, dễ thương\n- Các view trong quán rất vintage, retro\n- Giá nước hơi nhỉnh một chút nhưng đổi lại rất chất"
+            },
+            {
+                "reviewer_name": "CWT",
+                "review_time": "một tháng trước",
+                "rating": "4 sao",
+                "content": "Quán xây mới khá đẹp, nội thất phong cách mới hiện đại hơn cũng dễ thở hơn, không gian kín nhưng nhìn không bí bách.\n\nCũng với diện tích đất cũ nhưng thiết kế mới khiến quán rộng hơn với tầng 1 để xe, tầng 2-3 không gian cà phê, có kèm bán bánh.\n\nQuán cần chọn lọc nhạc để mở trong không gian nhỏ và kín như hiện tại. Những bài nhạc nhịp bass nhanh, dồn dập không phù hợp với không gian cà phê."
+            },
+            {
+                "reviewer_name": "Huỳnh Minh Việt",
+                "review_time": "2 tháng trước",
+                "rating": "2 sao",
+                "content": "Quán đã nâng cấp rộng rãi, đẹp và nhiều chỗ ngồi hơn so với quán cũ. Chỗ ngồi vẫn nhỏ hẹp, sát nhau, ngồi lâu dễ mỏi lưng.\nCó chỗ giữ xe nhỏ ở tầng 1 nhưng vẫn khó có chỗ để xe, phải để ngoài hẻm khá bất tiện.\nColdbrew Spring uống ổn, vị chua dịu kết hợp với vị mặn của muối hồng và hậu vị ngọt nhẹ sau cùng tạo cảm giác thanh mát, dễ chịu.\nVấn đề là quán cafe mở ở Việt Nam, nhân viên và chủ là người Việt, khách cũng là người Việt nhưng menu thì chỉ toàn tiếng Anh? Hỏi nhân viên ấp úng rồi cũng không trả lời được.\nKhông đáng để quay lại"
+            }
+        ]
+    }
+}
