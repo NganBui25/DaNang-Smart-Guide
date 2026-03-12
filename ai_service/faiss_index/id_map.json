@@ -1,0 +1,1778 @@
+{
+  "0": {
+    "json_key": "1",
+    "name": "Tiệm Cà Phê Tháng Mười Hai",
+    "category": "coffee",
+    "rating": "4,6",
+    "address": "72 Nguyễn Chánh, Hoà Khánh Bắc, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0833478",
+      "108.1497808"
+    ],
+    "image_path": "data/image/Tiệm_Cà_Phê_Tháng_Mười_Hai.jpg"
+  },
+  "1": {
+    "json_key": "2",
+    "name": "Ibasho Coffee",
+    "category": "coffee",
+    "rating": "4,1",
+    "address": "124 Yên Khê 1, Thanh Khê Đông, Thanh Khê, Đà Nẵng, Việt Nam",
+    "coordinate": [
+      "16.072602",
+      "108.1798707"
+    ],
+    "image_path": "data/image/Ibasho_Coffee.jpg"
+  },
+  "2": {
+    "json_key": "3",
+    "name": "Tiệm Cà Phê Ô Cửa Sổ",
+    "category": "coffee",
+    "rating": "3,9",
+    "address": "29-31 Thanh Tịnh, Hoà Minh, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0613873",
+      "108.1735578"
+    ],
+    "image_path": "data/image/Tiệm_Cà_Phê_Ô_Cửa_Sổ.jpg"
+  },
+  "3": {
+    "json_key": "4",
+    "name": "43 Factory Coffee Roaster",
+    "category": "coffee",
+    "rating": "4,7",
+    "address": "422 Ngô Thì Sĩ, Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0480872",
+      "108.2460233"
+    ],
+    "image_path": "data/image/43_Factory_Coffee_Roaster.jpg"
+  },
+  "4": {
+    "json_key": "5",
+    "name": "THE POWERHOUSE 2 COFFEE & MORE",
+    "category": "coffee",
+    "rating": "4,6",
+    "address": "17 Âu Cơ, Hoà Khánh Bắc, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0713011",
+      "108.1498415"
+    ],
+    "image_path": "data/image/THE_POWERHOUSE_2_COFFEE_&_MORE.jpg"
+  },
+  "5": {
+    "json_key": "6",
+    "name": "THE LEAF HOUSE CAFE",
+    "category": "coffee",
+    "rating": "4,8",
+    "address": "1151 Nguyễn Tất Thành, Thanh Khê Đông, Thanh Khê, Đà Nẵng 50000, Việt Nam",
+    "coordinate": [
+      "16.0731486",
+      "108.186807"
+    ],
+    "image_path": "data/image/THE_LEAF_HOUSE_CAFE.jpg"
+  },
+  "6": {
+    "json_key": "7",
+    "name": "Wind Garden Coffee",
+    "category": "coffee",
+    "rating": "4,3",
+    "address": "72 Lê Mạnh Trinh, An Hải, Sơn Trà, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.074512",
+      "108.2434614"
+    ],
+    "image_path": "data/image/Wind_Garden_Coffee.jpg"
+  },
+  "7": {
+    "json_key": "8",
+    "name": "Golden Time Coffee",
+    "category": "coffee",
+    "rating": "4,6",
+    "address": "147 Trần Nguyên Đán, Hoà Minh, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.077549",
+      "108.1600494"
+    ],
+    "image_path": "data/image/Golden_Time_Coffee.jpg"
+  },
+  "8": {
+    "json_key": "9",
+    "name": "T Garden coffee",
+    "category": "coffee",
+    "rating": "4,3",
+    "address": "Hoà Minh, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0711875",
+      "108.1588125"
+    ],
+    "image_path": "data/image/T_Garden_coffee.jpg"
+  },
+  "9": {
+    "json_key": "10",
+    "name": "Cherish Coffee & Desserts",
+    "category": "coffee",
+    "rating": "4,1",
+    "address": "238 Kinh Dương Vương, Thanh Khê Tây, Liên Chiểu, Đà Nẵng, Việt Nam",
+    "coordinate": [
+      "16.075599",
+      "108.1684256"
+    ],
+    "image_path": "data/image/Cherish_Coffee_&_Desserts.jpg"
+  },
+  "10": {
+    "json_key": "11",
+    "name": "WONDERLUST - Coffee & Souvenir",
+    "category": "coffee",
+    "rating": "4,5",
+    "address": "96 Trần Phú, Hải Châu, Đà Nẵng 840236, Việt Nam",
+    "coordinate": [
+      "16.0691557",
+      "108.223843"
+    ],
+    "image_path": "data/image/WONDERLUST_-_Coffee_&_Souvenir.jpg"
+  },
+  "11": {
+    "json_key": "12",
+    "name": "Quán Cà Phê Đẹp Đà Nẵng",
+    "category": "coffee",
+    "rating": "4,8",
+    "address": "197 Lê Trọng Tấn, Hoà Phát, Cẩm Lệ, Đà Nẵng 50710, Việt Nam",
+    "coordinate": [
+      "16.0352703",
+      "108.1734072"
+    ],
+    "image_path": "data/image/Quán_Cà_Phê_Đẹp_Đà_Nẵng.jpg"
+  },
+  "12": {
+    "json_key": "13",
+    "name": "Nóc Rooftop",
+    "category": "coffee",
+    "rating": "4,7",
+    "address": "54 Lê Duy Đình, Chính Gián, Thanh Khê, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0648228",
+      "108.200325"
+    ],
+    "image_path": "data/image/Nóc_Rooftop.jpg"
+  },
+  "13": {
+    "json_key": "14",
+    "name": "SaiGon Brown Coffee",
+    "category": "coffee",
+    "rating": "4,2",
+    "address": "1 Tân Trào, Hoà Minh, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0602436",
+      "108.1744226"
+    ],
+    "image_path": "data/image/SaiGon_Brown_Coffee.jpg"
+  },
+  "14": {
+    "json_key": "15",
+    "name": "Khu Văn hóa Du lịch Không Gian Xưa",
+    "category": "coffee",
+    "rating": "4,2",
+    "address": "402 Điện Biên Phủ, Thanh Khê Đông, Thanh Khê, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0663007",
+      "108.18943"
+    ],
+    "image_path": "data/image/Khu_Văn_hóa_Du_lịch_Không_Gian_Xưa.jpg"
+  },
+  "15": {
+    "json_key": "16",
+    "name": "An Garden.Coffee & Tea",
+    "category": "coffee",
+    "rating": "4,6",
+    "address": "Lô 343 Hoàng Thị Loan, Hoà Minh, Liên Chiểu, Đà Nẵng 50000, Việt Nam",
+    "coordinate": [
+      "16.074807",
+      "108.1596473"
+    ],
+    "image_path": "data/image/An_Garden.Coffee_&_Tea.jpg"
+  },
+  "16": {
+    "json_key": "17",
+    "name": "Phong Cách Cổ Điển - Thụy cà phê",
+    "category": "coffee",
+    "rating": "4,8",
+    "address": "14 Nam Cao, Hoà Khánh Nam, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0663124",
+      "108.1523331"
+    ],
+    "image_path": "data/image/Phong_Cách_Cổ_Điển_-_Thụy_cà_phê.jpg"
+  },
+  "17": {
+    "json_key": "18",
+    "name": "Lối Xưa Cafe",
+    "category": "coffee",
+    "rating": "4,5",
+    "address": "225/3 Đống Đa, Thạch Thang, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0755634",
+      "108.2155914"
+    ],
+    "image_path": "data/image/Lối_Xưa_Cafe.jpg"
+  },
+  "18": {
+    "json_key": "19",
+    "name": "Nhà",
+    "category": "coffee",
+    "rating": "5,0",
+    "address": "61 Phạm Như Xương, Hoà Khánh Nam, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0632488",
+      "108.1548765"
+    ],
+    "image_path": "data/image/Nhà.jpg"
+  },
+  "19": {
+    "json_key": "20",
+    "name": "Trình cà phê",
+    "category": "coffee",
+    "rating": "4,8",
+    "address": "25 Phạm Hồng Thái, Hải Châu, Đà Nẵng 55000, Việt Nam",
+    "coordinate": [
+      "16.0673825",
+      "108.2217327"
+    ],
+    "image_path": "data/image/Trình_cà_phê.jpg"
+  },
+  "20": {
+    "json_key": "21",
+    "name": "Lối Xưa Cafe",
+    "category": "coffee",
+    "rating": "4,5",
+    "address": "225/3 Đống Đa, Thạch Thang, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0755634",
+      "108.2155914"
+    ],
+    "image_path": "data/image/Lối_Xưa_Cafe.jpg"
+  },
+  "21": {
+    "json_key": "22",
+    "name": "Seed-coffee",
+    "category": "coffee",
+    "rating": "4,8",
+    "address": "35C3+C57, Hoà Khánh Bắc, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0710377",
+      "108.1529237"
+    ],
+    "image_path": "data/image/Seed-coffee.jpg"
+  },
+  "22": {
+    "json_key": "23",
+    "name": "Tanpo Coffee & Tea",
+    "category": "coffee",
+    "rating": "4,3",
+    "address": "36 Đ. Ngô Thì Nhậm, Hoà Khánh Nam, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0697725",
+      "108.1530746"
+    ],
+    "image_path": "data/image/Tanpo_Coffee_&_Tea.jpg"
+  },
+  "23": {
+    "json_key": "24",
+    "name": "CaLaFe Coffee",
+    "category": "coffee",
+    "rating": "4,7",
+    "address": "34 Hà Văn Tính, Hoà Khánh Nam, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0686964",
+      "108.1545877"
+    ],
+    "image_path": "data/image/CaLaFe_Coffee.jpg"
+  },
+  "24": {
+    "json_key": "25",
+    "name": "MIRKO Coffee & Chill Beer",
+    "category": "coffee",
+    "rating": "3,4",
+    "address": "100 Nguyễn Hữu An, Nại Hiên Đông, Sơn Trà, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.1031274",
+      "108.2329497"
+    ],
+    "image_path": "data/image/MIRKO_Coffee_&_Chill_Beer.jpg"
+  },
+  "25": {
+    "json_key": "26",
+    "name": "DREAMER",
+    "category": "coffee",
+    "rating": "4,3",
+    "address": "230 Nguyễn Công Trứ, An Hải, Sơn Trà, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0659505",
+      "108.2367608"
+    ],
+    "image_path": "data/image/DREAMER.jpg"
+  },
+  "26": {
+    "json_key": "27",
+    "name": "NORMAD Coffee & Eatery - Phạm Văn Đồng",
+    "category": "coffee",
+    "rating": "4,6",
+    "address": "106 Phạm Văn Đồng, An Hải, Sơn Trà, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0711437",
+      "108.2362378"
+    ],
+    "image_path": "data/image/NORMAD_Coffee_&_Eatery_-_Phạm_Văn_Đồng.jpg"
+  },
+  "27": {
+    "json_key": "28",
+    "name": "Cà Phê Xóm",
+    "category": "coffee",
+    "rating": "4,6",
+    "address": "5 Nam Cao, Hoà Khánh Nam, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.06681",
+      "108.1523176"
+    ],
+    "image_path": "data/image/Cà_Phê_Xóm.jpg"
+  },
+  "28": {
+    "json_key": "29",
+    "name": "Trình cà phê",
+    "category": "coffee",
+    "rating": "4,8",
+    "address": "25 Phạm Hồng Thái, Hải Châu, Đà Nẵng 55000, Việt Nam",
+    "coordinate": [
+      "16.0673825",
+      "108.2217327"
+    ],
+    "image_path": "data/image/Trình_cà_phê.jpg"
+  },
+  "29": {
+    "json_key": "30",
+    "name": "COLOR COFFEE - RỪNG NHIỆT ĐỚI",
+    "category": "coffee",
+    "rating": "4,7",
+    "address": "550 Trưng Nữ Vương, Hòa Thuận Nam, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0477566",
+      "108.2119938"
+    ],
+    "image_path": "data/image/COLOR_COFFEE_-_RỪNG_NHIỆT_ĐỚI.jpg"
+  },
+  "30": {
+    "json_key": "31",
+    "name": "IKIGAI . garden . cafe",
+    "category": "coffee",
+    "rating": "4,4",
+    "address": "60 Nguyễn Chí Thanh, Hải Châu, Đà Nẵng 55000, Việt Nam",
+    "coordinate": [
+      "16.0740215",
+      "108.2205959"
+    ],
+    "image_path": "data/image/IKIGAI_._garden_._cafe.jpg"
+  },
+  "31": {
+    "json_key": "32",
+    "name": "The 59 cafe",
+    "category": "coffee",
+    "rating": "4,3",
+    "address": "59 Hải Phòng, Thạch Thang, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0717586",
+      "108.2175209"
+    ],
+    "image_path": "data/image/The_59_cafe.jpg"
+  },
+  "32": {
+    "json_key": "33",
+    "name": "2AM Coffee",
+    "category": "coffee",
+    "rating": "4,1",
+    "address": "194 Nguyễn Tri Phương, Thạc Gián, Thanh Khê, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0591201",
+      "108.2056653"
+    ],
+    "image_path": "data/image/2AM_Coffee.jpg"
+  },
+  "33": {
+    "json_key": "34",
+    "name": "Trà Quán Góc Nhà Tụi Mình",
+    "category": "coffee",
+    "rating": "4,7",
+    "address": "36 Lê Duẩn, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0723858",
+      "108.2218489"
+    ],
+    "image_path": "data/image/Trà_Quán_Góc_Nhà_Tụi_Mình.jpg"
+  },
+  "34": {
+    "json_key": "35",
+    "name": "A COFFEE",
+    "category": "coffee",
+    "rating": "4,7",
+    "address": "68 Lê Doãn Nhạ, Hoà Khánh Nam, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0676039",
+      "108.1530387"
+    ],
+    "image_path": "data/image/A_COFFEE.jpg"
+  },
+  "35": {
+    "json_key": "36",
+    "name": "Ribo Coffee - Quán Cafe Đẹp Đà Nẵng",
+    "category": "coffee",
+    "rating": "4,0",
+    "address": "05 Thái Thị Bôi, Chính Gián, Thanh Khê, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0682715",
+      "108.2011952"
+    ],
+    "image_path": "data/image/Ribo_Coffee_-_Quán_Cafe_Đẹp_Đà_Nẵng.jpg"
+  },
+  "36": {
+    "json_key": "37",
+    "name": "IKIGAI garden cafe - 01 Phạm Như Xương, Đà Nẵng",
+    "category": "coffee",
+    "rating": "3,8",
+    "address": "1 Phạm Như Xương, Hoà Khánh Nam, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0624223",
+      "108.1575171"
+    ],
+    "image_path": "data/image/IKIGAI_garden_cafe_-_01_Phạm_Như_Xương,_Đà_Nẵng.jpg"
+  },
+  "37": {
+    "json_key": "38",
+    "name": "43 Mét Vuông Cà Phê",
+    "category": "coffee",
+    "rating": "4,2",
+    "address": "727 Trần Cao Vân, Thanh Khê Đông, Thanh Khê, Đà Nẵng, Việt Nam",
+    "coordinate": [
+      "16.0686507",
+      "108.1836326"
+    ],
+    "image_path": "data/image/43_Mét_Vuông_Cà_Phê.jpg"
+  },
+  "38": {
+    "json_key": "39",
+    "name": "Tiệm cà phê chú Mạnh",
+    "category": "coffee",
+    "rating": "4,9",
+    "address": "298/21 Cách Mạng Tháng 8, Hòa Thọ Đông, Cẩm Lệ, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0172861",
+      "108.2028716"
+    ],
+    "image_path": "data/image/Tiệm_cà_phê_chú_Mạnh.jpg"
+  },
+  "39": {
+    "json_key": "40",
+    "name": "Acacia by CaySi cafe",
+    "category": "coffee",
+    "rating": "4,8",
+    "address": "05 An Cư 5, An Hải, Sơn Trà, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0740525",
+      "108.2419258"
+    ],
+    "image_path": "data/image/Acacia_by_CaySi_cafe.jpg"
+  },
+  "40": {
+    "json_key": "41",
+    "name": "La’s Cafe",
+    "category": "coffee",
+    "rating": "4,6",
+    "address": "36 Đ. Nguyễn Văn Thông, Hoà Xuân, Cẩm Lệ, Đà Nẵng 840236, Việt Nam",
+    "coordinate": [
+      "16.0198284",
+      "108.2222373"
+    ],
+    "image_path": "data/image/La’s_Cafe.jpg"
+  },
+  "41": {
+    "json_key": "42",
+    "name": "Amber coffee house",
+    "category": "coffee",
+    "rating": "4,6",
+    "address": "437 Tôn Đản, Hoà An, Cẩm Lệ, Đà Nẵng, Việt Nam",
+    "coordinate": [
+      "16.0431395",
+      "108.1831281"
+    ],
+    "image_path": "data/image/Amber_coffee_house.jpg"
+  },
+  "42": {
+    "json_key": "43",
+    "name": "Lặng Coffee",
+    "category": "coffee",
+    "rating": "5,0",
+    "address": "39 Yên Khê 3, Thanh Khê Tây, Liên Chiểu, Đà Nẵng, Việt Nam",
+    "coordinate": [
+      "16.07248",
+      "108.1745836"
+    ],
+    "image_path": "data/image/Lặng_Coffee.jpg"
+  },
+  "43": {
+    "json_key": "44",
+    "name": "Nia Coffee",
+    "category": "coffee",
+    "rating": "4,3",
+    "address": "3/14, Phan Thành Tài, Bình Thuận, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0529845",
+      "108.2214719"
+    ],
+    "image_path": "data/image/Nia_Coffee.jpg"
+  },
+  "44": {
+    "json_key": "45",
+    "name": "128 ngô văn sở",
+    "category": "coffee",
+    "rating": "4,7",
+    "address": "128 Ngô Văn Sở, Hoà Khánh Bắc, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0677415",
+      "108.1477795"
+    ],
+    "image_path": "data/image/128_ngô_văn_sở.jpg"
+  },
+  "45": {
+    "json_key": "46",
+    "name": "Ngã Coffee & Desserts",
+    "category": "coffee",
+    "rating": "4,7",
+    "address": "2 Đặng Thùy Trâm, Hoà Thuận, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0523796",
+      "108.2062998"
+    ],
+    "image_path": "data/image/Ngã_Coffee_&_Desserts.jpg"
+  },
+  "46": {
+    "json_key": "47",
+    "name": "P Coffee",
+    "category": "coffee",
+    "rating": "4,2",
+    "address": "53-55 Nguyễn Văn Linh, Phước Ninh, Hải Châu, Đà Nẵng 50211, Việt Nam",
+    "coordinate": [
+      "16.0607465",
+      "108.2206633"
+    ],
+    "image_path": "data/image/P_Coffee.jpg"
+  },
+  "47": {
+    "json_key": "48",
+    "name": "Melody Garden Coffee",
+    "category": "coffee",
+    "rating": "3,6",
+    "address": "92 Nguyễn Lương Bằng, Hoà Khánh Bắc, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0751286",
+      "108.1492621"
+    ],
+    "image_path": "data/image/Melody_Garden_Coffee.jpg"
+  },
+  "48": {
+    "json_key": "49",
+    "name": "Quán cà phê Hè - Cà phê sân vườn, máy lạnh",
+    "category": "coffee",
+    "rating": "5,0",
+    "address": "123 Phạm Như Xương, Hoà Khánh Nam, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0641941",
+      "108.1519022"
+    ],
+    "image_path": "data/image/Quán_cà_phê_Hè_-_Cà_phê_sân_vườn,_máy_lạnh.jpg"
+  },
+  "49": {
+    "json_key": "50",
+    "name": "Third House Coffee",
+    "category": "coffee",
+    "rating": "4,7",
+    "address": "142/3 Lê Độ, Xuân Hà, Thanh Khê, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0668394",
+      "108.2013939"
+    ],
+    "image_path": "data/image/Third_House_Coffee.jpg"
+  },
+  "50": {
+    "json_key": "1",
+    "name": "Cơm nhà vui",
+    "category": "food",
+    "rating": "4,9",
+    "address": "86 Đ. 2 Tháng 9, Phước Ninh, Hải Châu, Đà Nẵng 10000, Việt Nam",
+    "coordinate": [
+      "16.0566182",
+      "108.2220671"
+    ],
+    "image_path": "data/image/Cơm_nhà_vui.jpg"
+  },
+  "51": {
+    "json_key": "2",
+    "name": "Quán Cờ Lê",
+    "category": "food",
+    "rating": "3,8",
+    "address": "122 Nguyễn Chánh, Hoà Khánh Bắc, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0862877",
+      "108.1523036"
+    ],
+    "image_path": "data/image/Quán_Cờ_Lê.jpg"
+  },
+  "52": {
+    "json_key": "3",
+    "name": "Cơm Mẹ Anh - Cơm Ngon Đà Nẵng - Local Vietnamese Cuisine",
+    "category": "food",
+    "rating": "4,9",
+    "address": "82 Đ. 2 Tháng 9, Phước Ninh, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0569654",
+      "108.2220091"
+    ],
+    "image_path": "data/image/Cơm_Mẹ_Anh_-_Cơm_Ngon_Đà_Nẵng_-_Local_Vietnamese_Cuisine.jpg"
+  },
+  "53": {
+    "json_key": "4",
+    "name": "Bếp Cuốn Đà Nẵng",
+    "category": "food",
+    "rating": "4,9",
+    "address": "31-33 Trần Bạch Đằng, An Hải, Sơn Trà, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0579628",
+      "108.2451505"
+    ],
+    "image_path": "data/image/Bếp_Cuốn_Đà_Nẵng.jpg"
+  },
+  "54": {
+    "json_key": "5",
+    "name": "Cô Ba Phở bò",
+    "category": "food",
+    "rating": "4,8",
+    "address": "154 Bạch Đằng, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0669705",
+      "108.2247188"
+    ],
+    "image_path": "data/image/Cô_Ba_Phở_bò.jpg"
+  },
+  "55": {
+    "json_key": "6",
+    "name": "Quán Ốc Ngon Đà Nẵng",
+    "category": "food",
+    "rating": "4,4",
+    "address": "137 Nguyễn Đức Trung, Thanh Khê Đông, Thanh Khê, Đà Nẵng 88000, Việt Nam",
+    "coordinate": [
+      "16.0663069",
+      "108.1886495"
+    ],
+    "image_path": "data/image/Quán_Ốc_Ngon_Đà_Nẵng.jpg"
+  },
+  "56": {
+    "json_key": "7",
+    "name": "Bánh Xèo Bà Dưỡng",
+    "category": "food",
+    "rating": "4,3",
+    "address": "280/23 Hoàng Diệu, Phước Ninh, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0588772",
+      "108.216166"
+    ],
+    "image_path": "data/image/Bánh_Xèo_Bà_Dưỡng.jpg"
+  },
+  "57": {
+    "json_key": "8",
+    "name": "Ăn Thôi 안토이",
+    "category": "food",
+    "rating": "4,7",
+    "address": "114 Bạch Đằng, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0682463",
+      "108.2248133"
+    ],
+    "image_path": "data/image/Ăn_Thôi_안토이.jpg"
+  },
+  "58": {
+    "json_key": "9",
+    "name": "Nhà hàng Nhà Gỗ Việt Đà Nẵng",
+    "category": "food",
+    "rating": "4,9",
+    "address": "49 Nguyễn Thái Học, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0679495",
+      "108.2232911"
+    ],
+    "image_path": "data/image/Nhà_hàng_Nhà_Gỗ_Việt_Đà_Nẵng.jpg"
+  },
+  "59": {
+    "json_key": "10",
+    "name": "Quán Cơm Bình Dân (Binh Dan Rice Restaurant)",
+    "category": "food",
+    "rating": "5,0",
+    "address": "44 Phan Văn Định, Hoà Khánh Bắc, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0882569",
+      "108.1461675"
+    ],
+    "image_path": "data/image/Quán_Cơm_Bình_Dân_(Binh_Dan_Rice_Restaurant).jpg"
+  },
+  "60": {
+    "json_key": "11",
+    "name": "Quán ăn Nhà Ta",
+    "category": "food",
+    "rating": "4,0",
+    "address": "134 Đ. 2 Tháng 9, Bình Thuận, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0531445",
+      "108.2219696"
+    ],
+    "image_path": "data/image/Quán_ăn_Nhà_Ta.jpg"
+  },
+  "61": {
+    "json_key": "12",
+    "name": "Thìa Gỗ Đà Nẵng",
+    "category": "food",
+    "rating": "4,7",
+    "address": "53 Phan Thúc Duyện, Bắc Mỹ Phú, Ngũ Hành Sơn, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0529867",
+      "108.2415777"
+    ],
+    "image_path": "data/image/Thìa_Gỗ_Đà_Nẵng.jpg"
+  },
+  "62": {
+    "json_key": "13",
+    "name": "An Nam Quán",
+    "category": "food",
+    "rating": "4,5",
+    "address": "78 Trần Bạch Đằng, P, Ngũ Hành Sơn, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0556756",
+      "108.2457347"
+    ],
+    "image_path": "data/image/An_Nam_Quán.jpg"
+  },
+  "63": {
+    "json_key": "14",
+    "name": "Quán Huế Ngon - 다낭최고의 로컬 BBQ 레스토랑- Best local food in Da Nang",
+    "category": "food",
+    "rating": "4,1",
+    "address": "65 Trần Quốc Toản, Phước Ninh, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0662346",
+      "108.2212925"
+    ],
+    "image_path": "data/image/Quán_Huế_Ngon_-_다낭최고의_로컬_BBQ_레스토랑-_Best_local_food_in_Da_Nang.jpg"
+  },
+  "64": {
+    "json_key": "15",
+    "name": "Cơm Ngon Đà Nẵng - Bếp Huế",
+    "category": "food",
+    "rating": "4,0",
+    "address": "185 Nguyễn Văn Thoại, An Hải Đông, Sơn Trà, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0553321",
+      "108.2426628"
+    ],
+    "image_path": "data/image/Cơm_Ngon_Đà_Nẵng_-_Bếp_Huế.jpg"
+  },
+  "65": {
+    "json_key": "16",
+    "name": "Mít trộn Bà Già",
+    "category": "food",
+    "rating": "4,4",
+    "address": "Kiệt 47 Lý Thái Tổ, Thạc Gián, Thanh Khê, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0651226",
+      "108.2091788"
+    ],
+    "image_path": "data/image/Mít_trộn_Bà_Già.jpg"
+  },
+  "66": {
+    "json_key": "17",
+    "name": "Nhà Hàng Cafe Trúc Lâm Viên",
+    "category": "food",
+    "rating": "4,5",
+    "address": "08 Trần Quý Cáp, Thạch Thang, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0817179",
+      "108.2217503"
+    ],
+    "image_path": "data/image/Nhà_Hàng_Cafe_Trúc_Lâm_Viên.jpg"
+  },
+  "67": {
+    "json_key": "18",
+    "name": "Quán ăn vặt ngon Đà Nẵng",
+    "category": "food",
+    "rating": "3,9",
+    "address": "71 Nguyễn Huy Tưởng, Hoà An, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.053488",
+      "108.1694921"
+    ],
+    "image_path": "data/image/Quán_ăn_vặt_ngon_Đà_Nẵng.jpg"
+  },
+  "68": {
+    "json_key": "19",
+    "name": "Hải sản Năm Đảnh",
+    "category": "food",
+    "rating": "4,1",
+    "address": "139/59/38 Trần Quang Khải, Phường, Sơn Trà, Đà Nẵng, Việt Nam",
+    "coordinate": [
+      "16.1022967",
+      "108.2533986"
+    ],
+    "image_path": "data/image/Hải_sản_Năm_Đảnh.jpg"
+  },
+  "69": {
+    "json_key": "20",
+    "name": "Cơm nhà Kiều Thị - 68 Đường 2/9 Đà Nẵng",
+    "category": "food",
+    "rating": "4,5",
+    "address": "70 Đ. 2 Tháng 9, Phước Ninh, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0572122",
+      "108.2221526"
+    ],
+    "image_path": "data/image/Cơm_nhà_Kiều_Thị_-_68_Đường_29_Đà_Nẵng.jpg"
+  },
+  "70": {
+    "json_key": "21",
+    "name": "Hải sản Năm Đảnh",
+    "category": "food",
+    "rating": "4,1",
+    "address": "139/59/38 Trần Quang Khải, Phường, Sơn Trà, Đà Nẵng, Việt Nam",
+    "coordinate": [
+      "16.1022967",
+      "108.2533986"
+    ],
+    "image_path": "data/image/Hải_sản_Năm_Đảnh.jpg"
+  },
+  "71": {
+    "json_key": "22",
+    "name": "Nhà Bếp Xưa Restaurant",
+    "category": "food",
+    "rating": "4,8",
+    "address": "64B Hà Bổng, An Hải, Sơn Trà, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.066058",
+      "108.2443163"
+    ],
+    "image_path": "data/image/Nhà_Bếp_Xưa_Restaurant.jpg"
+  },
+  "72": {
+    "json_key": "23",
+    "name": "Mì Quảng Ếch bếp Trang",
+    "category": "food",
+    "rating": "4,4",
+    "address": "441 Ông Ích Khiêm, Phước Ninh, Hải Châu, Đà Nẵng 55000, Việt Nam",
+    "coordinate": [
+      "16.0628382",
+      "108.2160468"
+    ],
+    "image_path": "data/image/Mì_Quảng_Ếch_bếp_Trang.jpg"
+  },
+  "73": {
+    "json_key": "24",
+    "name": "Quán Ăn Cây Sung",
+    "category": "food",
+    "rating": "4,2",
+    "address": "135 Trần Nguyên Đán, Hoà Minh, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0772378",
+      "108.1605738"
+    ],
+    "image_path": "data/image/Quán_Ăn_Cây_Sung.jpg"
+  },
+  "74": {
+    "json_key": "25",
+    "name": "Tiệm Ăn Phúc Ký",
+    "category": "food",
+    "rating": "4,4",
+    "address": "81 Hùng Vương, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.068262",
+      "108.2192663"
+    ],
+    "image_path": "data/image/Tiệm_Ăn_Phúc_Ký.jpg"
+  },
+  "75": {
+    "json_key": "26",
+    "name": "Ẩm Thực Năm Hiền - Bánh Xèo Tôm Nhảy",
+    "category": "food",
+    "rating": "4,0",
+    "address": "46 Phan Thanh, Thạc Gián, Thanh Khê, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0646855",
+      "108.2079332"
+    ],
+    "image_path": "data/image/Ẩm_Thực_Năm_Hiền_-_Bánh_Xèo_Tôm_Nhảy.jpg"
+  },
+  "76": {
+    "json_key": "27",
+    "name": "ỐC CHẢO ĐÀ NẴNG - 35 TRẦN VĂN KỶ",
+    "category": "food",
+    "rating": "3,4",
+    "address": "35 Trần Văn Kỷ, Hoà Khánh Nam, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0697599",
+      "108.1549785"
+    ],
+    "image_path": "data/image/ỐC_CHẢO_ĐÀ_NẴNG_-_35_TRẦN_VĂN_KỶ.jpg"
+  },
+  "77": {
+    "json_key": "28",
+    "name": "Nhà Hàng Cội Nguồn",
+    "category": "food",
+    "rating": "4,1",
+    "address": "160 Nguyễn Tri Phương, Thạc Gián, Thanh Khê, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0601309",
+      "108.2051731"
+    ],
+    "image_path": "data/image/Nhà_Hàng_Cội_Nguồn.jpg"
+  },
+  "78": {
+    "json_key": "29",
+    "name": "Cửa hàng Ăn uống Mậu Dịch 1986",
+    "category": "food",
+    "rating": "4,3",
+    "address": "149 Hải Phòng, Thạch Thang, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0716765",
+      "108.2138646"
+    ],
+    "image_path": "data/image/Cửa_hàng_Ăn_uống_Mậu_Dịch_1986.jpg"
+  },
+  "79": {
+    "json_key": "30",
+    "name": "Nhà hàng Ngon Thị Hoa",
+    "category": "food",
+    "rating": "4,2",
+    "address": "Str, 100 Lê Quang Đạo, Bắc Mỹ Phú, Ngũ Hành Sơn, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0489044",
+      "108.2458626"
+    ],
+    "image_path": "data/image/Nhà_hàng_Ngon_Thị_Hoa.jpg"
+  },
+  "80": {
+    "json_key": "31",
+    "name": "Cơm niêu 3 Cá Bống",
+    "category": "food",
+    "rating": "4,0",
+    "address": "112 Nguyễn Tri Phương, Chính Gián, Thanh Khê, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0615129",
+      "108.204336"
+    ],
+    "image_path": "data/image/Cơm_niêu_3_Cá_Bống.jpg"
+  },
+  "81": {
+    "json_key": "32",
+    "name": "Quán Mì Quảng Bà Bích",
+    "category": "food",
+    "rating": "4,1",
+    "address": "1 Đặng Dung, Hoà Khánh Bắc, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.071235",
+      "108.1501031"
+    ],
+    "image_path": "data/image/Quán_Mì_Quảng_Bà_Bích.jpg"
+  },
+  "82": {
+    "json_key": "33",
+    "name": "Quán lẩu 70",
+    "category": "food",
+    "rating": "3,9",
+    "address": "16 Đ. Ngô Thì Nhậm, Hoà Khánh Nam, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0694905",
+      "108.1523029"
+    ],
+    "image_path": "data/image/Quán_lẩu_70.jpg"
+  },
+  "83": {
+    "json_key": "34",
+    "name": "TÔN NỮ QUÁN",
+    "category": "food",
+    "rating": "4,4",
+    "address": "383/9 Hải Phòng, Chính Gián, Thanh Khê, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0698439",
+      "108.206141"
+    ],
+    "image_path": "data/image/TÔN_NỮ_QUÁN.jpg"
+  },
+  "84": {
+    "json_key": "35",
+    "name": "Nhà hàng Hoa Lư - Sunbay",
+    "category": "food",
+    "rating": "4,1",
+    "address": "113 Nguyễn Hữu Thọ, Hòa Thuận Nam, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0482262",
+      "108.2097757"
+    ],
+    "image_path": "data/image/Nhà_hàng_Hoa_Lư_-_Sunbay.jpg"
+  },
+  "85": {
+    "json_key": "36",
+    "name": "Cơm Ngon Đà Nẵng - Cơm Văn Phòng",
+    "category": "food",
+    "rating": "3,0",
+    "address": "117 Ng. Gia Tự, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0667186",
+      "108.2180119"
+    ],
+    "image_path": "data/image/Cơm_Ngon_Đà_Nẵng_-_Cơm_Văn_Phòng.jpg"
+  },
+  "86": {
+    "json_key": "37",
+    "name": "Tiệm Ăn Thanh Ngọc",
+    "category": "food",
+    "rating": "3,0",
+    "address": "271 Hùng Vương, Thạc Gián, Thanh Khê, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0667698",
+      "108.2121399"
+    ],
+    "image_path": "data/image/Tiệm_Ăn_Thanh_Ngọc.jpg"
+  },
+  "87": {
+    "json_key": "38",
+    "name": "Quán A.Bi - Hải sản bình dân",
+    "category": "food",
+    "rating": "4,4",
+    "address": "100 Phan Thanh, Thạc Gián, Thanh Khê, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.062394",
+      "108.2088537"
+    ],
+    "image_path": "data/image/Quán_A.Bi_-_Hải_sản_bình_dân.jpg"
+  },
+  "88": {
+    "json_key": "39",
+    "name": "Ăn vặt 3colu",
+    "category": "food",
+    "rating": "4,1",
+    "address": "36 Nguyễn Bá Học, Bình Thuận, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0546547",
+      "108.2206954"
+    ],
+    "image_path": "data/image/Ăn_vặt_3colu.jpg"
+  },
+  "89": {
+    "json_key": "40",
+    "name": "Tiệm Cơm 75s",
+    "category": "food",
+    "rating": "3,4",
+    "address": "61 Nguyễn Lương Bằng, Hoà Khánh Bắc, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0734682",
+      "108.1493638"
+    ],
+    "image_path": "data/image/Tiệm_Cơm_75s.jpg"
+  },
+  "90": {
+    "json_key": "41",
+    "name": "Bánh tráng thịt heo Bà Hường",
+    "category": "food",
+    "rating": "4,3",
+    "address": "126 Duy Tân, Hòa Thuận Nam, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0512153",
+      "108.2081205"
+    ],
+    "image_path": "data/image/Bánh_tráng_thịt_heo_Bà_Hường.jpg"
+  },
+  "91": {
+    "json_key": "42",
+    "name": "Quán Cơm Gà 3 Lu",
+    "category": "food",
+    "rating": "4,1",
+    "address": "105 Đặng Dung, Hoà Khánh Nam, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0683741",
+      "108.1513031"
+    ],
+    "image_path": "data/image/Quán_Cơm_Gà_3_Lu.jpg"
+  },
+  "92": {
+    "json_key": "43",
+    "name": "Cơm Hến Hoàng Diệu - Đà Nẵng",
+    "category": "food",
+    "rating": "4,6",
+    "address": "37 Kiệt 356 Hoàng Diệu, Bình Thuận, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0563507",
+      "108.2159507"
+    ],
+    "image_path": "data/image/Cơm_Hến_Hoàng_Diệu_-_Đà_Nẵng.jpg"
+  },
+  "93": {
+    "json_key": "44",
+    "name": "Gà Nướng Muối Ớt Đà Nẵng",
+    "category": "food",
+    "rating": "4,0",
+    "address": "26 Lê Độ, Hoà Minh, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.07891",
+      "108.1591999"
+    ],
+    "image_path": "data/image/Gà_Nướng_Muối_Ớt_Đà_Nẵng.jpg"
+  },
+  "94": {
+    "json_key": "45",
+    "name": "Bánh bèo Bà Bé",
+    "category": "food",
+    "rating": "4,1",
+    "address": "100 Hoàng Văn Thụ, Phước Ninh, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0631",
+      "108.218979"
+    ],
+    "image_path": "data/image/Bánh_bèo_Bà_Bé.jpg"
+  },
+  "95": {
+    "json_key": "46",
+    "name": "Nướng Bơ Đà Nẵng - Nướng bơ 1986",
+    "category": "food",
+    "rating": "4,4",
+    "address": "319 Nguyễn Tri Phương, Bình Thuận, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0507808",
+      "108.2133283"
+    ],
+    "image_path": "data/image/Nướng_Bơ_Đà_Nẵng_-_Nướng_bơ_1986.jpg"
+  },
+  "96": {
+    "json_key": "47",
+    "name": "Dân Dã Quán",
+    "category": "food",
+    "rating": "4,0",
+    "address": "265 Nguyễn Văn Linh, Thạc Gián, Thanh Khê, Đà Nẵng 50313, Việt Nam",
+    "coordinate": [
+      "16.0599239",
+      "108.2122375"
+    ],
+    "image_path": "data/image/Dân_Dã_Quán.jpg"
+  },
+  "97": {
+    "json_key": "48",
+    "name": "Quán Cơm Đà Nẵng",
+    "category": "food",
+    "rating": "3,9",
+    "address": "25 Hà Huy Tập, Xuân Hà, Thanh Khê, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.069518",
+      "108.1918904"
+    ],
+    "image_path": "data/image/Quán_Cơm_Đà_Nẵng.jpg"
+  },
+  "98": {
+    "json_key": "49",
+    "name": "Bún chả cá Bà Phiến (Bà Thừa)",
+    "category": "food",
+    "rating": "4,3",
+    "address": "63 Lê Hồng Phong, Phước Ninh, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.064018",
+      "108.2202724"
+    ],
+    "image_path": "data/image/Bún_chả_cá_Bà_Phiến_(Bà_Thừa).jpg"
+  },
+  "99": {
+    "json_key": "50",
+    "name": "DONALD TRUNG ĐÀ NẴNG _352 Hải Phòng",
+    "category": "food",
+    "rating": "4,8",
+    "address": "352 Hải Phòng, Chính Gián, Thanh Khê, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0679539",
+      "108.204807"
+    ],
+    "image_path": "data/image/DONALD_TRUNG_ĐÀ_NẴNG__352_Hải_Phòng.jpg"
+  },
+  "100": {
+    "json_key": "1",
+    "name": "Trung Tâm Giải Trí Helio",
+    "category": "play",
+    "rating": "4,3",
+    "address": "Tòa nhà Helio, 01 Đ. 2 Tháng 9, Hoà Cường Bắc, Hải Châu, Đà Nẵng, Việt Nam",
+    "coordinate": [
+      "16.0365588",
+      "108.2248719"
+    ],
+    "image_path": "data/image/Trung_Tâm_Giải_Trí_Helio.jpg"
+  },
+  "101": {
+    "json_key": "2",
+    "name": "DD WONDERLAND",
+    "category": "play",
+    "rating": "4,4",
+    "address": "78b Quang Trung, Thạch Thang, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0746815",
+      "108.2188584"
+    ],
+    "image_path": "data/image/DD_WONDERLAND.jpg"
+  },
+  "102": {
+    "json_key": "3",
+    "name": "Khu vui chơi trẻ em Đô Rê Mon",
+    "category": "play",
+    "rating": "4,3",
+    "address": "77 Thanh Tịnh, Hoà Minh, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.060858",
+      "108.1722222"
+    ],
+    "image_path": "data/image/Khu_vui_chơi_trẻ_em_Đô_Rê_Mon.jpg"
+  },
+  "103": {
+    "json_key": "4",
+    "name": "NICKY KIDS - Khu Vui Chơi Dành Cho Bé",
+    "category": "play",
+    "rating": "4,3",
+    "address": "363C+XWG, Đ. 2 Tháng 9, Bình Thuận, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0549151",
+      "108.2223728"
+    ],
+    "image_path": "data/image/NICKY_KIDS_-_Khu_Vui_Chơi_Dành_Cho_Bé.jpg"
+  },
+  "104": {
+    "json_key": "5",
+    "name": "Khu Vui Chơi Trẻ Em Minions Kids Hải Châu",
+    "category": "play",
+    "rating": "4,0",
+    "address": "14 - 16 Đ. 30/4, Hoà Cường Bắc, Hải Châu, Đà Nẵng 55000, Việt Nam",
+    "coordinate": [
+      "16.0408495",
+      "108.2202956"
+    ],
+    "image_path": "data/image/Khu_Vui_Chơi_Trẻ_Em_Minions_Kids_Hải_Châu.jpg"
+  },
+  "105": {
+    "json_key": "6",
+    "name": "Khu Vui Chơi Trẻ Em POKEMON Kids - Đà Nẵng",
+    "category": "play",
+    "rating": "4,3",
+    "address": "88 Nguyễn Tri Phương, Chính Gián, Thanh Khê, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0620376",
+      "108.20399"
+    ],
+    "image_path": "data/image/Khu_Vui_Chơi_Trẻ_Em_POKEMON_Kids_-_Đà_Nẵng.jpg"
+  },
+  "106": {
+    "json_key": "7",
+    "name": "Khu vui chơi giải trí Cung Thiếu Nhi Đà Nẵng",
+    "category": "play",
+    "rating": "4,6",
+    "address": "2A Phan Đăng Lưu, Hoà Cường Bắc, Hải Châu, Đà Nẵng, Việt Nam",
+    "coordinate": [
+      "16.0381439",
+      "108.2253648"
+    ],
+    "image_path": "data/image/Khu_vui_chơi_giải_trí_Cung_Thiếu_Nhi_Đà_Nẵng.jpg"
+  },
+  "107": {
+    "json_key": "8",
+    "name": "ba na hills | 巴拿山",
+    "category": "play",
+    "rating": "4,4",
+    "address": "Hoà Phú, Hòa Vang, Đà Nẵng, Việt Nam",
+    "coordinate": [
+      "15.9972041",
+      "107.988763"
+    ],
+    "image_path": "data/image/ba_na_hills__巴拿山.jpg"
+  },
+  "108": {
+    "json_key": "9",
+    "name": "Khu vui chơi trẻ em và cafe Mario kids",
+    "category": "play",
+    "rating": "4,0",
+    "address": "183 Nguyễn Chánh, Hoà Khánh Bắc, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0874988",
+      "108.1533019"
+    ],
+    "image_path": "data/image/Khu_vui_chơi_trẻ_em_và_cafe_Mario_kids.jpg"
+  },
+  "109": {
+    "json_key": "10",
+    "name": "Khu vui chơi",
+    "category": "play",
+    "rating": "3,7",
+    "address": "103 Đ. Ngô Thì Nhậm, Hoà Minh, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.072137",
+      "108.1585223"
+    ],
+    "image_path": "data/image/Khu_vui_chơi.jpg"
+  },
+  "110": {
+    "json_key": "11",
+    "name": "Khu Vui chơi Thiếu nhi",
+    "category": "play",
+    "rating": "4,7",
+    "address": "36QM+973, Vân Đồn, Nại Hiên Đông, Sơn Trà, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0883969",
+      "108.2331744"
+    ],
+    "image_path": "data/image/Khu_Vui_chơi_Thiếu_nhi.jpg"
+  },
+  "111": {
+    "json_key": "12",
+    "name": "Kubo Nano",
+    "category": "play",
+    "rating": "3,8",
+    "address": "255 Hùng Vương, Thạc Gián, Thanh Khê, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0667392",
+      "108.2135158"
+    ],
+    "image_path": "data/image/Kubo_Nano.jpg"
+  },
+  "112": {
+    "json_key": "13",
+    "name": "Công Viên Nước Mikazuki 365",
+    "category": "play",
+    "rating": "4,2",
+    "address": "Khu du lịch Xuân Thiều, Nguyễn Tất Thành, Hoà Hiệp Nam, Liên Chiểu, Đà Nẵng 55000, Việt Nam",
+    "coordinate": [
+      "16.0921811",
+      "108.1441576"
+    ],
+    "image_path": "data/image/Công_Viên_Nước_Mikazuki_365.jpg"
+  },
+  "113": {
+    "json_key": "14",
+    "name": "Công Viên APEC",
+    "category": "play",
+    "rating": "4,4",
+    "address": "Phước Ninh, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0581055",
+      "108.2232435"
+    ],
+    "image_path": "data/image/Công_Viên_APEC.jpg"
+  },
+  "114": {
+    "json_key": "15",
+    "name": "Công Viên Nước Đà Nẵng - Holie Water Park",
+    "category": "play",
+    "rating": "4,7",
+    "address": "Làng thể thao, tuyên sơn, Đà Nẵng 50000, Việt Nam",
+    "coordinate": [
+      "16.0354751",
+      "108.2256831"
+    ],
+    "image_path": "data/image/Công_Viên_Nước_Đà_Nẵng_-_Holie_Water_Park.jpg"
+  },
+  "115": {
+    "json_key": "16",
+    "name": "Công viên Kỳ Quan",
+    "category": "play",
+    "rating": "4,4",
+    "address": "01 Lê Văn Duyệt, Nại Hiên Đông, Sơn Trà, Đà Nẵng 590000, Việt Nam",
+    "coordinate": [
+      "16.0988248",
+      "108.224412"
+    ],
+    "image_path": "data/image/Công_viên_Kỳ_Quan.jpg"
+  },
+  "116": {
+    "json_key": "17",
+    "name": "Cung Thiếu Nhi Đà Nẵng",
+    "category": "play",
+    "rating": "4,4",
+    "address": "2a Phan Đăng Lưu, Hoà Cường Bắc, Hải Châu, Đà Nẵng, Việt Nam",
+    "coordinate": [
+      "16.0383904",
+      "108.2253727"
+    ],
+    "image_path": "data/image/Cung_Thiếu_Nhi_Đà_Nẵng.jpg"
+  },
+  "117": {
+    "json_key": "18",
+    "name": "Làng Bích họa Đà Nẵng",
+    "category": "play",
+    "rating": "4,0",
+    "address": "75 Nguyễn Văn Linh, Phước Ninh, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0607296",
+      "108.2200532"
+    ],
+    "image_path": "data/image/Làng_Bích_họa_Đà_Nẵng.jpg"
+  },
+  "118": {
+    "json_key": "19",
+    "name": "Hòa Phú Thành Tourist - Trượt thác Đà Nẵng",
+    "category": "play",
+    "rating": "4,4",
+    "address": "Hoà Phú, Hòa Vang, Đà Nẵng, Việt Nam",
+    "coordinate": [
+      "15.9577622",
+      "107.9916977"
+    ],
+    "image_path": "data/image/Hòa_Phú_Thành_Tourist_-_Trượt_thác_Đà_Nẵng.jpg"
+  },
+  "119": {
+    "json_key": "20",
+    "name": "Điểm đầu trượt thác Hoà Phú Thành",
+    "category": "play",
+    "rating": "4,4",
+    "address": "QL14G, Hoà Phú, Hòa Vang, Đà Nẵng, Việt Nam",
+    "coordinate": [
+      "15.9554313",
+      "107.9804688"
+    ],
+    "image_path": "data/image/Điểm_đầu_trượt_thác_Hoà_Phú_Thành.jpg"
+  },
+  "120": {
+    "json_key": "21",
+    "name": "Ngũ Hành Sơn",
+    "category": "play",
+    "rating": "4,4",
+    "address": "81 Huyền Trân Công Chúa, Hoà Hải, Ngũ Hành Sơn, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0037104",
+      "108.2631605"
+    ],
+    "image_path": "data/image/Ngũ_Hành_Sơn.jpg"
+  },
+  "121": {
+    "json_key": "22",
+    "name": "Tượng Cá Chép Hóa Rồng",
+    "category": "play",
+    "rating": "4,5",
+    "address": "Đ. Trần Hưng Đạo, An Hải, Sơn Trà, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.06291",
+      "108.229815"
+    ],
+    "image_path": "data/image/Tượng_Cá_Chép_Hóa_Rồng.jpg"
+  },
+  "122": {
+    "json_key": "23",
+    "name": "Khu vui chơi trẻ em",
+    "category": "play",
+    "rating": null,
+    "address": "45 An Hải 11, An Hải, Sơn Trà, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0855569",
+      "108.2345356"
+    ],
+    "image_path": "data/image/Khu_vui_chơi_trẻ_em.jpg"
+  },
+  "123": {
+    "json_key": "24",
+    "name": "Chợ đêm Helio - B. Night Market",
+    "category": "play",
+    "rating": "4,1",
+    "address": "Đ. 2 Tháng 9, Hoà Cường Bắc, Hải Châu, Đà Nẵng, Việt Nam",
+    "coordinate": [
+      "16.037223",
+      "108.2245568"
+    ],
+    "image_path": "data/image/Chợ_đêm_Helio_-_B._Night_Market.jpg"
+  },
+  "124": {
+    "json_key": "25",
+    "name": "Bãi biển Sơn Trà",
+    "category": "play",
+    "rating": "4,8",
+    "address": "Bến Xe Bus, Sơn Trà, Đà Nẵng, Việt Nam",
+    "coordinate": [
+      "16.0991295",
+      "108.2550616"
+    ],
+    "image_path": "data/image/Bãi_biển_Sơn_Trà.jpg"
+  },
+  "125": {
+    "json_key": "26",
+    "name": "Ba Na Hills",
+    "category": "play",
+    "rating": "4,4",
+    "address": "Thôn An Sơn, Hòa Vang, Đà Nẵng, Việt Nam",
+    "coordinate": [
+      "15.9951364",
+      "107.9961392"
+    ],
+    "image_path": "data/image/Ba_Na_Hills.jpg"
+  },
+  "126": {
+    "json_key": "27",
+    "name": "Mũi Nghê",
+    "category": "play",
+    "rating": "4,5",
+    "address": "Thọ Quang, Sơn Trà, Đà Nẵng, Việt Nam",
+    "coordinate": [
+      "16.1186244",
+      "108.3368715"
+    ],
+    "image_path": "data/image/Mũi_Nghê.jpg"
+  },
+  "127": {
+    "json_key": "28",
+    "name": "Công Viên Trung Tâm Hành Chính Liên Chiểu",
+    "category": "play",
+    "rating": "4,5",
+    "address": "35C5+RQC, Nguyễn Sinh Sắc, Hoà Minh, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0720506",
+      "108.1593952"
+    ],
+    "image_path": "data/image/Công_Viên_Trung_Tâm_Hành_Chính_Liên_Chiểu.jpg"
+  },
+  "128": {
+    "json_key": "29",
+    "name": "Bãi Yên Ngựa",
+    "category": "play",
+    "rating": "4,3",
+    "address": "46XP+535, Thọ Quang, Sơn Trà, Đà Nẵng, Việt Nam",
+    "coordinate": [
+      "16.1478869",
+      "108.2352196"
+    ],
+    "image_path": "data/image/Bãi_Yên_Ngựa.jpg"
+  },
+  "129": {
+    "json_key": "30",
+    "name": "Ghềnh Bàng",
+    "category": "play",
+    "rating": "4,5",
+    "address": "Hoàng Sa, Thọ Quang, Sơn Trà, Đà Nẵng, Việt Nam",
+    "coordinate": [
+      "16.1124336",
+      "108.3116322"
+    ],
+    "image_path": "data/image/Ghềnh_Bàng.jpg"
+  },
+  "130": {
+    "json_key": "31",
+    "name": "Vòng quay Mặt Trời (Sun Wheel)",
+    "category": "play",
+    "rating": "4,5",
+    "address": "1 Phan Đăng Lưu, Hoà Cường Bắc, Hải Châu, Đà Nẵng, Việt Nam",
+    "coordinate": [
+      "16.0401624",
+      "108.2285171"
+    ],
+    "image_path": "data/image/Vòng_quay_Mặt_Trời_(Sun_Wheel).jpg"
+  },
+  "131": {
+    "json_key": "32",
+    "name": "Nóc Rooftop",
+    "category": "play",
+    "rating": "4,7",
+    "address": "54 Lê Duy Đình, Chính Gián, Thanh Khê, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0648228",
+      "108.200325"
+    ],
+    "image_path": "data/image/Nóc_Rooftop.jpg"
+  },
+  "132": {
+    "json_key": "33",
+    "name": "Big Garden",
+    "category": "play",
+    "rating": "4,5",
+    "address": "Hoàng Thị Loan, Hoà Minh, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0751783",
+      "108.1591467"
+    ],
+    "image_path": "data/image/Big_Garden.jpg"
+  },
+  "133": {
+    "json_key": "34",
+    "name": "Điểm Nóng+ Eat, Drink & Music",
+    "category": "play",
+    "rating": "3,9",
+    "address": "37 Nguyễn Tri Phương, Thạc Gián, Thanh Khê, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0573808",
+      "108.2069542"
+    ],
+    "image_path": "data/image/Điểm_Nóng+_Eat,_Drink_&_Music.jpg"
+  },
+  "134": {
+    "json_key": "35",
+    "name": "VinWonders Nam Hội An",
+    "category": "play",
+    "rating": "4,9",
+    "address": "Võ Chí Công, Bình Minh, Thăng Bình, Quảng Nam, Việt Nam",
+    "coordinate": [
+      "15.7868077",
+      "108.4086898"
+    ],
+    "image_path": "data/image/VinWonders_Nam_Hội_An.jpg"
+  },
+  "135": {
+    "json_key": "36",
+    "name": "Di tích Thành Điện Hải",
+    "category": "play",
+    "rating": "4,4",
+    "address": "36GC+FMC, Đ. Thành Điện Hải, Thạch Thang, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0761821",
+      "108.2216302"
+    ],
+    "image_path": "data/image/Di_tích_Thành_Điện_Hải.jpg"
+  },
+  "136": {
+    "json_key": "37",
+    "name": "Hải đăng Tiên Sa",
+    "category": "play",
+    "rating": "4,4",
+    "address": "Thọ Quang, Sơn Trà, Đà Nẵng, Việt Nam",
+    "coordinate": [
+      "16.1396875",
+      "108.3220625"
+    ],
+    "image_path": "data/image/Hải_đăng_Tiên_Sa.jpg"
+  },
+  "137": {
+    "json_key": "38",
+    "name": "Khói Garden",
+    "category": "play",
+    "rating": "4,6",
+    "address": "Lô49, Trần Văn Trứ, Bình Thuận, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0564006",
+      "108.2227808"
+    ],
+    "image_path": "data/image/Khói_Garden.jpg"
+  },
+  "138": {
+    "json_key": "39",
+    "name": "Đồ Chơi Trẻ Em Na Đà Nẵng",
+    "category": "play",
+    "rating": "5,0",
+    "address": "28 Lê Thị Xuyến, Chính Gián, Thanh Khê, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0690016",
+      "108.2007022"
+    ],
+    "image_path": "data/image/Đồ_Chơi_Trẻ_Em_Na_Đà_Nẵng.jpg"
+  },
+  "139": {
+    "json_key": "40",
+    "name": "New Phương Đông",
+    "category": "play",
+    "rating": "4,3",
+    "address": "20 Đống Đa, Thuận Phước, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0825316",
+      "108.2209614"
+    ],
+    "image_path": "data/image/New_Phương_Đông.jpg"
+  },
+  "140": {
+    "json_key": "41",
+    "name": "Bảo Tàng Đà Nẵng",
+    "category": "play",
+    "rating": "4,2",
+    "address": "31 Trần Phú, P, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0745542",
+      "108.2239668"
+    ],
+    "image_path": "data/image/Bảo_Tàng_Đà_Nẵng.jpg"
+  },
+  "141": {
+    "json_key": "42",
+    "name": "BABY CỦA TÔI - Ô tô điện trẻ em, xe máy điện trẻ em, đồ chơi trẻ em, Bàn ghế chống gù chống cận",
+    "category": "play",
+    "rating": "4,8",
+    "address": "107 Hàm Nghi, Thạc Gián, Thanh Khê, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0619419",
+      "108.2110511"
+    ],
+    "image_path": "data/image/BABY_CỦA_TÔI_-_Ô_tô_điện_trẻ_em,_xe_máy_điện_trẻ_em,_đồ_chơi_trẻ_em,_Bàn_ghế_chống_gù_chống_cận.jpg"
+  },
+  "142": {
+    "json_key": "43",
+    "name": "Sugar Social Club",
+    "category": "play",
+    "rating": "4,8",
+    "address": "100 Yên Bái, Phước Ninh, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0656756",
+      "108.2223219"
+    ],
+    "image_path": "data/image/Sugar_Social_Club.jpg"
+  },
+  "143": {
+    "json_key": "44",
+    "name": "RIO Hòa Khánh Đà Nẵng",
+    "category": "play",
+    "rating": "4,4",
+    "address": "403 Tôn Đức Thắng, Hoà Minh, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0592576",
+      "108.1635674"
+    ],
+    "image_path": "data/image/RIO_Hòa_Khánh_Đà_Nẵng.jpg"
+  },
+  "144": {
+    "json_key": "45",
+    "name": "Karaoke RETRO",
+    "category": "play",
+    "rating": "4,4",
+    "address": "175 Phùng Hưng, Hoà Minh, Liên Chiểu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0728062",
+      "108.166423"
+    ],
+    "image_path": "data/image/Karaoke_RETRO.jpg"
+  },
+  "145": {
+    "json_key": "46",
+    "name": "ong vang",
+    "category": "play",
+    "rating": "4,2",
+    "address": "62b Lê Duẩn, Thạch Thang, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0712482",
+      "108.2183327"
+    ],
+    "image_path": "data/image/ong_vang.jpg"
+  },
+  "146": {
+    "json_key": "47",
+    "name": "Bảo tàng Hồ Chí Minh",
+    "category": "play",
+    "rating": "4,3",
+    "address": "26X9+F2G, Duy Tân, Hoà Cường Bắc, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0486814",
+      "108.217581"
+    ],
+    "image_path": "data/image/Bảo_tàng_Hồ_Chí_Minh.jpg"
+  },
+  "147": {
+    "json_key": "48",
+    "name": "DA NANG DOWNTOWN",
+    "category": "play",
+    "rating": "4,4",
+    "address": "Đ. 2 Tháng 9, Hoà Cường Bắc, Hải Châu, Đà Nẵng 550000, Việt Nam",
+    "coordinate": [
+      "16.0412139",
+      "108.2256332"
+    ],
+    "image_path": "data/image/DA_NANG_DOWNTOWN.jpg"
+  }
+}
