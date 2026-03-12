@@ -44,6 +44,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Third-party
+    'rest_framework',
+    'corsheaders',
+    # Local apps
     'places',
     'reviews',
     'users',
@@ -51,6 +55,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',  # CORS - phải đặt trước CommonMiddleware
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -132,3 +137,23 @@ STATIC_URL = 'static/'
 
 # Default custom User model
 AUTH_USER_MODEL = 'users.User'
+
+# Django REST Framework
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',  # Tạm thời open, sau sẽ đổi sang IsAuthenticated
+    ],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 12,
+}
+
+# CORS - Cho phép ReactJS frontend gọi API
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",   # React dev server
+    "http://127.0.0.1:3000",
+]
+CORS_ALLOW_ALL_ORIGINS = True  # Tạm thời mở rộng cho giai đoạn dev
+
+# URL của AI Service (FastAPI)
+AI_SERVICE_URL = "http://localhost:8000"
+
