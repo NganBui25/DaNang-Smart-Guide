@@ -1,88 +1,147 @@
-# 🏝️ Da Nang Smart Guide & Hidden Gems Recommendation
+# 🏝️ Da Nang Smart Guide — Hidden Gems Recommendation System
 
-Dự án Hệ thống Gợi ý Điểm đến Bản địa tại Đà Nẵng, sử dụng công nghệ tìm kiếm ngữ nghĩa (Semantic Search) kết hợp với các mô hình ngôn ngữ lớn (NLP/PhoBERT) và nền tảng Web App.
+Hệ thống gợi ý điểm đến bản địa tại Đà Nẵng, sử dụng **Semantic Search** (PhoBERT + FAISS) tích hợp với **Django REST API** và **FastAPI AI Service**.
 
-Hệ thống được thiết kế theo kiến trúc Microservices gồm Backend Core (Django) xử lý CSDL và AI Service (FastAPI) chuyên dụng cho tính toán Vector FAISS.
+---
 
 ## 📂 Cấu Trúc Thư Mục
 
 ```text
-danang_hidden_gems/
-├── backend/            # Chứa Backend API Core (Django + MySQL)
-│   ├── apps/           # Chứa các app nghiệp vụ (places, reviews, users)
-│   ├── data/           # Thư mục cào dữ liệu mồi JSON
-│   ├── settings.py     # Config kết nối CSDL và App
+DaNang-Smart-Guide/
+├── backend/            # Django REST API (MySQL)
+│   ├── places/         # App quản lý địa điểm & search
+│   ├── reviews/        # App quản lý đánh giá
+│   ├── users/          # App quản lý tài khoản
+│   ├── data/           # Dữ liệu crawl JSON (coffee, food, play)
+│   ├── scripts/        # import_data.py — nhập JSON vào MySQL
+│   ├── settings.py
+│   ├── urls.py
 │   └── requirements.txt
-├── ai_service/         # Service độc lập chạy AI Model & FAISS Vector
-│   ├── faiss_index/    # Chứa file bin index lưu trữ Vector
-│   ├── scripts/        # Thư mục chạy background logic
-│   ├── main.py         # Chạy FastAPI root cho tìm kiếm Vector
+├── ai_service/         # FastAPI AI Service (PhoBERT + FAISS)
+│   ├── models/
+│   │   └── embedder.py     # Module sinh vector PhoBERT 768 chiều
+│   ├── scripts/
+│   │   └── sync_faiss.py   # Đồng bộ JSON crawl → FAISS index
+│   ├── faiss_index/
+│   │   ├── places.index    # FAISS index (148 địa điểm)
+│   │   └── id_map.json     # Map faiss_id → thông tin địa điểm
+│   ├── main.py             # FastAPI endpoints
 │   └── requirements.txt
-└── frontend/           # (Sẽ có trong giai đoạn sau) Chứa ReactJS User App
+└── frontend/           # (Giai đoạn 4) ReactJS SPA
 ```
-
-## 🚀 Hướng Dẫn Cài Đặt và Chạy Project Local
-
-Dưới đây là các bước để các thành viên trong nhóm clone về và chạy được trên máy tính cá nhân.
-
-### 1. Yêu cầu trước khi bắt đầu (Prerequisites)
-- Đã cài đặt Python 3.10 trở lên.
-- Đã cài đặt và khởi chạy hệ quản trị CSDL MySQL (thông qua MySQL Workbench, XAMPP >= 10.4).
-- Cài Git.
-
-### 2. Thiết lập cơ sở dữ liệu (MySQL)
-Mở một trình quản lý MySQL (VD: phpMyAdmin cục bộ hoặc DBeaver, tạo 1 câu lệnh Query mới và chạy):
-
-```sql
-CREATE DATABASE IF NOT EXISTS danang_hidden_gems CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-```
-
-> **Lưu ý**: Config mặc định trong hệ thống đang cấu hình host MySQL là `127.0.0.1:3306`, user là `root`, password rỗng `''`. Nếu máy bạn có password, hãy vào file `backend/settings.py` để chỉnh lại trong biến `DATABASES`.
-
-### 3. Cài đặt và Chạy Backend API (Django)
-Mở terminal tại thư mục gốc của project (nơi chứa file này):
-
-```bash
-# 1. Di chuyển vào thư mục backend
-cd backend
-
-# 2. (Tùy chọn nhưng KHUYÊN DÙNG) Tạo môi trường ảo Virtual Environment để tránh xung đột thư viện với hệ điều hành:
-python -m venv venv
-# Active cho Windows:
-.\venv\Scripts\activate
-# Active cho MacOS/Linux:
-source venv/bin/activate
-
-# 3. Cài đặt các thư viện cần thiết cho Django
-pip install -r requirements.txt
-
-# 4. Tạo cấu trúc các bảng MySQL từ Models python (Migrate)
-python manage.py migrate
-
-# 5. Khởi chạy Server Backend tại cổng 8080 (hoặc cổng mặc định 8000 của django)
-python manage.py runserver 8080
-```
-Server Backend sẽ chạy ở url: `http://localhost:8080`
-
-### 4. Cài đặt và Chạy AI Service (FastAPI + FAISS)
-FastAPI sẽ chạy độc lập để load file FAISS Index vào RAM. Hãy mở một **Terminal mới** từ thư mục gốc.
-
-```bash
-# 1. Di chuyển vào thư mục ai_service
-cd ai_service
-
-# 2. Cài đặt các thư viện cho AI Service
-pip install -r requirements.txt
-
-# 3. Khởi chạy server FastAPI (Nên chạy cổng mặc định 8000)
-python -m uvicorn main:app --reload --port 8000
-```
-Server AI FastAPI sẽ chạy lúc này. Bạn có thể test API Docs xịn xò có sẵn của FastAPI tại: `http://localhost:8000/docs`
 
 ---
 
-## 🤝 Hướng Dẫn Đóng Góp (Git Workflow)
-Nhóm đang sử dụng nhánh **`feature/ai-api`** cho phần Backend và AI Vector. Khi clone về:
-1. `git checkout feature/ai-api`
-2. Cập nhật sửa lỗi nếu có.
-3. Git add, commit và mở Pull Request báo cho Leader nếu code mới chạy ổn.
+## 🚀 Hướng Dẫn Cài Đặt & Chạy Local
+
+### Yêu cầu
+- Python 3.10+
+- MySQL / MariaDB đang chạy (XAMPP, MySQL Workbench...)
+- Git
+
+---
+
+### 1. Tạo Database MySQL
+Mở MySQL và chạy:
+```sql
+CREATE DATABASE danang_hidden_gems
+  CHARACTER SET utf8mb4
+  COLLATE utf8mb4_unicode_ci;
+```
+
+> ⚠️ Mặc định kết nối: `host=127.0.0.1`, `user=root`, `password=''`.  
+> Nếu khác, sửa trong `backend/settings.py` mục `DATABASES`.
+
+---
+
+### 2. Chạy Backend Django (API Core)
+```bash
+cd backend
+
+# (Khuyên dùng) Tạo môi trường ảo
+python -m venv venv
+.\venv\Scripts\activate          # Windows
+# source venv/bin/activate       # Mac/Linux
+
+# Cài thư viện
+pip install -r requirements.txt
+
+# Tạo bảng trong MySQL
+python manage.py migrate
+
+# Import dữ liệu mồi từ JSON vào MySQL
+python scripts/import_data.py
+
+# Khởi chạy server tại cổng 8080
+python manage.py runserver 8080
+```
+✅ API sẵn sàng tại: `http://localhost:8080/api/`  
+✅ Admin panel: `http://localhost:8080/admin/`
+
+---
+
+### 3. Chạy AI Service (FastAPI + FAISS + PhoBERT)
+Mở **terminal mới** từ thư mục gốc:
+```bash
+cd ai_service
+
+pip install -r requirements.txt
+
+# Đồng bộ FAISS index từ dữ liệu JSON (chỉ cần chạy 1 lần)
+# Lần đầu sẽ tự download model PhoBERT ~543MB từ HuggingFace
+python scripts/sync_faiss.py
+
+# Khởi chạy server tại cổng 8000
+python -m uvicorn main:app --reload --port 8000
+```
+✅ AI Service tại: `http://localhost:8000`  
+✅ API Docs (Swagger): `http://localhost:8000/docs`
+
+---
+
+## 📡 Danh Sách API Endpoints
+
+| Method | URL | Chức năng |
+|--------|-----|-----------|
+| `GET` | `/api/places/` | Danh sách địa điểm (phân trang 12/trang) |
+| `GET` | `/api/places/?category=Cafe` | Lọc theo danh mục |
+| `GET` | `/api/places/?search=biển` | Tìm kiếm theo tên/địa chỉ |
+| `GET` | `/api/places/?hidden_gem=1` | Lọc hidden gems |
+| `GET` | `/api/places/{id}/` | Chi tiết địa điểm |
+| `POST` | `/api/places/` | Crowdsourcing: submit địa điểm mới |
+| `GET` | `/api/places/{id}/reviews/` | Danh sách reviews của địa điểm |
+| `POST` | `/api/places/{id}/bookmark/` | Toggle bookmark |
+| `POST` | `/api/search/` | **Tìm kiếm ngữ nghĩa AI** (PhoBERT + FAISS) |
+| `GET` | `/api/categories/` | Danh sách danh mục |
+| `POST` | `/api/reviews/` | Tạo review mới |
+
+### Ví dụ Semantic Search
+```bash
+curl -X POST http://localhost:8080/api/search/ \
+  -H "Content-Type: application/json" \
+  -d '{"query": "quán cà phê chill gần biển", "top_k": 5}'
+```
+
+---
+
+## 🛠️ Công Nghệ Sử Dụng
+
+| Layer | Stack |
+|-------|-------|
+| Backend API | Python, Django 4.2 LTS, Django REST Framework |
+| AI Service | FastAPI, PhoBERT (`vinai/phobert-base`), FAISS |
+| Database | MySQL / MariaDB |
+| Vector Search | FAISS IndexIDMap (L2 distance) |
+| Frontend *(sắp ra)* | ReactJS, Google Maps API |
+
+---
+
+## 🤝 Git Workflow
+Nhánh đang phát triển: **`feature/ai-api`**
+
+```bash
+git clone <repo-url>
+git checkout feature/ai-api
+```
+
+Khi có thay đổi: `git add .` → `git commit -m "..."` → `git push origin feature/ai-api`
