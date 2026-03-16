@@ -1,16 +1,23 @@
-# React + Vite
+# Frontend (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+SPA cho Danang Hidden Gems: semantic search, b?n d?, bookmark, submit d?a di?m.
 
-Currently, two official plugins are available:
+## Ch?y dev
+```bash
+npm install
+npm run dev -- --host --port 3000
+```
+Env: `VITE_API_BASE` (m?c d?nh http://localhost:8080/api). Copy t? `../.env.example` n?u dùng docker-compose.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Build & serve (dùng Dockerfile)
+`docker build -t danang-frontend . && docker run -p 3000:80 danang-frontend`
 
-## React Compiler
+## Tính nang chính
+- Search ng? nghia (PhoBERT/FAISS) + map (Leaflet), toggle list/split/map.
+- Chi ti?t d?a di?m, bookmark, reviews, submit d?a di?m (yêu c?u dang nh?p).
+- Theme context (light/dark), skeleton/loading states, toast/thông báo l?i co b?n.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## TODO v2
+- Playwright smoke flows.
+- Nâng thông báo l?i/validation cho form submit & login.
+- UI copywriting “Local mode”.

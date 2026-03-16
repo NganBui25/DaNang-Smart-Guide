@@ -1,113 +1,164 @@
-"""
-Script đồng bộ dữ liệu từ file JSON crawl sang FAISS Index.
+﻿"""
+Build FAISS index from crawled JSON place data.
 
-Luồng hoạt động:
-1. Đọc file JSON cào được (places_coffee.json, places_food.json, places_play.json)
-2. Với mỗi địa điểm, ghép text (name + address) → đưa qua PhoBERT → sinh vector
-3. Nạp vector + place_id vào FAISS Index và lưu file .index
-4. Đồng thời lưu map {faiss_internal_id: json_key} vào file JSON để tra cứu
-
-Sử dụng: python scripts/sync_faiss.py
+Usage:
+    python scripts/sync_faiss.py
 """
-import sys
-import os
+
+from __future__ import annotations
+
 import json
-import requests
-
-# Thêm thư mục gốc của ai_service vào sys.path để import module
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from models.embedder import get_embedding, build_place_text
+import os
+import sys
+import time
+from typing import Any
 
 import faiss
 import numpy as np
 
-DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "backend", "data")
-INDEX_FILE = os.path.join(os.path.dirname(__file__), "..", "faiss_index", "places.index")
-ID_MAP_FILE = os.path.join(os.path.dirname(__file__), "..", "faiss_index", "id_map.json")
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from models.embedder import build_place_text, get_embedding  # noqa: E402
+
+
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+DATA_DIR = os.getenv("DATA_DIR", os.path.join(BASE_DIR, "backend", "data"))
+INDEX_FILE = os.getenv(
+    "INDEX_FILE",
+    os.path.join(os.path.dirname(__file__), "..", "faiss_index", "places.index"),
+)
+ID_MAP_FILE = os.getenv(
+    "ID_MAP_FILE",
+    os.path.join(os.path.dirname(__file__), "..", "faiss_index", "id_map.json"),
+)
+VECTOR_DIMENSION = int(os.getenv("VECTOR_DIMENSION", "768"))
 
 DATA_FILES = {
     "coffee": "places_coffee.json",
-    "food":   "places_food.json",
-    "play":   "places_play.json"
+    "food": "places_food.json",
+    "play": "places_play.json",
 }
 
-VECTOR_DIMENSION = 768
+
+def _safe_text(value: Any) -> str:
+    return str(value).encode("ascii", "backslashreplace").decode("ascii")
 
 
-def build_or_load_index():
+def _ensure_output_dirs() -> None:
     os.makedirs(os.path.dirname(INDEX_FILE), exist_ok=True)
-    if os.path.exists(INDEX_FILE):
-        print(f"[Sync] Đang load index cũ từ: {INDEX_FILE}")
-        return faiss.read_index(INDEX_FILE)
-    flat = faiss.IndexFlatL2(VECTOR_DIMENSION)
-    return faiss.IndexIDMap(flat)
+    os.makedirs(os.path.dirname(ID_MAP_FILE), exist_ok=True)
 
 
-def run_sync():
-    index = build_or_load_index()
-    
-    # Map: faiss_id (int) -> thông tin JSON gốc { key, name, category }
-    id_map = {}
-    faiss_id = index.ntotal  # Tiếp tục từ số lượng hiện tại (hỗ trợ sync tăng dần)
+def _iter_records() -> list[tuple[str, str, dict[str, Any]]]:
+    records: list[tuple[str, str, dict[str, Any]]] = []
 
     for category, filename in DATA_FILES.items():
         filepath = os.path.join(DATA_DIR, filename)
         if not os.path.exists(filepath):
-            print(f"[Sync] Không tìm thấy file: {filepath}, bỏ qua.")
+            print(f"[sync] missing file, skip: {filepath}")
             continue
-        
+
         with open(filepath, "r", encoding="utf-8") as f:
             data = json.load(f)
-        
-        print(f"\n[Sync] Đang xử lý {len(data)} địa điểm từ '{filename}'...")
-        
-        for key, place in data.items():
-            name = place.get("name", "")
-            address = place.get("address", "")
-            
-            # Ghép các review lại để tạo description phong phú hơn
-            reviews_text = " ".join([
-                r.get("content", "") for r in place.get("reviews", [])
-            ])
-            
-            # Ghép tất cả text thành một đoạn duy nhất
-            full_text = build_place_text(
-                name=name,
-                address=address,
-                description=reviews_text,
-                category=category
-            )
-            
-            print(f"  [{faiss_id}] Embedding: {name[:40]}...")
-            
-            try:
-                vector = get_embedding(full_text)
-                vec_array = np.array([vector], dtype=np.float32)
-                ids = np.array([faiss_id], dtype=np.int64)
-                index.add_with_ids(vec_array, ids)
-                
-                id_map[str(faiss_id)] = {
-                    "json_key": key,
-                    "name": name,
-                    "category": category,
-                    "rating": place.get("rating", ""),
-                    "address": address,
-                    "coordinate": place.get("coordinate", []),
-                    "image_path": place.get("image_path", ""),
-                }
-                faiss_id += 1
-            except Exception as e:
-                print(f"  [LỖI] Không thể embed '{name}': {e}")
-                continue
 
-    # Lưu index và map
+        if isinstance(data, dict):
+            iterable = data.items()
+        elif isinstance(data, list):
+            iterable = ((str(i), item) for i, item in enumerate(data))
+        else:
+            print(f"[sync] unsupported structure in {filename}, skip")
+            continue
+
+        count = 0
+        for json_key, place in iterable:
+            if not isinstance(place, dict):
+                continue
+            records.append((category, str(json_key), place))
+            count += 1
+
+        print(f"[sync] loaded {count} records from {filename}")
+
+    return records
+
+
+def run_sync() -> None:
+    _ensure_output_dirs()
+    started_at = time.time()
+
+    records = _iter_records()
+    if not records:
+        raise RuntimeError("No input records found. Nothing to index.")
+
+    vectors: list[list[float]] = []
+    ids: list[int] = []
+    id_map: dict[str, dict[str, Any]] = {}
+
+    for faiss_id, (category, json_key, place) in enumerate(records):
+        name = (place.get("name") or "").strip()
+        log_name = _safe_text(name)
+        address = (place.get("address") or "").strip()
+
+        reviews = place.get("reviews") or []
+        review_text = " ".join(
+            str(r.get("content", "")) for r in reviews if isinstance(r, dict)
+        )
+
+        full_text = build_place_text(
+            name=name,
+            address=address,
+            description=review_text,
+            category=category,
+        )
+
+        try:
+            vector = get_embedding(full_text)
+        except Exception as exc:  # noqa: BLE001
+            print(f"[sync] embedding failed for '{log_name}': {_safe_text(exc)}")
+            continue
+
+        if not vector:
+            print(f"[sync] empty vector for '{log_name}', skip")
+            continue
+
+        if len(vector) != VECTOR_DIMENSION:
+            print(
+                f"[sync] dimension mismatch for '{log_name}': "
+                f"{len(vector)} != {VECTOR_DIMENSION}, skip"
+            )
+            continue
+
+        vectors.append(vector)
+        ids.append(faiss_id)
+        id_map[str(faiss_id)] = {
+            "json_key": json_key,
+            "name": name,
+            "category": category,
+            "rating": place.get("rating", ""),
+            "address": address,
+            "coordinate": place.get("coordinate", []),
+            "image_path": place.get("image_path", ""),
+        }
+
+        if len(vectors) % 20 == 0:
+            print(f"[sync] embedded {len(vectors)} places...")
+
+    if not vectors:
+        raise RuntimeError("No vectors were generated. Index was not written.")
+
+    matrix = np.asarray(vectors, dtype=np.float32)
+    id_array = np.asarray(ids, dtype=np.int64)
+
+    index = faiss.IndexIDMap(faiss.IndexFlatL2(VECTOR_DIMENSION))
+    index.add_with_ids(matrix, id_array)
+
     faiss.write_index(index, INDEX_FILE)
     with open(ID_MAP_FILE, "w", encoding="utf-8") as f:
         json.dump(id_map, f, ensure_ascii=False, indent=2)
-    
-    print(f"\n✅ Đồng bộ hoàn thành! Tổng số vector: {index.ntotal}")
-    print(f"   Index lưu tại: {INDEX_FILE}")
-    print(f"   ID Map lưu tại: {ID_MAP_FILE}")
+
+    elapsed = time.time() - started_at
+    print(f"[done] vectors: {index.ntotal} | time: {elapsed:.1f}s")
+    print(f"[done] index file: {INDEX_FILE}")
+    print(f"[done] id map: {ID_MAP_FILE}")
 
 
 if __name__ == "__main__":

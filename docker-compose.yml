@@ -1,0 +1,74 @@
+services:
+  db:
+    image: mysql:8.0
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_NAME:-danang_hidden_gems}
+      MYSQL_USER: ${DB_USER:-appuser}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-apppass}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-rootpass}
+    command: ["mysqld", "--character-set-server=utf8mb4", "--collation-server=utf8mb4_unicode_ci"]
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    command: ["gunicorn", "wsgi:application", "--bind", "0.0.0.0:8080", "--workers", "3"]
+    env_file: .env
+    environment:
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_USER: ${DB_USER:-appuser}
+      DB_PASSWORD: ${DB_PASSWORD:-apppass}
+      DB_NAME: ${DB_NAME:-danang_hidden_gems}
+      AI_SERVICE_URL: http://ai_service:8000
+      DJANGO_ALLOWED_HOSTS: "backend,localhost,127.0.0.1"
+      CORS_ALLOWED_ORIGINS: "http://localhost:3000,http://localhost:5173"
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - .:/app
+      - ./backend/data:/app/data
+      - static_data:/app/staticfiles
+
+  ai_service:
+    build:
+      context: .
+      dockerfile: ai_service/Dockerfile
+    command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+    env_file: .env
+    environment:
+      INDEX_FILE: /app/faiss_index/places.index
+      ID_MAP_FILE: /app/faiss_index/id_map.json
+      DATA_DIR: /app/data
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./ai_service/faiss_index:/app/faiss_index
+      - ./backend/data:/app/data
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        - VITE_API_BASE=${VITE_API_BASE:-http://localhost:8080/api}
+    ports:
+      - "3000:80"
+    environment:
+      VITE_API_BASE: http://localhost:8080/api
+    depends_on:
+      - backend
+
+volumes:
+  mysql_data:
+  static_data:

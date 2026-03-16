@@ -1,23 +1,39 @@
 from rest_framework import viewsets, status
+from rest_framework.decorators import action
 from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
 from .models import Review
 from .serializers import ReviewSerializer, ReviewCreateSerializer
 
 
-class ReviewViewSet(viewsets.ModelViewSet):
+class ReviewViewSet(viewsets.ViewSet):
     """
-    API endpoint để quản lý đánh giá.
-    - POST /api/reviews/     - Tạo review mới
-    - GET  /api/reviews/{id}/ - Xem review
+    - GET  /api/reviews/?place={id}   Lấy reviews theo địa điểm
+    - POST /api/reviews/              Tạo review mới (cần đăng nhập)
+    - DELETE /api/reviews/{id}/       Admin xóa review
     """
-    queryset = Review.objects.select_related('user', 'place').prefetch_related('images')
+    permission_classes = [IsAuthenticated]
 
-    def get_serializer_class(self):
-        if self.action == 'create':
-            return ReviewCreateSerializer
-        return ReviewSerializer
+    def list(self, request):
+        place_id = request.query_params.get("place")
+        if not place_id:
+            return Response({"error": "Cần truyền ?place=<id>"}, status=status.HTTP_400_BAD_REQUEST)
+        reviews = Review.objects.filter(place_id=place_id).select_related("user").order_by("-created_at")
+        return Response(ReviewSerializer(reviews, many=True).data)
 
-    def create(self, request, *args, **kwargs):
-        if not request.user.is_authenticated:
-            return Response({'error': 'Cần đăng nhập để đánh giá'}, status=status.HTTP_401_UNAUTHORIZED)
-        return super().create(request, *args, **kwargs)
+    def create(self, request):
+        serializer = ReviewCreateSerializer(data=request.data, context={"request": request})
+        serializer.is_valid(raise_exception=True)
+        review = serializer.save()
+        return Response(ReviewSerializer(review).data, status=status.HTTP_201_CREATED)
+
+    def destroy(self, request, pk=None):
+        try:
+            review = Review.objects.get(pk=pk)
+        except Review.DoesNotExist:
+            return Response({"error": "Review không tồn tại"}, status=status.HTTP_404_NOT_FOUND)
+        # Only review owner or admin can delete
+        if review.user != request.user and not request.user.is_admin:
+            return Response({"error": "Không có quyền xóa review này."}, status=status.HTTP_403_FORBIDDEN)
+        review.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)

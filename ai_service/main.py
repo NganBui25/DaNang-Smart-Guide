@@ -1,124 +1,109 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-import faiss
-import numpy as np
+import logging
+import mysql.connector
+import json
 import os
+from dotenv import load_dotenv
 
-from models.embedder import get_embedding, build_place_text
+from vectorization import encode_text, compute_similarity_batch
+from sentiment import summarize_sentiment
 
-app = FastAPI(
-    title="Danang Hidden Gems — AI Service",
-    description="Vector Embedding (PhoBERT) và Semantic Search (FAISS) cho hệ thống gợi ý điểm đến Đà Nẵng",
-    version="1.0.0"
-)
+load_dotenv()
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
-# ------- FAISS Setup -------
-VECTOR_DIMENSION = 768
-INDEX_FILE = "faiss_index/places.index"
-os.makedirs("faiss_index", exist_ok=True)
+app = FastAPI(title="DaNang Smart Guide - AI Engine")
 
-# Dùng IndexIDMap để ánh xạ chính xác place_id (từ MySQL) ↔ faiss_id
-if os.path.exists(INDEX_FILE):
-    index = faiss.read_index(INDEX_FILE)
-else:
-    flat_index = faiss.IndexFlatL2(VECTOR_DIMENSION)
-    index = faiss.IndexIDMap(flat_index)
-
-
-def _save_index():
-    faiss.write_index(index, INDEX_FILE)
-
-
-# ------- Pydantic Models -------
-class PlaceTextInput(BaseModel):
-    place_id: int
-    name: str
-    address: str = ""
-    description: str = ""
-    category: str = ""
-
-class EmbedQueryRequest(BaseModel):
-    text: str
-
-class SearchQuery(BaseModel):
-    query_vector: list[float]
-    top_k: int = 10
-
-class SearchByTextQuery(BaseModel):
-    text: str
-    top_k: int = 10
-
-
-# ------- Endpoints -------
-@app.get("/", summary="Health check")
-def read_root():
-    return {
-        "status": "AI Service running",
-        "vector_count": index.ntotal
-    }
-
-
-@app.post("/embed", summary="Chuyển đổi text thành vector PhoBERT")
-def embed_text(req: EmbedQueryRequest):
-    """Trả về vector embedding 768 chiều từ một đoạn văn bản."""
-    vector = get_embedding(req.text)
-    return {"vector": vector, "dimension": len(vector)}
-
-
-@app.post("/add_place", summary="Thêm địa điểm vào FAISS index")
-def add_place(data: PlaceTextInput):
-    """
-    Nhận thông tin text của địa điểm, tự động sinh vector PhoBERT
-    và lưu vào FAISS Index với place_id là key ánh xạ.
-    """
-    combined_text = build_place_text(
-        name=data.name,
-        address=data.address,
-        description=data.description,
-        category=data.category
+def get_db_connection():
+    return mysql.connector.connect(
+        host=os.getenv("DB_HOST", "127.0.0.1"),
+        user=os.getenv("DB_USER", "root"),
+        password=os.getenv("DB_PASSWORD", ""),
+        database=os.getenv("DB_NAME", "danang_hidden_gems")
     )
-    vector = get_embedding(combined_text)
-    vec_array = np.array([vector], dtype=np.float32)
-    ids = np.array([data.place_id], dtype=np.int64)
-    index.add_with_ids(vec_array, ids)
-    _save_index()
-    return {
-        "status": "success",
-        "place_id": data.place_id,
-        "text_used": combined_text[:100] + "..." if len(combined_text) > 100 else combined_text
-    }
 
+class SearchRequest(BaseModel):
+    text: str
+    top_k: int = 5
+    hidden_gem: bool = False
 
-@app.post("/search_by_vector", summary="Tìm kiếm bằng vector có sẵn")
-def search_by_vector(query: SearchQuery):
-    """Nhận vector trực tiếp và trả về top-k place_id gần nhất."""
-    if index.ntotal == 0:
-        raise HTTPException(status_code=404, detail="FAISS index is empty. Please add places first.")
-    if len(query.query_vector) != VECTOR_DIMENSION:
-        raise HTTPException(status_code=400, detail=f"Vector must have {VECTOR_DIMENSION} dimensions")
-    vec = np.array([query.query_vector], dtype=np.float32)
-    distances, place_ids = index.search(vec, query.top_k)
-    results = [
-        {"place_id": int(place_ids[0][i]), "score": float(distances[0][i])}
-        for i in range(len(place_ids[0])) if place_ids[0][i] != -1
-    ]
-    return {"status": "success", "results": results}
+class VectorizeRequest(BaseModel):
+    place_id: str
+    text: str
 
+class SentimentRequest(BaseModel):
+    reviews: list[str]
 
-@app.post("/search", summary="Tìm kiếm bằng văn bản (end-to-end)")
-def search_by_text(query: SearchByTextQuery):
-    """
-    Nhận câu hỏi text (VD: 'quán cà phê yên tĩnh gần biển'),
-    tự động sinh vector qua PhoBERT rồi tìm kiếm ngữ nghĩa trong FAISS.
-    Trả về danh sách place_id tương ứng với địa điểm phù hợp nhất.
-    """
-    if index.ntotal == 0:
-        raise HTTPException(status_code=404, detail="FAISS index is empty. Please add places first.")
-    vector = get_embedding(query.text)
-    vec = np.array([vector], dtype=np.float32)
-    distances, place_ids = index.search(vec, query.top_k)
-    results = [
-        {"place_id": int(place_ids[0][i]), "score": float(distances[0][i])}
-        for i in range(len(place_ids[0])) if place_ids[0][i] != -1
-    ]
-    return {"status": "success", "query": query.text, "results": results}
+@app.post("/search")
+def search(req: SearchRequest):
+    logger.info(f"Searching for: {req.text} (top_k={req.top_k}, hidden_gem={req.hidden_gem})")
+    query_vec = encode_text(req.text)
+    if not query_vec:
+        raise HTTPException(status_code=400, detail="Could not encode query")
+
+    try:
+        conn = get_db_connection()
+        cursor = conn.cursor(dictionary=True)
+        q = "SELECT id, name, embedding_vector, is_hidden_gem FROM places_place WHERE status = 'APPROVED' AND embedding_vector IS NOT NULL"
+        if req.hidden_gem:
+            q += " AND is_hidden_gem = 1"
+        cursor.execute(q)
+        rows = cursor.fetchall()
+        conn.close()
+    except Exception as e:
+        logger.error(f"DB connection error: {e}")
+        raise HTTPException(status_code=500, detail="Database connection error")
+
+    vectors_dict = {}
+    for r in rows:
+        try:
+            vec = json.loads(r["embedding_vector"])
+            if isinstance(vec, str):
+                vec = json.loads(vec)
+            # Dùng trực tiếp ID dạng chuỗi (thường là char(32) trong DB MySQL)
+            vectors_dict[str(r["id"])] = vec
+        except Exception as e:
+            continue
+            
+    if not vectors_dict:
+        return {"results": []}
+
+    results_raw = compute_similarity_batch(query_vec, vectors_dict)
+    
+    top_results = []
+    query_words = set(req.text.lower().split())
+    
+    for uid, score in results_raw[:req.top_k]:
+        db_id = str(uid)
+        # Nối ID nếu là chuỗi 32 byte không có gạch ngang
+        if len(db_id) == 32 and "-" not in db_id:
+            db_id = f"{db_id[:8]}-{db_id[8:12]}-{db_id[12:16]}-{db_id[16:20]}-{db_id[20:]}"
+            
+        match_keywords = [w for w in query_words if len(w) > 2]
+        if score > 0.6:
+            reason = "Phù hợp ngữ nghĩa tổng thể rất cao."
+        elif match_keywords:
+            reason = f"Trùng khớp {len(match_keywords)} từ khóa tiềm năng."
+        else:
+            reason = "Gợi ý dựa trên ngữ cảnh tương đồng."
+            
+        top_results.append({
+            "place_id": db_id,
+            "score": score,
+            "match_reason": reason
+        })
+        
+    return {"results": top_results}
+
+@app.post("/vectorize")
+def vectorize(req: VectorizeRequest):
+    logger.info(f"Vectorizing place: {req.place_id}")
+    vec = encode_text(req.text)
+    return {"vector": vec}
+
+@app.post("/sentiment")
+def sentiment(req: SentimentRequest):
+    logger.info(f"Sentiment analysis for {len(req.reviews)} reviews")
+    summary = summarize_sentiment(req.reviews)
+    return {"summary": summary}

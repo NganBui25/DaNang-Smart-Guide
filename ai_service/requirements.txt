@@ -2,7 +2,9 @@ fastapi==0.115.0
 uvicorn==0.30.6
 pydantic==2.8.2
 faiss-cpu==1.8.0
-numpy==2.0.2
+numpy==1.26.4
 python-dotenv==1.0.1
 requests==2.32.3
-# Phần NLP PhoBert sẽ cài sau để tránh xung đột
+mysql-connector-python==9.0.0
+pyvi==0.1.1
+packaging==24.1

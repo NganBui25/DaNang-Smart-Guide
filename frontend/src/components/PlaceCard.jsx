@@ -1,28 +1,32 @@
 import { Link } from 'react-router-dom'
-import { MapPin, Star, Gem } from 'lucide-react'
+import { MapPin, Gem } from 'lucide-react'
+import { resolvePlaceImage } from '../utils/media'
 
 export default function PlaceCard({ place, score }) {
-    const stars = Math.round((place.rating || 4.0) * 10) / 10
+    const imageSrc = resolvePlaceImage(place)
 
     return (
         <Link
             to={`/places/${place.id}`}
-            className="glass-card group block overflow-hidden hover:border-sky-500/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-sky-900/20"
+            aria-label={`Xem chi tiet ${place.name}`}
+            className="glass-card group block overflow-hidden transition-all duration-300 hover:-translate-y-1"
         >
             {/* Image */}
-            <div className="relative h-44 bg-gray-800 overflow-hidden">
-                {place.image_path ? (
+            <div className="relative h-44 overflow-hidden" style={{ background: 'var(--surface-2)' }}>
+                {imageSrc ? (
                     <img
-                        src={place.image_path}
+                        src={imageSrc}
                         alt={place.name}
+                        loading="lazy"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         onError={(e) => { e.target.style.display = 'none' }}
                     />
                 ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-800 to-gray-900">
-                        <MapPin size={40} className="text-gray-600" />
+                    <div className="w-full h-full flex items-center justify-center">
+                        <MapPin size={40} style={{ color: 'var(--text-muted)' }} />
                     </div>
                 )}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/45 via-transparent to-transparent pointer-events-none" />
                 {/* Badges */}
                 <div className="absolute top-2 left-2 flex gap-1.5">
                     {place.is_hidden_gem && (
@@ -31,12 +35,12 @@ export default function PlaceCard({ place, score }) {
                         </span>
                     )}
                     {place.category && (
-                        <span className="px-2 py-0.5 bg-sky-600/90 backdrop-blur text-xs font-medium rounded-full">
+                        <span className="px-2 py-0.5 bg-sky-600/90 backdrop-blur text-xs font-medium rounded-full text-white">
                             {place.category.name}
                         </span>
                     )}
                 </div>
-                {/* AI Score if present */}
+                {/* AI Score */}
                 {score !== undefined && (
                     <div className="absolute top-2 right-2 px-2 py-0.5 bg-black/60 backdrop-blur rounded-full text-xs text-sky-400 font-mono">
                         AI ✦
@@ -46,10 +50,10 @@ export default function PlaceCard({ place, score }) {
 
             {/* Content */}
             <div className="p-4">
-                <h3 className="font-semibold text-sm leading-tight line-clamp-2 group-hover:text-sky-400 transition-colors">
+                <h3 className="font-semibold text-sm leading-tight line-clamp-2 group-hover:text-sky-400 transition-colors" style={{ color: 'var(--text)' }}>
                     {place.name}
                 </h3>
-                <div className="flex items-center gap-1 mt-2 text-gray-400">
+                <div className="flex items-center gap-1 mt-2" style={{ color: 'var(--text-muted)' }}>
                     <MapPin size={12} className="flex-shrink-0" />
                     <span className="text-xs line-clamp-1">{place.address || 'Đà Nẵng'}</span>
                 </div>
@@ -57,7 +61,7 @@ export default function PlaceCard({ place, score }) {
                 {place.tags?.length > 0 && (
                     <div className="flex flex-wrap gap-1 mt-2">
                         {place.tags.slice(0, 3).map(tag => (
-                            <span key={tag.id} className="px-2 py-0.5 bg-gray-700/60 text-xs rounded-full text-gray-300">
+                            <span key={tag.id} className="px-2 py-0.5 text-xs rounded-full" style={{ background: 'var(--surface-2)', color: 'var(--text-muted)' }}>
                                 #{tag.name}
                             </span>
                         ))}

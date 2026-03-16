@@ -1,23 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap');
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+/* ===== Dark Theme (default) ===== */
 :root {
-  /* Color Palette */
-  --color-primary: #0ea5e9;
-  --color-primary-dark: #0284c7;
-  --color-accent: #f97316;
-  --color-bg: #0a0f1a;
-  --color-surface: #111827;
-  --color-surface-2: #1f2937;
-  --color-border: rgba(255,255,255,0.08);
-  --color-text: #f1f5f9;
-  --color-text-muted: #94a3b8;
-  --color-success: #22c55e;
-  --color-danger: #ef4444;
+  --bg: #060b16;
+  --surface: #0f172a;
+  --surface-2: #1e293b;
+  --border: rgba(148, 163, 184, 0.24);
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+  --glass-bg: rgba(15, 23, 42, 0.72);
+  --glass-border: rgba(148, 163, 184, 0.25);
+  --accent: #38bdf8;
+  --accent-2: #22d3ee;
+  --accent-3: #a78bfa;
+}
 
-  /* Glass effect */
-  --glass-bg: rgba(17, 24, 39, 0.7);
-  --glass-border: rgba(255,255,255,0.1);
+/* ===== Light Theme ===== */
+html:not(.dark) {
+  --bg: #f4f7fb;
+  --surface: #ffffff;
+  --surface-2: #edf2f7;
+  --border: rgba(15, 23, 42, 0.12);
+  --text: #0f172a;
+  --text-muted: #475569;
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(15, 23, 42, 0.1);
+  --accent: #0284c7;
+  --accent-2: #0ea5e9;
+  --accent-3: #6366f1;
 }
 
 * {
@@ -28,60 +41,267 @@
 
 body {
   font-family: 'Be Vietnam Pro', sans-serif;
-  background: var(--color-bg);
-  color: var(--color-text);
+  background:
+    radial-gradient(1200px 700px at 6% -10%, color-mix(in srgb, var(--accent) 25%, transparent), transparent 60%),
+    radial-gradient(980px 560px at 92% 8%, color-mix(in srgb, var(--accent-3) 22%, transparent), transparent 62%),
+    radial-gradient(760px 460px at 45% 115%, color-mix(in srgb, var(--accent-2) 18%, transparent), transparent 65%),
+    linear-gradient(180deg, color-mix(in srgb, var(--bg) 90%, #000 10%) 0%, var(--bg) 100%);
+  background-attachment: fixed;
+  color: var(--text);
   line-height: 1.6;
   overflow-x: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* ===== Glassmorphism Card ===== */
-.glass-card {
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-radius: 16px;
+#root {
+  min-height: 100vh;
 }
 
-/* ===== Scrollbar ===== */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--color-surface); }
-::-webkit-scrollbar-thumb { background: var(--color-surface-2); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--color-primary); }
+:focus-visible {
+  outline: 2px solid #0ea5e9;
+  outline-offset: 2px;
+}
 
-/* ===== Animations ===== */
+@layer components {
+  .glass-card {
+    @apply rounded-2xl border transition-all duration-300;
+    background: var(--glass-bg);
+    border-color: var(--glass-border);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow:
+      0 18px 36px rgba(2, 6, 23, 0.26),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+
+  .glass-card:hover {
+    border-color: color-mix(in srgb, var(--accent) 48%, var(--glass-border));
+    box-shadow:
+      0 24px 50px rgba(2, 6, 23, 0.36),
+      0 0 0 1px color-mix(in srgb, var(--accent) 25%, transparent),
+      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+
+  .surface {
+    background: var(--surface);
+    border: 1px solid var(--border);
+  }
+
+  .text-base-content {
+    color: var(--text);
+  }
+
+  .text-muted {
+    color: var(--text-muted);
+  }
+
+  .skeleton {
+    background: linear-gradient(90deg, var(--surface) 25%, var(--surface-2) 50%, var(--surface) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 8px;
+  }
+
+  .search-input {
+    color: var(--text);
+  }
+
+  .search-input::placeholder {
+    color: color-mix(in srgb, var(--text-muted) 90%, #ffffff 10%);
+  }
+
+  .search-clear {
+    color: var(--text-muted);
+  }
+
+  .search-clear:hover {
+    color: var(--text);
+  }
+
+  .search-chip {
+    background: color-mix(in srgb, var(--surface-2) 92%, #ffffff 8%);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+  }
+
+  .search-chip:hover {
+    border-color: rgba(14, 165, 233, 0.45);
+    color: #0284c7;
+    background: color-mix(in srgb, var(--surface-2) 78%, #ffffff 22%);
+  }
+
+  .app-shell {
+    position: relative;
+    min-height: 100vh;
+    isolation: isolate;
+  }
+
+  .global-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .global-orb {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(56px);
+    opacity: 0.42;
+    animation: orbFloat 20s ease-in-out infinite alternate;
+  }
+
+  .global-orb-1 {
+    width: 32rem;
+    height: 32rem;
+    top: -8rem;
+    left: -7rem;
+    background: radial-gradient(circle at 32% 28%, color-mix(in srgb, var(--accent) 80%, white 20%), transparent 72%);
+  }
+
+  .global-orb-2 {
+    width: 26rem;
+    height: 26rem;
+    right: -5rem;
+    top: 14%;
+    opacity: 0.35;
+    background: radial-gradient(circle at 40% 40%, color-mix(in srgb, var(--accent-3) 72%, white 28%), transparent 70%);
+    animation-delay: 2.5s;
+  }
+
+  .global-orb-3 {
+    width: 24rem;
+    height: 24rem;
+    left: 28%;
+    bottom: -7rem;
+    opacity: 0.3;
+    background: radial-gradient(circle at 30% 40%, color-mix(in srgb, var(--accent-2) 70%, white 30%), transparent 68%);
+    animation-delay: 5s;
+  }
+
+  .global-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(to right, color-mix(in srgb, var(--border) 34%, transparent) 1px, transparent 1px),
+      linear-gradient(to bottom, color-mix(in srgb, var(--border) 34%, transparent) 1px, transparent 1px);
+    background-size: 52px 52px;
+    mask-image: radial-gradient(ellipse at center, black 42%, transparent 82%);
+    opacity: 0.3;
+  }
+
+  .hero-ring {
+    border: 1px solid color-mix(in srgb, var(--accent) 42%, transparent);
+    box-shadow: inset 0 0 24px color-mix(in srgb, var(--accent) 24%, transparent);
+  }
+
+  .soft-divider {
+    border-color: color-mix(in srgb, var(--border) 82%, transparent) !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--surface-2);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0ea5e9;
+}
+
 @keyframes fadeSlideUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0);    }
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.4); }
-  50%       { box-shadow: 0 0 0 12px rgba(14, 165, 233, 0);  }
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes shimmer {
-  0%   { background-position: -200% center; }
-  100% { background-position:  200% center; }
+  0% {
+    background-position: -200% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
 }
 
-.animate-fade-up  { animation: fadeSlideUp 0.4s ease forwards; }
-.animate-pulse-glow { animation: pulse-glow 2s infinite; }
+@keyframes orbFloat {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
 
-/* ===== Skeleton Loading ===== */
-.skeleton {
-  background: linear-gradient(90deg, var(--color-surface) 25%, var(--color-surface-2) 50%, var(--color-surface) 75%);
-  background-size: 200% 100%;
-  animation: shimmer 1.5s infinite;
-  border-radius: 8px;
+  50% {
+    transform: translate3d(18px, -16px, 0) scale(1.04);
+  }
+
+  100% {
+    transform: translate3d(-16px, 20px, 0) scale(0.96);
+  }
 }
 
-/* ===== Leaflet Map override ===== */
-.leaflet-container { background: #111827 !important; }
+.animate-fade-up {
+  animation: fadeSlideUp 0.35s ease forwards;
+}
+
+.animate-slide-right {
+  animation: slideInRight 0.3s ease forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Leaflet dark/light override */
+.leaflet-container {
+  background: var(--surface) !important;
+}
+
 .leaflet-popup-content-wrapper {
-  background: var(--color-surface) !important;
-  color: var(--color-text) !important;
+  background: var(--surface) !important;
+  color: var(--text) !important;
   border-radius: 12px !important;
   border: 1px solid var(--glass-border) !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2) !important;
 }
-.leaflet-popup-tip { background: var(--color-surface) !important; }
+
+.leaflet-popup-tip {
+  background: var(--surface) !important;
+}
+
+.leaflet-control-zoom a {
+  background: var(--surface-2) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}

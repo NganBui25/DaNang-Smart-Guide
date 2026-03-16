@@ -1,15 +1,17 @@
-import { useEffect, useState } from 'react'
-import { useSearchParams } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { useSearchParams, Link } from 'react-router-dom'
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'
-import { Map, List, Loader2, SearchX } from 'lucide-react'
+import { Map, List, Loader2, SearchX, X, ArrowRight, MapPin, ExternalLink } from 'lucide-react'
 import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 
 import { searchApi, placesApi } from '../services/api'
 import PlaceCard from '../components/PlaceCard'
 import SearchBar from '../components/SearchBar'
+import { useTheme } from '../contexts/ThemeContext'
+import { resolvePlaceImage } from '../utils/media'
 
-// Fix leaflet default marker icon
+// Fix leaflet icons
 delete L.Icon.Default.prototype._getIconUrl
 L.Icon.Default.mergeOptions({
     iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
@@ -17,25 +19,126 @@ L.Icon.Default.mergeOptions({
     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
 })
 
-// Custom blue marker cho selected place
 const selectedIcon = new L.Icon({
     iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png',
     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
+    iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34],
 })
 
 function FlyToPlace({ place }) {
     const map = useMap()
     useEffect(() => {
-        if (place?.lat && place?.lng) {
-            map.flyTo([place.lat, place.lng], 16, { duration: 1.2 })
-        }
+        if (place?.lat && place?.lng) map.flyTo([place.lat, place.lng], 16, { duration: 1 })
     }, [place, map])
     return null
 }
 
+// ===== Compact Card for list panel =====
+function CompactCard({ place, isSelected, onClick }) {
+    const imageSrc = resolvePlaceImage(place)
+
+    return (
+        <div
+            onClick={onClick}
+            className={`cursor-pointer rounded-xl p-3 flex gap-3 transition-all duration-200 border
+        ${isSelected ? 'border-sky-500 shadow-lg shadow-sky-900/20' : 'hover:border-sky-500/30'}
+      `}
+            style={{
+                background: 'var(--glass-bg)',
+                borderColor: isSelected ? '#0ea5e9' : 'var(--glass-border)',
+                backdropFilter: 'blur(12px)',
+            }}
+        >
+            <div className="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0" style={{ background: 'var(--surface-2)' }}>
+                {imageSrc
+                    ? <img src={imageSrc} loading="lazy" alt={place.name} className="w-full h-full object-cover" onError={e => e.target.style.display = 'none'} />
+                    : <div className="w-full h-full" style={{ background: 'var(--surface-2)' }} />
+                }
+            </div>
+            <div className="flex-1 min-w-0">
+                <p className="text-sm font-medium line-clamp-1" style={{ color: 'var(--text)' }}>{place.name}</p>
+                <p className="text-xs line-clamp-1 mt-0.5" style={{ color: 'var(--text-muted)' }}>{place.address || 'Đà Nẵng'}</p>
+                {place.category && <span className="text-xs text-sky-400">{place.category.name}</span>}
+            </div>
+        </div>
+    )
+}
+
+// ===== Inline Detail Panel =====
+function DetailPanel({ place, onClose }) {
+    if (!place) return null
+    const imageSrc = resolvePlaceImage(place)
+
+    return (
+        <div className="animate-slide-right h-full overflow-y-auto flex flex-col" style={{ background: 'var(--surface)', borderLeft: '1px solid var(--border)' }}>
+            {/* Header */}
+            <div className="flex items-center justify-between px-4 py-3 border-b sticky top-0 z-10" style={{ borderColor: 'var(--border)', background: 'var(--glass-bg)', backdropFilter: 'blur(12px)' }}>
+                <span className="font-semibold text-sm line-clamp-1" style={{ color: 'var(--text)' }}>{place.name}</span>
+                <button aria-label="Dong panel chi tiet" onClick={onClose} className="p-1.5 rounded-lg hover:bg-red-500/20 text-red-400 transition-colors">
+                    <X size={16} />
+                </button>
+            </div>
+
+            {/* Image */}
+            <div className="h-44 relative overflow-hidden flex-shrink-0" style={{ background: 'var(--surface-2)' }}>
+                {imageSrc
+                    ? <img src={imageSrc} loading="lazy" alt={place.name} className="w-full h-full object-cover" onError={e => e.target.style.display = 'none'} />
+                    : <div className="w-full h-full flex items-center justify-center"><MapPin size={32} style={{ color: 'var(--text-muted)' }} /></div>
+                }
+                {place.is_hidden_gem && (
+                    <span className="absolute top-2 left-2 px-2 py-0.5 bg-amber-500 text-black text-xs font-bold rounded-full">✦ Hidden Gem</span>
+                )}
+            </div>
+
+            {/* Content */}
+            <div className="p-4 space-y-4 flex-1">
+                {place.category && (
+                    <span className="inline-block px-3 py-0.5 text-xs rounded-full bg-sky-600/20 text-sky-400">{place.category.name}</span>
+                )}
+
+                {place.address && (
+                    <div className="flex items-start gap-2">
+                        <MapPin size={14} className="mt-0.5 flex-shrink-0" style={{ color: 'var(--text-muted)' }} />
+                        <span className="text-sm" style={{ color: 'var(--text-muted)' }}>{place.address}</span>
+                    </div>
+                )}
+
+                {place.tags?.length > 0 && (
+                    <div className="flex flex-wrap gap-1.5">
+                        {place.tags.map(t => (
+                            <span key={t.id} className="px-2 py-0.5 text-xs rounded-full" style={{ background: 'var(--surface-2)', color: 'var(--text-muted)', border: '1px solid var(--border)' }}>
+                                #{t.name}
+                            </span>
+                        ))}
+                    </div>
+                )}
+
+                {/* Actions */}
+                <div className="space-y-2 pt-2">
+                    <Link
+                        to={`/places/${place.id}`}
+                        className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-sm font-medium transition-colors"
+                    >
+                        Xem chi tiết đầy đủ <ArrowRight size={14} />
+                    </Link>
+
+                    {place.lat && place.lng && (
+                        <a
+                            href={`https://www.google.com/maps/dir/?api=1&destination=${place.lat},${place.lng}`}
+                            target="_blank" rel="noopener noreferrer"
+                            className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl text-sm font-medium transition-all"
+                            style={{ background: 'var(--surface-2)', color: 'var(--text)', border: '1px solid var(--border)' }}
+                        >
+                            <ExternalLink size={14} /> Chỉ đường
+                        </a>
+                    )}
+                </div>
+            </div>
+        </div>
+    )
+}
+
+// ===== Main Component =====
 export default function SearchResultsPage() {
     const [searchParams] = useSearchParams()
     const query = searchParams.get('q') || ''
@@ -44,60 +147,72 @@ export default function SearchResultsPage() {
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(null)
     const [selectedPlace, setSelectedPlace] = useState(null)
-    const [viewMode, setViewMode] = useState('split') // 'split' | 'list' | 'map'
+    const [showDetail, setShowDetail] = useState(false)
+    const [viewMode, setViewMode] = useState(() => (window.innerWidth < 768 ? 'list' : 'split'))
+    const [isMobile, setIsMobile] = useState(() => window.innerWidth < 768)
+    const { theme } = useTheme()
 
     useEffect(() => {
-        if (!query) return
+        const onResize = () => {
+            const mobile = window.innerWidth < 768
+            setIsMobile(mobile)
+            if (mobile && viewMode === 'split') {
+                setViewMode('list')
+            }
+        }
+        window.addEventListener('resize', onResize)
+        return () => window.removeEventListener('resize', onResize)
+    }, [viewMode])
+
+    useEffect(() => {
+        if (!query) {
+            placesApi.list({ page_size: 30 })
+                .then(r => setResults(r.data.results || []))
+                .catch((err) => setError(err.message || 'Khong the ket noi den backend.'))
+            return
+        }
         setLoading(true)
         setError(null)
-
-        const fetchResults = query
-            ? searchApi.semantic(query, 20)
-            : placesApi.list({ page_size: 20 })
-
-        fetchResults
+        setShowDetail(false)
+        searchApi.semantic(query, 20)
             .then(res => {
-                const data = res.data
-                const items = data.results || []
+                const items = res.data.results || []
                 setResults(items)
                 if (items.length > 0) setSelectedPlace(items[0])
             })
-            .catch(() => setError('Không thể kết nối tới backend. Hãy đảm bảo server đang chạy.'))
+                .catch((err) => setError(err.message || 'Khong the ket noi den backend.'))
             .finally(() => setLoading(false))
     }, [query])
 
-    // Map center mặc định = Đà Nẵng
-    const mapCenter = selectedPlace?.lat
-        ? [selectedPlace.lat, selectedPlace.lng]
-        : [16.0544, 108.2022]
+    const handleSelectPlace = (place) => {
+        setSelectedPlace(place)
+        setShowDetail(true)
+    }
 
+    const mapCenter = selectedPlace?.lat ? [selectedPlace.lat, selectedPlace.lng] : [16.0544, 108.2022]
     const placeMarkers = results.filter(p => p.lat && p.lng)
 
+    const tileUrl = theme === 'dark'
+        ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
+        : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png'
+
     return (
-        <div className="flex flex-col h-screen pt-14 bg-gray-950">
-            {/* Top Search Bar */}
-            <div className="px-6 py-3 border-b border-white/8 bg-gray-900/60 backdrop-blur">
-                <div className="max-w-5xl mx-auto flex items-center gap-4">
-                    <div className="flex-1">
-                        <SearchBar initialValue={query} />
-                    </div>
-                    {/* View Toggle */}
-                    <div className="flex items-center gap-1 bg-gray-800 rounded-lg p-1">
+        <div className="flex flex-col h-screen pt-14" style={{ background: 'var(--bg)' }}>
+            {/* Top Bar */}
+            <div className="px-4 py-2.5 border-b backdrop-blur" style={{ borderColor: 'var(--border)', background: 'var(--glass-bg)' }}>
+                <div className="max-w-6xl mx-auto flex items-center gap-4">
+                    <div className="flex-1"><SearchBar initialValue={query} /></div>
+                    {/* View toggle */}
+                    <div className="flex items-center gap-1 rounded-lg p-1" style={{ background: 'var(--surface-2)' }}>
                         {[
-                            { key: 'list', icon: <List size={16} />, label: 'Danh sách' },
-                            { key: 'split', icon: <><List size={14} /><Map size={14} /></>, label: 'Split' },
-                            { key: 'map', icon: <Map size={16} />, label: 'Bản đồ' },
-                        ].map(({ key, icon, label }) => (
-                            <button
-                                key={key}
-                                onClick={() => setViewMode(key)}
-                                title={label}
-                                className={`p-2 rounded-md transition-all text-sm flex items-center gap-1
-                  ${viewMode === key
-                                        ? 'bg-sky-600 text-white'
-                                        : 'text-gray-400 hover:text-white'
-                                    }`}
-                            >
+                            { key: 'list', icon: <List size={15} />, label: 'Danh sách' },
+                            { key: 'split', icon: <span className="flex gap-0.5"><List size={13} /><Map size={13} /></span>, label: 'Split', hidden: isMobile },
+                            { key: 'map', icon: <Map size={15} />, label: 'Bản đồ' },
+                        ].filter((item) => !item.hidden).map(({ key, icon, label }) => (
+                            <button key={key} onClick={() => setViewMode(key)} title={label}
+                                aria-label={`Che do ${label}`}
+                                className={`px-2.5 py-1.5 rounded-md transition-all text-xs flex items-center gap-1
+                  ${viewMode === key ? 'bg-sky-600 text-white' : 'text-gray-400 hover:text-white'}`}>
                                 {icon}
                             </button>
                         ))}
@@ -105,103 +220,69 @@ export default function SearchResultsPage() {
                 </div>
             </div>
 
-            {/* Result count */}
+            {/* Count bar */}
             {!loading && query && (
-                <div className="px-6 py-2 text-xs text-gray-500 max-w-5xl mx-auto w-full">
+                <div className="px-6 py-1.5 text-xs" style={{ color: 'var(--text-muted)', background: 'var(--surface)', borderBottom: '1px solid var(--border)' }}>
                     {results.length > 0
-                        ? <span>Tìm thấy <span className="text-sky-400 font-semibold">{results.length}</span> địa điểm phù hợp với "<span className="text-white">{query}</span>"</span>
-                        : <span>Không tìm thấy kết quả nào.</span>
-                    }
+                        ? <>Tìm thấy <span className="text-sky-400 font-semibold">{results.length}</span> địa điểm cho "<span style={{ color: 'var(--text)' }}>{query}</span>"</>
+                        : 'Không tìm thấy kết quả nào.'}
                 </div>
             )}
 
-            {/* Main Content: Split/List/Map */}
+            {/* Content */}
             <div className="flex flex-1 overflow-hidden">
 
-                {/* === Place List === */}
+                {/* List Panel */}
                 {(viewMode === 'list' || viewMode === 'split') && (
-                    <div className={`
-            ${viewMode === 'split' ? 'w-[420px] flex-shrink-0' : 'flex-1'}
-            overflow-y-auto p-4 border-r border-white/8
-          `}>
-                        {loading && (
-                            <div className="flex items-center justify-center py-20 gap-3 text-gray-400">
-                                <Loader2 size={20} className="animate-spin" />
-                                <span className="text-sm">Đang tìm kiếm...</span>
-                            </div>
-                        )}
-                        {error && (
-                            <div className="text-center py-20 text-red-400 text-sm">{error}</div>
-                        )}
+                    <div className={`${viewMode === 'split' ? (showDetail ? 'w-56' : 'w-80') : 'flex-1'} ${isMobile ? 'w-full' : ''} overflow-y-auto border-r flex-shrink-0 transition-all duration-300`}
+                        style={{ borderColor: 'var(--border)' }}>
+
+                        {loading && <div role="status" aria-live="polite" className="flex items-center justify-center py-20 gap-3" style={{ color: 'var(--text-muted)' }}><Loader2 size={20} className="animate-spin" /><span className="text-sm">Dang tim...</span></div>}
+                        {error && <div role="alert" className="text-center py-20 text-red-400 text-sm px-4">{error}</div>}
                         {!loading && results.length === 0 && !error && query && (
-                            <div className="flex flex-col items-center py-20 text-gray-500 gap-3">
-                                <SearchX size={40} />
-                                <p className="text-sm">Thử từ khoá khác nhé!</p>
+                            <div className="flex flex-col items-center py-20 gap-3" style={{ color: 'var(--text-muted)' }}>
+                                <SearchX size={36} /><p className="text-sm">Thu tu khoa khac hoac bo dau tieng Viet.</p>
                             </div>
                         )}
-                        <div className={viewMode === 'split' ? 'flex flex-col gap-3' : 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'}>
-                            {results.map((place, i) => (
-                                <div
-                                    key={place.id}
-                                    onClick={() => setSelectedPlace(place)}
-                                    className={`cursor-pointer rounded-xl ring-2 transition-all duration-200
-                    ${selectedPlace?.id === place.id && viewMode === 'split'
-                                            ? 'ring-sky-500' : 'ring-transparent'}`}
-                                    style={{ animationDelay: `${i * 40}ms` }}
-                                >
-                                    {viewMode === 'split' ? (
-                                        // Compact card cho split view
-                                        <div className="glass-card p-3 flex gap-3 hover:border-sky-500/40 transition-all">
-                                            <div className="w-16 h-16 rounded-lg overflow-hidden bg-gray-800 flex-shrink-0">
-                                                {place.image_path
-                                                    ? <img src={place.image_path} alt={place.name} className="w-full h-full object-cover" onError={e => e.target.style.display = 'none'} />
-                                                    : <div className="w-full h-full bg-gradient-to-br from-gray-700 to-gray-800" />
-                                                }
-                                            </div>
-                                            <div className="flex-1 min-w-0">
-                                                <p className="text-sm font-medium line-clamp-1">{place.name}</p>
-                                                <p className="text-xs text-gray-400 line-clamp-1 mt-0.5">{place.address || 'Đà Nẵng'}</p>
-                                                {place.category && (
-                                                    <span className="text-xs text-sky-400">{place.category.name}</span>
-                                                )}
-                                                {place.ai_score !== undefined && (
-                                                    <span className="ml-2 text-xs text-gray-500">AI ✦</span>
-                                                )}
-                                            </div>
-                                        </div>
-                                    ) : (
-                                        <PlaceCard place={place} score={place.ai_score} />
-                                    )}
-                                </div>
+
+                        <div className={viewMode === 'list' ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-4' : 'flex flex-col gap-2 p-3'}>
+                            {results.map((place) => (
+                                viewMode === 'list'
+                                    ? <PlaceCard key={place.id} place={place} score={place.ai_score} />
+                                    : <CompactCard key={place.id} place={place} isSelected={selectedPlace?.id === place.id} onClick={() => handleSelectPlace(place)} />
                             ))}
                         </div>
                     </div>
                 )}
 
-                {/* === Map === */}
-                {(viewMode === 'map' || viewMode === 'split') && (
+                {/* Detail Panel (slide-in) */}
+                {viewMode === 'split' && showDetail && (
+                    <div className="w-80 flex-shrink-0 flex flex-col overflow-hidden transition-all duration-300">
+                        <DetailPanel place={selectedPlace} onClose={() => setShowDetail(false)} />
+                    </div>
+                )}
+
+                {/* Map */}
+                {(viewMode === 'map' || (viewMode === 'split' && !isMobile)) && (
                     <div className="flex-1 relative">
-                        <MapContainer
-                            center={mapCenter}
-                            zoom={13}
-                            className="w-full h-full"
-                            zoomControl={false}
-                        >
-                            <TileLayer
-                                url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
-                                attribution='&copy; <a href="https://carto.com/">CARTO</a>'
-                            />
+                        <MapContainer center={mapCenter} zoom={13} className="w-full h-full" zoomControl={true}>
+                            <TileLayer url={tileUrl} attribution='&copy; CARTO' />
                             <FlyToPlace place={selectedPlace} />
                             {placeMarkers.map(place => (
                                 <Marker
                                     key={place.id}
                                     position={[place.lat, place.lng]}
                                     icon={selectedPlace?.id === place.id ? selectedIcon : new L.Icon.Default()}
-                                    eventHandlers={{ click: () => setSelectedPlace(place) }}
+                                    eventHandlers={{ click: () => handleSelectPlace(place) }}
                                 >
                                     <Popup>
-                                        <div className="text-sm font-medium">{place.name}</div>
-                                        <div className="text-xs text-gray-400 mt-1">{place.address}</div>
+                                        <div>
+                                            <p className="font-semibold text-sm">{place.name}</p>
+                                            <p className="text-xs mt-1" style={{ color: 'var(--text-muted)' }}>{place.address}</p>
+                                            <Link to={`/places/${place.id}`} className="text-xs text-sky-400 hover:underline mt-1 inline-block">
+                                                Xem chi tiết →
+                                            </Link>
+                                        </div>
                                     </Popup>
                                 </Marker>
                             ))}
