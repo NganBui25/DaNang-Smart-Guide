@@ -53,9 +53,17 @@ services:
       DATA_DIR: /app/data
     ports:
       - "8000:8000"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
     volumes:
       - ./ai_service/faiss_index:/app/faiss_index
       - ./backend/data:/app/data
+      - huggingface_cache:/root/.cache/huggingface
 
   frontend:
     build:
@@ -72,3 +80,4 @@ services:
 volumes:
   mysql_data:
   static_data:
+  huggingface_cache:
