@@ -187,3 +187,26 @@ AI_SERVICE_URL = os.getenv('AI_SERVICE_URL', 'http://localhost:8000')
 # Pagination defaults (used by custom pagination class)
 PAGE_SIZE_DEFAULT = int(os.getenv('PAGE_SIZE_DEFAULT', 12))
 PAGE_SIZE_MAX = int(os.getenv('PAGE_SIZE_MAX', 50))
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'simple': {
+            'format': '%(asctime)s %(levelname)s %(name)s %(message)s',
+        },
+    },
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple',
+        },
+    },
+    'loggers': {
+        'places.signals': {
+            'handlers': ['console'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+    },
+}
