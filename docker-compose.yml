@@ -56,6 +56,7 @@ services:
     volumes:
       - ./ai_service/faiss_index:/app/faiss_index
       - ./backend/data:/app/data
+      - huggingface_cache:/root/.cache/huggingface
 
   frontend:
     build:
@@ -72,3 +73,4 @@ services:
 volumes:
   mysql_data:
   static_data:
+  huggingface_cache:
