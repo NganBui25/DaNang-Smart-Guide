@@ -1,50 +1,67 @@
+import json
 import logging
+
 import requests
+from django.conf import settings
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-from django.conf import settings
 
 from .models import Place
+
 
 logger = logging.getLogger(__name__)
 AI_SERVICE_URL = getattr(settings, "AI_SERVICE_URL", "http://localhost:8000")
 
 
+def _normalize_text(value):
+    return str(value).strip() if value is not None else ""
+
+
 @receiver(post_save, sender=Place)
 def auto_vectorize_on_approve(sender, instance, **kwargs):
-    """
-    Khi Admin duyệt địa điểm (status → APPROVED), tự động gửi request
-    đến AI Service để sinh vector ngữ nghĩa và lưu lại.
-    """
-    if instance.status != 'APPROVED':
+    if instance.status != "APPROVED":
         return
     if instance.embedding_vector:
-        # Đã có vector rồi, bỏ qua
         return
 
-    # Tạo text đầu vào cho model: tên + địa chỉ + mô tả + tags
-    tag_names = ' '.join(instance.tags.values_list('name', flat=True))
-    category_name = instance.category.name if instance.category else ''
-    text = ' '.join(filter(None, [
-        instance.name,
-        category_name,
-        instance.address or '',
-        instance.description or '',
-        tag_names,
-    ]))
+    tag_names = " ".join(
+        tag_name
+        for tag_name in (
+            _normalize_text(tag) for tag in instance.tags.values_list("name", flat=True)
+        )
+        if tag_name
+    )
+    category_name = _normalize_text(instance.category.name if instance.category else "")
+    text = " ".join(
+        filter(
+            None,
+            [
+                _normalize_text(instance.name),
+                category_name,
+                _normalize_text(instance.address),
+                _normalize_text(instance.description),
+                tag_names,
+            ],
+        )
+    )
+    payload = {"place_id": str(instance.id), "text": text}
 
     try:
-        resp = requests.post(
+        logger.info(
+            "Vectorize payload for place '%s': %s",
+            instance.name,
+            json.dumps(payload, ensure_ascii=False),
+        )
+        response = requests.post(
             f"{AI_SERVICE_URL}/vectorize",
-            json={"place_id": str(instance.id), "text": text},
+            json=payload,
             timeout=15,
         )
-        resp.raise_for_status()
-        data = resp.json()
+        response.raise_for_status()
+        data = response.json()
         vector = data.get("vector")
         if vector:
-            # Cập nhật trực tiếp để tránh kích hoạt signal lại
             Place.objects.filter(pk=instance.pk).update(embedding_vector=vector)
             logger.info("Auto-vectorized place '%s' (id=%s)", instance.name, instance.id)
-    except requests.exceptions.RequestException as e:
-        logger.warning("Could not vectorize place '%s': %s", instance.name, e)
+    except requests.exceptions.RequestException as exc:
+        logger.warning("Could not vectorize place '%s': %s", instance.name, exc)
