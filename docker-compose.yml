@@ -53,13 +53,6 @@ services:
       DATA_DIR: /app/data
     ports:
       - "8000:8000"
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: 1
-              capabilities: [gpu]
     volumes:
       - ./ai_service/faiss_index:/app/faiss_index
       - ./backend/data:/app/data
