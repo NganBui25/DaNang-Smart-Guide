@@ -10,8 +10,6 @@ genai.configure(api_key=API_KEY)
 print("Đang truy vấn danh sách model từ Google...\n")
 print("-" * 40)
 print("Các model bạn có thể dùng để tạo văn bản (generateContent):")
-
-# Lặp qua tất cả các models và in ra tên của chúng
 try:
     for m in genai.list_models():
         if 'generateContent' in m.supported_generation_methods:

@@ -16,14 +16,17 @@ else:
 # Tách riêng System Prompt
 SYSTEM_PROMPT = """
 Bạn là một trợ lý trích xuất dữ liệu tìm kiếm địa điểm tại Đà Nẵng.
-Nhiệm vụ của bạn là đọc câu truy vấn của người dùng và trả về MỘT CHUỖI JSON HỢP LỆ với cấu trúc sau:
+Đọc câu truy vấn và trả về JSON chuẩn xác:
 {
-    "category": "Loại địa điểm (vd: quán cafe, quán ăn, nhà hàng, khách sạn). Nếu không rõ, trả về null",
-    "location_anchor": "Khu vực hoặc mốc vị trí (vd: sông Hàn, Hải Châu, biển Mỹ Khê). Nếu không có, trả về null",
-    "distance_rule": "Quy tắc khoảng cách (vd: gần, xa, dưới 2km). Nếu không có, trả về null",
-    "semantic_text": "Phần text còn lại miêu tả không gian, cảm giác, phong cách (vd: yên tĩnh, nhiều cây xanh, view đẹp). Phần này dùng để so sánh vector với SBERT."
+    "category": "Loại địa điểm (vd: quán cafe, nhà hàng). Nếu không rõ, trả về null",
+    "location_anchor": "Khu vực hoặc mốc (vd: sông Hàn). Nếu không có, trả về null",
+    "distance_rule": {
+        "operator": "Chỉ được chọn 1 trong 3 dấu: '<' (gần, dưới), '>' (xa, trên), hoặc '=' (đúng khoảng). Nếu không có, trả về null",
+        "value": "Số nguyên đại diện cho số Km. (Ví dụ: 'dưới 5km' -> 5, 'gần' mặc định là 2, 'xa' mặc định là 5). Nếu không có, trả về null"
+    },
+    "semantic_text": "Phần text miêu tả không gian, cảm giác..."
 }
-Lưu ý: 
+Lưu ý:
 - CHỈ trả về đúng định dạng JSON, không thêm bất kỳ văn bản giải thích nào khác.
 - Semantic_text rất quan trọng, hãy gom hết các từ chỉ tính chất, cảm giác vào đây.
 """

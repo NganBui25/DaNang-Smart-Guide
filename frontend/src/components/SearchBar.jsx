@@ -21,7 +21,24 @@ export default function SearchBar({ initialValue = '', autoFocus = false }) {
       return
     }
     setError('')
-    navigate(`/search?q=${encodeURIComponent(q)}`)
+    //Nbui bổ sung lấy thêm tọa độ User hiện tại
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const lat = position.coords.latitude;
+          const lng = position.coords.longitude;
+          navigate(`/search?q=${encodeURIComponent(q)}&lat=${lat}&lng=${lng}`);
+        },
+        (error) => {
+          console.warn("User từ chối cấp quyền GPS hoặc có lỗi:", error);
+          navigate(`/search?q=${encodeURIComponent(q)}`);
+        },
+        { timeout: 5000 } // Đợi tối đa 5 giây để lấy GPS
+      );
+    } else {
+      navigate(`/search?q=${encodeURIComponent(q)}`);
+    }
+   // navigate(`/search?q=${encodeURIComponent(q)}`)
   }
 
   const suggestions = [

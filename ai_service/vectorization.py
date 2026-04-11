@@ -1,6 +1,5 @@
 import numpy as np
 from typing import Dict, List, Tuple
-# Nhớ import đúng đường dẫn hàm get_embedding của bạn nhé
 from models.embedder import get_embedding 
 
 def encode_text(text: str) -> np.ndarray:
