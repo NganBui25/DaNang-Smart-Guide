@@ -12,11 +12,13 @@ import hashlib
 import os
 import re
 from math import sqrt
+from sentence_transformers import SentenceTransformer
 
-
-VECTOR_DIMENSION = int(os.getenv("VECTOR_DIMENSION", "768"))
+#VECTOR_DIMENSION = int(os.getenv("VECTOR_DIMENSION", "768"))
 TOKEN_PATTERN = re.compile(r"\w+", re.UNICODE)
-
+VECTOR_DIMENSION = 768
+MODEL_NAME = os.getenv("SBERT_MODEL", "keepitreal/vietnamese-sbert")
+model = SentenceTransformer(MODEL_NAME)
 
 def _tokenize(text: str) -> list[str]:
     return TOKEN_PATTERN.findall((text or "").lower())
@@ -28,22 +30,10 @@ def is_model_loaded() -> bool:
 
 
 def get_embedding(text: str) -> list[float]:
-    tokens = _tokenize(text)
-    if not tokens:
+    if not text or not text.strip():
         return [0.0] * VECTOR_DIMENSION
-
-    vec = [0.0] * VECTOR_DIMENSION
-    for token in tokens:
-        digest = hashlib.sha256(token.encode("utf-8")).digest()
-        idx = int.from_bytes(digest[:4], "big") % VECTOR_DIMENSION
-        sign = 1.0 if (digest[4] & 1) == 0 else -1.0
-        vec[idx] += sign
-
-    norm = sqrt(sum(v * v for v in vec))
-    if norm > 0:
-        vec = [v / norm for v in vec]
-    return vec
-
+    vector = model.encode(text)
+    return vector.tolist()
 
 def build_place_text(name: str, address: str = "", description: str = "", category: str = "") -> str:
     parts = [name]

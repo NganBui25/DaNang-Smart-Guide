@@ -140,18 +140,28 @@ class SearchViewSet(viewsets.ViewSet):
     def create(self, request):
         query = request.data.get("query", "").strip()
         top_k = int(request.data.get("top_k", 10))
-
+        user_lat = request.data.get("user_lat")
+        user_lng = request.data.get("user_lng")
         if not query:
             return Response({"error": "Vui long nhap tu khoa tim kiem"}, status=status.HTTP_400_BAD_REQUEST)
 
         try:
+            ai_payload = {
+                "text": query, 
+                "top_k": top_k,
+                "user_lat": user_lat,
+                "user_lng": user_lng
+            }
             ai_response = requests.post(
                 f"{AI_SERVICE_URL}/search",
-                json={"text": query, "top_k": top_k},
+                json=ai_payload,
                 timeout=10,
             )
             ai_response.raise_for_status()
-            ai_results = ai_response.json().get("results", [])
+            
+            ai_data = ai_response.json()
+            ai_results = ai_data.get("results", [])
+            parsed_intent = ai_data.get("parsed_intent", {})
         except requests.exceptions.RequestException as e:
             logger.exception("AI Service unreachable for query='%s'", query)
             return Response(
@@ -167,12 +177,13 @@ class SearchViewSet(viewsets.ViewSet):
                     "count": len(fallback_results),
                     "results": fallback_results,
                     "fallback": "keyword",
+                    "parsed_intent": parsed_intent if 'parsed_intent' in locals() else None
                 }
             )
 
         place_ids = [str(r["place_id"]) for r in ai_results]
         score_map = {str(r["place_id"]): r["score"] for r in ai_results}
-
+        reason_map = {str(r["place_id"]): r.get("match_reason", "") for r in ai_results}
         places = (
             Place.objects.filter(id__in=place_ids, status="APPROVED")
             .select_related("category")
@@ -187,6 +198,6 @@ class SearchViewSet(viewsets.ViewSet):
 
         for item in results:
             item["ai_score"] = round(score_map.get(str(item["id"]), 0), 4)
-
+            item["match_reason"] = reason_map.get(str(item["id"]), "")
         logger.info("semantic_search query='%s' results=%s", query, len(results))
-        return Response({"query": query, "count": len(results), "results": results})
+        return Response({"query": query, "count": len(results),"parsed_intent": parsed_intent, "results": results})

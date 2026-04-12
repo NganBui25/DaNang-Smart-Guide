@@ -142,6 +142,9 @@ function DetailPanel({ place, onClose }) {
 export default function SearchResultsPage() {
     const [searchParams] = useSearchParams()
     const query = searchParams.get('q') || ''
+    //Nbui bổ sung lấy thêm tọa độ User hiện tại
+    const lat = searchParams.get('lat');
+    const lng = searchParams.get('lng');
 
     const [results, setResults] = useState([])
     const [loading, setLoading] = useState(false)
@@ -174,15 +177,18 @@ export default function SearchResultsPage() {
         setLoading(true)
         setError(null)
         setShowDetail(false)
-        searchApi.semantic(query, 20)
+        //Nbui có sửa xí ở đây thêm lat,lng (tọa độ user) để gửi về BE
+        const userLat = lat ? parseFloat(lat) : null;
+        const userLng = lng ? parseFloat(lng) : null;
+        searchApi.semantic(query, 20,userLat, userLng)
             .then(res => {
                 const items = res.data.results || []
                 setResults(items)
                 if (items.length > 0) setSelectedPlace(items[0])
             })
-                .catch((err) => setError(err.message || 'Khong the ket noi den backend.'))
+            .catch((err) => setError(err.message || 'Khong the ket noi den backend.'))
             .finally(() => setLoading(false))
-    }, [query])
+    }, [query,lat, lng])
 
     const handleSelectPlace = (place) => {
         setSelectedPlace(place)

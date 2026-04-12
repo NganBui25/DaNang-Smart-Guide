@@ -59,10 +59,15 @@ export const placesApi = {
   bookmark: (id) => api.post(`/places/${id}/bookmark/`),
   bookmarks: () => api.get('/places/bookmarks/'),
 }
-
+//Nbui có sửa thêm ở đây để gửi thêm lat,lng (tọa độ user) về BE khi search
 export const searchApi = {
-  semantic: (query, top_k = 10) =>
-    api.post('/search/', { query, top_k }),
+  semantic: (query, top_k = 10, user_lat = null, user_lng = null) =>
+    api.post('/search/', { 
+      query: query,        
+      top_k: top_k, 
+      user_lat: user_lat, // Truyền thêm tọa độ Vĩ độ
+      user_lng: user_lng
+      }),
 }
 
 export const categoriesApi = {
