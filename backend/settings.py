@@ -7,7 +7,17 @@ import pymysql
 from datetime import timedelta
 from dotenv import load_dotenv
 
-load_dotenv()
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+
+def _running_in_docker() -> bool:
+    return Path("/.dockerenv").exists()
+
+
+load_dotenv(BASE_DIR / ".env")
+if not _running_in_docker():
+    load_dotenv(BASE_DIR / ".env.local", override=True)
 
 pymysql.version_info = (2, 2, 1, "final", 0)
 pymysql.install_as_MySQLdb()
@@ -18,10 +28,6 @@ try:
     DatabaseWrapper.check_database_version_supported = lambda self: None
 except Exception:
     pass
-
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
