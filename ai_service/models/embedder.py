@@ -1,39 +1,39 @@
-"""
-Lightweight deterministic text embedding helper.
-
-This implementation avoids heavyweight ML model downloads so the demo stack can
-run reliably in constrained environments. It uses hashed token features with
-L2 normalization to produce fixed-size vectors.
-"""
+"""SentenceTransformer embedder with automatic CPU/GPU fallback."""
 
 from __future__ import annotations
 
-import hashlib
+import logging
 import os
-import re
-from math import sqrt
+
+import torch
 from sentence_transformers import SentenceTransformer
 
-#VECTOR_DIMENSION = int(os.getenv("VECTOR_DIMENSION", "768"))
-TOKEN_PATTERN = re.compile(r"\w+", re.UNICODE)
-VECTOR_DIMENSION = 768
-MODEL_NAME = os.getenv("SBERT_MODEL", "keepitreal/vietnamese-sbert")
-model = SentenceTransformer(MODEL_NAME)
 
-def _tokenize(text: str) -> list[str]:
-    return TOKEN_PATTERN.findall((text or "").lower())
+logger = logging.getLogger(__name__)
+VECTOR_DIMENSION = int(os.getenv("VECTOR_DIMENSION", "768"))
+MODEL_NAME = os.getenv("SBERT_MODEL", "keepitreal/vietnamese-sbert")
+DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
+model = SentenceTransformer(MODEL_NAME, device=DEVICE)
+
+logger.info("Loaded embedding model '%s' on device=%s", MODEL_NAME, DEVICE)
 
 
 def is_model_loaded() -> bool:
-    # Kept for backward compatibility with existing health checks.
-    return True
+    return model is not None
 
 
 def get_embedding(text: str) -> list[float]:
     if not text or not text.strip():
         return [0.0] * VECTOR_DIMENSION
-    vector = model.encode(text)
+
+    vector = model.encode(
+        text,
+        normalize_embeddings=True,
+        convert_to_numpy=True,
+        show_progress_bar=False,
+    )
     return vector.tolist()
+
 
 def build_place_text(name: str, address: str = "", description: str = "", category: str = "") -> str:
     parts = [name]

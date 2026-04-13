@@ -82,7 +82,7 @@ def search(req: SearchRequest):
             db_id = f"{db_id[:8]}-{db_id[8:12]}-{db_id[12:16]}-{db_id[16:20]}-{db_id[20:]}"
             
         match_keywords = [w for w in query_words if len(w) > 2]
-        if score > 0.6:
+        if score > 0.75:
             reason = "Phù hợp ngữ nghĩa tổng thể rất cao."
         elif match_keywords:
             reason = f"Trùng khớp {len(match_keywords)} từ khóa tiềm năng."
@@ -345,9 +345,9 @@ def search(req: SearchRequest):
 @app.post("/vectorize")
 def vectorize(req: VectorizeRequest):
     logger.info(f"Vectorizing place: {req.place_id}")
+    if not req.text or not req.text.strip():
+        raise HTTPException(status_code=400, detail="Text cannot be empty")
     vec = encode_text(req.text)
-    if vec is not None:
-        vec = vec.tolist()
     return {"vector": vec}
 
 
