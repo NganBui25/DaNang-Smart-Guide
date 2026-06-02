@@ -133,6 +133,82 @@ docker compose exec ai_service sh
 
 Neu dang chay GPU, them `-f docker-compose.yml -f docker-compose.gpu.yml` vao cac lenh tren.
 
+## Deploy kieu hybrid: server chay web + DB, laptop chay AI
+Dung cach nay khi server cloud RAM thap, nhung laptop cua ban van chay tot `ai_service`.
+
+### So do
+- Server cloud:
+  - `frontend`
+  - `backend`
+  - `db`
+- Laptop:
+  - `ai_service`
+
+Luong request:
+```text
+User -> Frontend tren server -> Backend tren server -> AI service tren laptop -> Backend -> Frontend
+```
+
+### 1. Chay `ai_service` tren laptop
+Neu laptop co GPU:
+```powershell
+docker compose -f docker-compose.yml -f docker-compose.gpu.yml up -d --build ai_service
+```
+
+Neu laptop chi chay CPU:
+```powershell
+docker compose up -d --build ai_service
+```
+
+Kiem tra:
+```powershell
+Invoke-RestMethod http://localhost:8000/healthz
+```
+
+### 2. Expose `ai_service` laptop ra internet
+Can mot URL public de server cloud goi duoc. Cach don gian nhat la dung tunnel.
+
+Vi du voi `ngrok`:
+```powershell
+ngrok http 8000
+```
+
+Ban se nhan duoc URL dang:
+```text
+https://abc123.ngrok-free.app
+```
+
+### 3. Tao `.env` tren server cloud
+Tren server cloud, dat:
+```env
+AI_SERVICE_URL=https://abc123.ngrok-free.app
+VITE_API_BASE=http://<server-ip-hoac-domain>:8080/api
+DJANGO_ALLOWED_HOSTS=<server-ip-hoac-domain>,localhost,127.0.0.1
+CORS_ALLOWED_ORIGINS=http://<server-ip-hoac-domain>:3000
+```
+
+### 4. Chay stack tren server cloud, KHONG chay `ai_service`
+Tren server dung file override rieng:
+```bash
+docker compose -f docker-compose.yml -f docker-compose.server.yml up -d --build db backend frontend
+```
+
+File `docker-compose.server.yml` se:
+- bo `depends_on ai_service` khoi `backend`
+- lay `AI_SERVICE_URL` tu `.env` tren server
+- build `frontend` theo `VITE_API_BASE` tren server
+
+### 5. Khoi tao du lieu lan dau tren server
+Neu DB tren server con trong:
+```bash
+docker compose -f docker-compose.yml -f docker-compose.server.yml run --rm backend sh -c "python manage.py migrate && python scripts/import_data.py && python manage.py collectstatic --noinput"
+```
+
+Luu y:
+- Laptop van can chay `ai_service` khi user dung search AI
+- Neu tat laptop hoac tat tunnel, backend tren server se khong goi duoc AI
+- Day la cach hop le cho demo/MVP, nhung chua phai production tu chu hoan toan
+
 ## Rollout lai embedding sau khi doi runtime/model
 1. Rebuild `ai_service`
 ```powershell

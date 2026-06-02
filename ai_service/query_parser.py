@@ -255,7 +255,7 @@ def parse_query_with_llm(query: str) -> dict:
 
     try:
         model = genai.GenerativeModel(
-            model_name="gemini-flash-lite-latest",
+            model_name="gemini-2.5-flash",
             system_instruction=SYSTEM_PROMPT,
         )
         response = model.generate_content(
