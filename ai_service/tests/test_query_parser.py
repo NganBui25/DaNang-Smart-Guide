@@ -11,6 +11,7 @@ class QueryParserTests(unittest.TestCase):
 
         self.assertEqual(parsed["category"], "Cafe")
         self.assertEqual(parsed["location_anchor"], "bien")
+        self.assertEqual(parsed["location_type"], "area")
         self.assertEqual(parsed["distance_rule"], {"operator": "<", "value": 5})
         self.assertEqual(parsed["semantic_text"], "yen tinh")
 
@@ -19,8 +20,22 @@ class QueryParserTests(unittest.TestCase):
 
         self.assertEqual(parsed["category"], "Vui choi")
         self.assertIsNone(parsed["location_anchor"])
+        self.assertIsNone(parsed["location_type"])
         self.assertEqual(parsed["distance_rule"], {"operator": "<", "value": 3})
         self.assertEqual(parsed["semantic_text"], "tre em")
+
+    def test_fallback_infers_point_location_type(self):
+        parsed = _fallback_parser("quan cafe view dep gan song han")
+
+        self.assertEqual(parsed["location_anchor"], "song han")
+        self.assertEqual(parsed["location_type"], "point")
+
+    def test_fallback_extracts_area_anchor_from_query(self):
+        parsed = _fallback_parser("co quan nuong nao ngon o quan lien chieu khong")
+
+        self.assertEqual(parsed["category"], "Quan an")
+        self.assertEqual(parsed["location_anchor"], "quan lien chieu")
+        self.assertEqual(parsed["location_type"], "area")
 
 
 if __name__ == "__main__":

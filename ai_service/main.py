@@ -10,6 +10,7 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 
 try:
+    from geocoding import get_coordinates
     from models.embedder import ensure_model_loaded, get_runtime_info
     from query_parser import parse_query_with_llm
     from sentiment import summarize_sentiment
@@ -19,6 +20,7 @@ try:
         get_search_backend_name,
     )
 except ImportError:  # pragma: no cover - supports package-style imports in tests/tools.
+    from ai_service.geocoding import get_coordinates
     from ai_service.models.embedder import ensure_model_loaded, get_runtime_info
     from ai_service.query_parser import parse_query_with_llm
     from ai_service.sentiment import summarize_sentiment
@@ -33,6 +35,7 @@ load_dotenv()
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 CATEGORY_MATCH_THRESHOLD = float(os.getenv("CATEGORY_MATCH_THRESHOLD", "0.35"))
+AREA_LOCATION_STOPWORDS = {"quan", "phuong", "duong", "thanh", "pho", "huyen", "khu"}
 
 app = FastAPI(title="DaNang Local Gems - AI Engine")
 
@@ -119,6 +122,66 @@ def _resolve_category_match(cursor, raw_category: str | None):
         "name": matched_row["name"],
         "score": round(float(score), 4),
     }
+
+
+def _lookup_anchor_coordinates_in_db(cursor, anchor_name: str) -> tuple[float | None, float | None]:
+    cursor.execute(
+        """
+        SELECT lat, lng
+        FROM places_place
+        WHERE name LIKE %s AND lat IS NOT NULL
+        LIMIT 1
+        """.strip(),
+        (f"%{anchor_name}%",),
+    )
+    anchor_result = cursor.fetchone()
+    if not anchor_result:
+        return None, None
+    return anchor_result["lat"], anchor_result["lng"]
+
+
+def _resolve_anchor_search_strategy(
+    cursor,
+    anchor_name: str | None,
+    location_type: str | None,
+    distance_rule: dict | None,
+    user_lat: float | None,
+    user_lng: float | None,
+) -> tuple[float | None, float | None, bool]:
+    target_lat = None
+    target_lng = None
+    use_like_search = False
+
+    if anchor_name:
+        if location_type == "area" and not distance_rule:
+            return None, None, True
+
+        target_lat, target_lng = get_coordinates(anchor_name)
+        if target_lat is None or target_lng is None:
+            target_lat, target_lng = _lookup_anchor_coordinates_in_db(cursor, anchor_name)
+        if target_lat is None or target_lng is None:
+            use_like_search = True
+    elif distance_rule and user_lat is not None and user_lng is not None:
+        target_lat = user_lat
+        target_lng = user_lng
+
+    return target_lat, target_lng, use_like_search
+
+
+def _build_area_like_clause(anchor_name: str) -> tuple[str | None, list[str]]:
+    tokens = [
+        token
+        for token in (anchor_name or "").split()
+        if len(token) >= 2 and token not in AREA_LOCATION_STOPWORDS
+    ]
+    if not tokens:
+        return None, []
+
+    clauses = ["(p.address LIKE %s OR p.name LIKE %s)" for _ in tokens]
+    params: list[str] = []
+    for token in tokens:
+        params.extend([f"%{token}%", f"%{token}%"])
+    return " AND ".join(clauses), params
 
 
 class SearchRequest(BaseModel):
@@ -224,35 +287,17 @@ def search(req: SearchRequest):
 
         anchor_name_raw = parsed_data.get("location_anchor", "")
         anchor_name = anchor_name_raw.lower().strip() if anchor_name_raw else None
+        location_type = parsed_data.get("location_type")
+        distance_rule = parsed_data.get("distance_rule")
 
-        target_lat = None
-        target_lng = None
-        use_like_search = False
-
-        if anchor_name:
-            cursor.execute(
-                """
-                SELECT lat, lng
-                FROM places_place
-                WHERE name LIKE %s AND lat IS NOT NULL
-                LIMIT 1
-                """.strip(),
-                (f"%{anchor_name}%",),
-            )
-            anchor_result = cursor.fetchone()
-
-            if anchor_result:
-                target_lat = anchor_result["lat"]
-                target_lng = anchor_result["lng"]
-            else:
-                use_like_search = True
-        elif (
-            parsed_data.get("distance_rule")
-            and req.user_lat is not None
-            and req.user_lng is not None
-        ):
-            target_lat = req.user_lat
-            target_lng = req.user_lng
+        target_lat, target_lng, use_like_search = _resolve_anchor_search_strategy(
+            cursor,
+            anchor_name,
+            location_type,
+            distance_rule,
+            req.user_lat,
+            req.user_lng,
+        )
 
         if target_lat is not None and target_lng is not None:
             distance_expr = f"""
@@ -267,23 +312,27 @@ def search(req: SearchRequest):
             where_clauses.append("p.lat IS NOT NULL")
             where_clauses.append("p.lng IS NOT NULL")
 
-            dist_rule = parsed_data.get("distance_rule")
-            if dist_rule and dist_rule.get("operator") and dist_rule.get("value") is not None:
-                operator = dist_rule["operator"]
+            if distance_rule and distance_rule.get("operator") and distance_rule.get("value") is not None:
+                operator = distance_rule["operator"]
                 try:
-                    distance_value = float(dist_rule["value"])
+                    distance_value = float(distance_rule["value"])
                 except (TypeError, ValueError):
-                    logger.warning("Invalid distance value in parsed query: %s", dist_rule)
+                    logger.warning("Invalid distance value in parsed query: %s", distance_rule)
                 else:
                     if operator in {"<", ">", "=", "<=", ">="}:
                         having_clauses.append(f"distance {operator} %s")
                         params.append(distance_value)
-            elif anchor_name and not dist_rule:
+            elif anchor_name and not distance_rule:
                 having_clauses.append("distance < 5")
 
         if use_like_search and anchor_name:
-            where_clauses.append("(p.address LIKE %s OR p.name LIKE %s)")
-            params.extend([f"%{anchor_name}%", f"%{anchor_name}%"])
+            area_clause, area_params = _build_area_like_clause(anchor_name)
+            if area_clause:
+                where_clauses.append(area_clause)
+                params.extend(area_params)
+            else:
+                where_clauses.append("(p.address LIKE %s OR p.name LIKE %s)")
+                params.extend([f"%{anchor_name}%", f"%{anchor_name}%"])
 
         select_str = ", ".join(select_fields)
         where_str = " AND ".join(where_clauses)

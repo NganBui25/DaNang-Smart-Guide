@@ -1,5 +1,6 @@
 # DaNang Smart Guide
-docker compose -f docker-compose.yml -f docker-compose.gpu.yml up -d
+docker compose -f docker-compose.yml -f docker-compose.gpu.yml up -d //bật
+docker compose -f docker-compose.yml -f docker-compose.gpu.yml down //tắt
 
 DaNang Smart Guide la du an full-stack tim kiem dia diem o Da Nang bang semantic search.
 
