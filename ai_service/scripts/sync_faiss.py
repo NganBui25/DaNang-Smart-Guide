@@ -1,4 +1,4 @@
-﻿"""
+"""
 Build FAISS index from crawled JSON place data.
 
 Usage:
@@ -19,6 +19,7 @@ import numpy as np
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from models.embedder import build_place_text, get_embedding  # noqa: E402
+from vectorization import normalize_matrix  # noqa: E402
 
 
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
@@ -58,13 +59,13 @@ def _iter_records() -> list[tuple[str, str, dict[str, Any]]]:
             print(f"[sync] missing file, skip: {filepath}")
             continue
 
-        with open(filepath, "r", encoding="utf-8") as f:
-            data = json.load(f)
+        with open(filepath, "r", encoding="utf-8") as handle:
+            data = json.load(handle)
 
         if isinstance(data, dict):
             iterable = data.items()
         elif isinstance(data, list):
-            iterable = ((str(i), item) for i, item in enumerate(data))
+            iterable = ((str(index), item) for index, item in enumerate(data))
         else:
             print(f"[sync] unsupported structure in {filename}, skip")
             continue
@@ -100,7 +101,9 @@ def run_sync() -> None:
 
         reviews = place.get("reviews") or []
         review_text = " ".join(
-            str(r.get("content", "")) for r in reviews if isinstance(r, dict)
+            str(review.get("content", ""))
+            for review in reviews
+            if isinstance(review, dict)
         )
 
         full_text = build_place_text(
@@ -146,14 +149,15 @@ def run_sync() -> None:
         raise RuntimeError("No vectors were generated. Index was not written.")
 
     matrix = np.asarray(vectors, dtype=np.float32)
+    matrix = np.ascontiguousarray(normalize_matrix(matrix), dtype=np.float32)
     id_array = np.asarray(ids, dtype=np.int64)
 
-    index = faiss.IndexIDMap(faiss.IndexFlatL2(VECTOR_DIMENSION))
+    index = faiss.IndexIDMap(faiss.IndexFlatIP(VECTOR_DIMENSION))
     index.add_with_ids(matrix, id_array)
 
     faiss.write_index(index, INDEX_FILE)
-    with open(ID_MAP_FILE, "w", encoding="utf-8") as f:
-        json.dump(id_map, f, ensure_ascii=False, indent=2)
+    with open(ID_MAP_FILE, "w", encoding="utf-8") as handle:
+        json.dump(id_map, handle, ensure_ascii=False, indent=2)
 
     elapsed = time.time() - started_at
     print(f"[done] vectors: {index.ntotal} | time: {elapsed:.1f}s")

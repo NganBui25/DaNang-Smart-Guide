@@ -1,87 +1,201 @@
-import os
+from __future__ import annotations
+
 import json
-import google.generativeai as genai
+import os
+import re
+import unicodedata
+
 from dotenv import load_dotenv
 
-# Load biến môi trường từ file .env
+try:
+    import google.generativeai as genai
+except ImportError:
+    genai = None
+
+
 load_dotenv()
 
-# Cấu hình API Key
 API_KEY = os.getenv("LLM_API_KEY")
-if not API_KEY:
-    print("⚠️ CẢNH BÁO: Chưa tìm thấy LLM_API_KEY trong file .env")
+if genai is None:
+    print("WARNING: google-generativeai is not installed; query parser will use fallback mode.")
+elif not API_KEY:
+    print("WARNING: LLM_API_KEY was not found; query parser will use fallback mode.")
 else:
     genai.configure(api_key=API_KEY)
 
-# Tách riêng System Prompt
+
 SYSTEM_PROMPT = """
-Bạn là một trợ lý trích xuất dữ liệu tìm kiếm địa điểm tại Đà Nẵng.
-Đọc câu truy vấn và trả về JSON chuẩn xác:
+Ban la mot tro ly trich xuat du lieu tim kiem dia diem tai Da Nang.
+Doc cau truy van va tra ve JSON chinh xac:
 {
-    "category": "Loại địa điểm (vd: quán cafe, nhà hàng). Nếu không rõ, trả về null",
-    "location_anchor": "Khu vực hoặc mốc (vd: sông Hàn). Nếu không có, trả về null",
+    "category": "Loai dia diem (vd: quan cafe, nha hang). Neu khong ro, tra ve null",
+    "location_anchor": "Khu vuc hoac moc (vd: song Han). Neu khong co, tra ve null",
     "distance_rule": {
-        "operator": "Chỉ được chọn 1 trong 3 dấu: '<' (gần, dưới), '>' (xa, trên), hoặc '=' (đúng khoảng). Nếu không có, trả về null",
-        "value": "Số nguyên đại diện cho số Km. (Ví dụ: 'dưới 5km' -> 5, 'gần' mặc định là 2, 'xa' mặc định là 5). Nếu không có, trả về null"
+        "operator": "Chi chon 1 trong 3 dau: '<', '>', '='. Neu khong co, tra ve null",
+        "value": "So Km dang so nguyen. Neu khong co, tra ve null"
     },
-    "semantic_text": "Phần text miêu tả không gian, cảm giác..."
+    "semantic_text": "Phan text mo ta khong gian, cam giac..."
 }
-Lưu ý:
-- CHỈ trả về đúng định dạng JSON, không thêm bất kỳ văn bản giải thích nào khác.
-- Semantic_text rất quan trọng, hãy gom hết các từ chỉ tính chất, cảm giác vào đây.
+Chi tra ve dung JSON, khong them giai thich.
 """
 
+CATEGORY_PATTERNS = (
+    ("Cafe", ("quan cafe", "ca phe", "ca phe", "cafe", "coffee", "quan ca phe")),
+    ("Quan an", ("nha hang", "quan an", "an vat", "am thuc", "restaurant", "food")),
+    ("Vui choi", ("vui choi", "giai tri", "tre em", "kids", "kid", "play")),
+)
+
+LOCATION_RULES = (
+    ("bien", ("gan bien", "ven bien", "sat bien", "bo bien"), {"operator": "<", "value": 5}),
+    ("song han", ("gan song han", "ven song han", "sat song han", "song han"), {"operator": "<", "value": 3}),
+    (None, ("gan toi", "gan day", "xung quanh toi", "quanh day"), {"operator": "<", "value": 3}),
+)
+
+GENERIC_TOKENS = {
+    "an",
+    "cho",
+    "choi",
+    "coffee",
+    "da",
+    "dia",
+    "diem",
+    "gan",
+    "hang",
+    "khu",
+    "nang",
+    "nha",
+    "noi",
+    "phe",
+    "quan",
+    "song",
+    "toi",
+    "tra",
+    "vui",
+    "ven",
+    "sat",
+    "bien",
+    "han",
+    "ca",
+    "cafe",
+}
+WORD_PATTERN = re.compile(r"\w+", re.UNICODE)
+
+
+def _normalize_text(value: str | None) -> str:
+    if not value:
+        return ""
+    text = unicodedata.normalize("NFKD", value)
+    text = "".join(ch for ch in text if not unicodedata.combining(ch))
+    return text.lower().strip()
+
+
+def _normalize_tokens(value: str | None) -> list[str]:
+    return [_normalize_text(token) for token in WORD_PATTERN.findall(value or "")]
+
+
+def _normalize_category(category: str | None) -> str | None:
+    category_norm = _normalize_text(category)
+    if not category_norm:
+        return None
+
+    for canonical_name, patterns in CATEGORY_PATTERNS:
+        if category_norm == _normalize_text(canonical_name):
+            return canonical_name
+        if any(pattern in category_norm for pattern in patterns):
+            return canonical_name
+    return category.strip() if category else None
+
+
+def _infer_category(query: str) -> str | None:
+    normalized_query = _normalize_text(query)
+    for canonical_name, patterns in CATEGORY_PATTERNS:
+        if any(pattern in normalized_query for pattern in patterns):
+            return canonical_name
+    return None
+
+
+def _infer_location(query: str) -> tuple[str | None, dict | None]:
+    normalized_query = _normalize_text(query)
+    for anchor, patterns, distance_rule in LOCATION_RULES:
+        if any(pattern in normalized_query for pattern in patterns):
+            return anchor, distance_rule.copy()
+    return None, None
+
+
+def _clean_distance_rule(distance_rule: dict | None) -> dict | None:
+    if not isinstance(distance_rule, dict):
+        return None
+
+    operator = distance_rule.get("operator")
+    value = distance_rule.get("value")
+    if operator not in {"<", ">", "=", "<=", ">="}:
+        return None
+    try:
+        numeric_value = float(value)
+    except (TypeError, ValueError):
+        return None
+    return {"operator": operator, "value": int(numeric_value) if numeric_value.is_integer() else numeric_value}
+
+
+def _build_semantic_text(query: str) -> str:
+    kept_tokens: list[str] = []
+    for token in WORD_PATTERN.findall(query or ""):
+        normalized = _normalize_text(token)
+        if len(normalized) < 2 or normalized in GENERIC_TOKENS:
+            continue
+        kept_tokens.append(token)
+
+    semantic_text = " ".join(kept_tokens).strip()
+    return semantic_text or (query or "").strip()
+
+
+def _post_process_parsed_intent(query: str, parsed: dict | None) -> dict:
+    parsed = parsed or {}
+
+    inferred_category = _infer_category(query)
+    inferred_anchor, inferred_distance = _infer_location(query)
+    normalized_category = _normalize_category(parsed.get("category")) or inferred_category
+    normalized_anchor = parsed.get("location_anchor")
+    if normalized_anchor:
+        normalized_anchor = _normalize_text(normalized_anchor)
+    if not normalized_anchor:
+        normalized_anchor = inferred_anchor
+
+    cleaned_distance_rule = _clean_distance_rule(parsed.get("distance_rule")) or inferred_distance
+    semantic_text = _build_semantic_text(parsed.get("semantic_text") or query)
+
+    return {
+        "category": normalized_category,
+        "location_anchor": normalized_anchor,
+        "distance_rule": cleaned_distance_rule,
+        "semantic_text": semantic_text,
+    }
+
+
 def parse_query_with_llm(query: str) -> dict:
-    """
-    Dùng Gemini 1.5 Flash để bóc tách câu truy vấn của người dùng thành các bộ lọc.
-    """
-    if not API_KEY:
+    if genai is None or not API_KEY:
         return _fallback_parser(query)
 
     try:
-        # Khởi tạo model với system_instruction (Cách chuẩn xác để gán role cho LLM)
         model = genai.GenerativeModel(
-            model_name='gemini-2.5-flash',
-            system_instruction=SYSTEM_PROMPT
+            model_name="gemini-2.5-flash",
+            system_instruction=SYSTEM_PROMPT,
         )
-        
-        # Gọi model chỉ với query của người dùng
         response = model.generate_content(
             query,
             generation_config=genai.GenerationConfig(
-                response_mime_type="application/json", 
-                temperature=0.1 
-            )
+                response_mime_type="application/json",
+                temperature=0.1,
+            ),
         )
-        
-        # Parse chuỗi string trả về
-        return json.loads(response.text)
+        return _post_process_parsed_intent(query, json.loads(response.text))
+    except json.JSONDecodeError as exc:
+        print(f"[-] Could not parse LLM JSON response: {exc}")
+        return _fallback_parser(query)
+    except Exception as exc:
+        print(f"[-] Query parser LLM call failed: {exc}")
+        return _fallback_parser(query)
 
-    except json.JSONDecodeError as e:
-        print(f"[-] Lỗi Parse JSON. Chuỗi model trả về:\n{response.text}\nChi tiết lỗi: {e}")
-        return _fallback_parser(query)
-    except Exception as e:
-        print(f"[-] Lỗi khi gọi LLM: {e}")
-        return _fallback_parser(query)
 
 def _fallback_parser(query: str) -> dict:
-    """Hàm dự phòng nếu API rớt mạng hoặc hết quota"""
-    return {
-        "category": None,
-        "location_anchor": None,
-        "distance_rule": None,
-        "semantic_text": query
-    }
-
-if __name__ == "__main__":
-    # Test case 1: Đầy đủ các yếu tố
-    test_query_1 = "tìm cho mình một quán cf xa sông hàn nhưng không gian phải thật yên tĩnh và ngập tràn cây xanh"
-    print(f"\n[Test 1] Câu hỏi: {test_query_1}")
-    print("-" * 50)
-    print(json.dumps(parse_query_with_llm(test_query_1), indent=4, ensure_ascii=False))
-
-    # Test case 2: Thiếu vị trí cụ thể (chỉ có semantic)
-    test_query_2 = "có nhà hàng nào đồ ăn ngon, view ngắm hoàng hôn lãng mạn không"
-    print(f"\n[Test 2] Câu hỏi: {test_query_2}")
-    print("-" * 50)
-    print(json.dumps(parse_query_with_llm(test_query_2), indent=4, ensure_ascii=False))
+    return _post_process_parsed_intent(query, {})

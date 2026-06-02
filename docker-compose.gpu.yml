@@ -1,5 +1,7 @@
 services:
   ai_service:
+    environment:
+      AI_DEVICE: cuda
     deploy:
       resources:
         reservations:

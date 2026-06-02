@@ -8,6 +8,8 @@ services:
       MYSQL_PASSWORD: ${DB_PASSWORD:-apppass}
       MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-rootpass}
     command: ["mysqld", "--character-set-server=utf8mb4", "--collation-server=utf8mb4_unicode_ci"]
+    ports:
+      - "3307:3306"
     volumes:
       - mysql_data:/var/lib/mysql
     healthcheck:
@@ -36,6 +38,8 @@ services:
     depends_on:
       db:
         condition: service_healthy
+      ai_service:
+        condition: service_healthy
     volumes:
       - .:/app
       - ./backend/data:/app/data
@@ -48,11 +52,21 @@ services:
     command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
     env_file: .env
     environment:
+      AI_DEVICE: ${AI_DEVICE:-auto}
+      SEARCH_BACKEND: ${SEARCH_BACKEND:-faiss}
+      SBERT_MODEL: ${SBERT_MODEL:-keepitreal/vietnamese-sbert}
+      VECTOR_DIMENSION: ${VECTOR_DIMENSION:-768}
       INDEX_FILE: /app/faiss_index/places.index
       ID_MAP_FILE: /app/faiss_index/id_map.json
       DATA_DIR: /app/data
     ports:
       - "8000:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/healthz', timeout=2)"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+      start_period: 5s
     volumes:
       - ./ai_service/faiss_index:/app/faiss_index
       - ./backend/data:/app/data

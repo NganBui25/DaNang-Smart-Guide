@@ -1,4 +1,7 @@
 import logging
+import re
+import unicodedata
+
 import requests
 from django.conf import settings
 from django.db.models import Q
@@ -17,6 +20,39 @@ from reviews.serializers import ReviewSerializer
 
 AI_SERVICE_URL = getattr(settings, "AI_SERVICE_URL", "http://localhost:8000")
 logger = logging.getLogger(__name__)
+WORD_PATTERN = re.compile(r"\w+", re.UNICODE)
+
+
+def _normalize_text(value):
+    if not value:
+        return ""
+    text = unicodedata.normalize("NFKD", str(value))
+    text = "".join(ch for ch in text if not unicodedata.combining(ch))
+    return text.lower().strip()
+
+
+def _tokenize(value):
+    return [_normalize_text(token) for token in WORD_PATTERN.findall(value or "")]
+
+
+def _canonicalize_place_name(name):
+    primary_name = re.split(r"\s+-\s+", str(name or ""), maxsplit=1)[0]
+    normalized = _normalize_text(primary_name)
+    normalized = re.sub(r"[^\w\s]", " ", normalized)
+    normalized = re.sub(r"\s+", " ", normalized)
+    return normalized.strip()
+
+
+def _dedupe_serialized_results(results):
+    seen = set()
+    deduped = []
+    for item in results:
+        key = _canonicalize_place_name(item.get("name"))
+        if key in seen:
+            continue
+        seen.add(key)
+        deduped.append(item)
+    return deduped
 
 
 class CategoryViewSet(viewsets.ReadOnlyModelViewSet):
@@ -75,7 +111,7 @@ class PlaceViewSet(viewsets.ModelViewSet):
     def reviews(self, request, pk=None):
         """GET /api/places/{id}/reviews/ - Lay reviews cua dia diem"""
         place = self.get_object()
-        reviews = place.reviews.select_related("user").prefetch_related("images")
+        reviews = place.reviews.select_related("user").order_by("-created_at")
         serializer = ReviewSerializer(reviews, many=True)
         return Response(serializer.data)
 
@@ -109,14 +145,18 @@ class SearchViewSet(viewsets.ViewSet):
 
     permission_classes = [AllowAny]
 
-    def _keyword_fallback(self, query, top_k, request):
-        keywords = [w for w in query.split() if len(w) >= 2][:8]
-        if not keywords:
+    def _keyword_fallback(self, query, top_k, request, parsed_intent=None):
+        parsed_intent = parsed_intent or {}
+        semantic_query = (parsed_intent.get("semantic_text") or query).strip()
+        keywords = [w for w in _tokenize(semantic_query) if len(w) >= 2][:8]
+        category = (parsed_intent.get("category") or "").strip()
+
+        if not keywords and not category:
             return []
 
-        q_filter = Q()
+        candidate_filter = Q()
         for kw in keywords:
-            q_filter |= (
+            candidate_filter |= (
                 Q(name__icontains=kw)
                 | Q(address__icontains=kw)
                 | Q(description__icontains=kw)
@@ -124,18 +164,69 @@ class SearchViewSet(viewsets.ViewSet):
 
         places = (
             Place.objects.filter(status="APPROVED")
-            .filter(q_filter)
             .select_related("category")
             .prefetch_related("tags")
-            .distinct()[:top_k]
+            .distinct()
+        )
+        if category:
+            places = places.filter(category__name__iexact=category)
+        if candidate_filter:
+            places = places.filter(candidate_filter)
+
+        candidate_places = list(places[: max(top_k * 8, 24)])
+        if not candidate_places and category:
+            candidate_places = list(
+                Place.objects.filter(status="APPROVED", category__name__iexact=category)
+                .select_related("category")
+                .prefetch_related("tags")
+                .distinct()[: max(top_k * 8, 24)]
+            )
+        if not candidate_places:
+            return []
+
+        def rank_place(place):
+            score = 0
+            category_name = _normalize_text(place.category.name if place.category else "")
+            name_text = _normalize_text(place.name)
+            address_text = _normalize_text(place.address)
+            description_text = _normalize_text(place.description)
+            semantic_text = _normalize_text(semantic_query)
+
+            if category and category_name == _normalize_text(category):
+                score += 6
+
+            if semantic_text:
+                if semantic_text and semantic_text in description_text:
+                    score += 5
+                elif semantic_text and semantic_text in name_text:
+                    score += 4
+
+            for kw in keywords:
+                if kw in name_text:
+                    score += 4
+                if kw in description_text:
+                    score += 3
+                if kw in address_text:
+                    score += 1
+
+            return score
+
+        ranked_places = sorted(
+            candidate_places,
+            key=lambda place: (
+                -rank_place(place),
+                place.name.lower(),
+            ),
         )
 
-        serializer = PlaceListSerializer(places, many=True, context={"request": request})
+        serializer = PlaceListSerializer(ranked_places[: max(top_k * 2, top_k)], many=True, context={"request": request})
         results = serializer.data
+        score_lookup = {str(place.id): rank_place(place) for place in ranked_places}
+
         for item in results:
-            item["ai_score"] = 0.0
+            item["ai_score"] = float(score_lookup.get(str(item["id"]), 0))
             item["match_reason"] = "keyword_fallback"
-        return results
+        return _dedupe_serialized_results(results)[:top_k]
 
     def create(self, request):
         query = request.data.get("query", "").strip()
@@ -170,7 +261,12 @@ class SearchViewSet(viewsets.ViewSet):
             )
 
         if not ai_results:
-            fallback_results = self._keyword_fallback(query, top_k, request)
+            fallback_results = self._keyword_fallback(
+                query,
+                top_k,
+                request,
+                parsed_intent if "parsed_intent" in locals() else None,
+            )
             return Response(
                 {
                     "query": query,
@@ -199,5 +295,6 @@ class SearchViewSet(viewsets.ViewSet):
         for item in results:
             item["ai_score"] = round(score_map.get(str(item["id"]), 0), 4)
             item["match_reason"] = reason_map.get(str(item["id"]), "")
+        results = _dedupe_serialized_results(results)
         logger.info("semantic_search query='%s' results=%s", query, len(results))
         return Response({"query": query, "count": len(results),"parsed_intent": parsed_intent, "results": results})
